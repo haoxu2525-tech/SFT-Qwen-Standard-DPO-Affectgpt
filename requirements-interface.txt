@@ -1,0 +1,17 @@
+# Additional packages for a separate, existing Qwen SFT-compatible environment.
+# Do not pip-install vendor/dpo/requirements.txt into the Omni environment:
+# its torch 2.0.1 / Transformers 4.29.2 cannot load Qwen2.5-Omni.
+# Neither upstream requirements file is edited by this overlay.
+transformers==4.52.4
+qwen-omni-utils==0.0.8
+peft==0.13.2
+accelerate==1.0.0
+hydra-core==1.3.2
+omegaconf==2.3.0
+tensor-parallel==1.2.4
+wandb==0.15.3
+beautifulsoup4==4.12.2
+datasets==2.14.4
+pyarrow==14.0.2
+fsspec==2023.6.0
+setuptools==75.1.0

@@ -1,0 +1,9 @@
+[submodule "vendor/dpo"]
+	path = vendor/dpo
+	url = https://github.com/eric-mitchell/direct-preference-optimization.git
+[submodule "vendor/sft"]
+	path = vendor/sft
+	url = https://github.com/haoxu2525-tech/SFT-on-Qwen2.5Omni7B-Affectgpt.git
+[submodule "vendor/affectgpt"]
+	path = vendor/affectgpt
+	url = https://github.com/zeroQiaoba/AffectGPT.git
