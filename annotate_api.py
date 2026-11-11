@@ -111,6 +111,11 @@ def save_json(path, data):
     os.replace(temporary, path)
 
 
+def input_rejected(record):
+    error = record.get("annotation_api", {}).get("error", {})
+    return error.get("http_status") == 400 and "data_inspection_failed" in error.get("body", "")
+
+
 def main():
     parser = argparse.ArgumentParser(description=__doc__)
     parser.add_argument("--dataset-root", type=Path, required=True)
@@ -121,6 +126,8 @@ def main():
     parser.add_argument("--limit", type=int)
     parser.add_argument("--prepare-only", action="store_true")
     parser.add_argument("--wait-for-download", action="store_true")
+    parser.add_argument("--continue-on-input-rejection", action="store_true",
+                        help="Retain API content-rejection records and continue the remaining samples")
     args = parser.parse_args()
     if args.workers < 1 or (args.limit is not None and args.limit < 1):
         parser.error("workers and limit must be positive")
@@ -166,7 +173,9 @@ def main():
             continue
         if any(record.get(k) != v for k, v in row.items()) or record.get("annotation_api", {}).get("settings") != settings:
             raise ValueError(f"Resume metadata changed: {record['id']}")
-        if not record.get("rejected") or record["chosen"] != row["ground_truth_answer"]:
+        if record["chosen"] != row["ground_truth_answer"]:
+            raise ValueError(f"Changed chosen answer: {record['id']}")
+        if not record.get("rejected") and not (args.continue_on_input_rejection and input_rejected(record)):
             raise ValueError(f"Saved unsuccessful attempt needs review: {record['id']}")
         if record["annotation_api"]["video_sha256"] != video_digest(args.dataset_root/row["video"]):
             raise ValueError("Original media changed")
@@ -177,11 +186,11 @@ def main():
         path = args.dataset_root/row["video"]
         sha = video_digest(path)
         large = 4*((path.stat().st_size+2)//3) >= 10_000_000
-        video_url = temporary_video(path, endpoint, key) if large else "data:video/mp4;base64,"+base64.b64encode(path.read_bytes()).decode("ascii")
         record = dict(row, chosen=row["ground_truth_answer"], rejected="")
         record["annotation_api"] = dict(settings=settings, video_sha256=sha,
                                          transport="temporary_oss" if large else "base64")
         try:
+            video_url = temporary_video(path, endpoint, key) if large else "data:video/mp4;base64,"+base64.b64encode(path.read_bytes()).decode("ascii")
             result = qwen_negative(row, video_url, endpoint, key, args.max_tokens)
             record["annotation_api"]["response"] = result
             if (result["stream_complete"] and result["finish_reason"] == "stop" and result["content"].strip()
@@ -209,7 +218,7 @@ def main():
                     record = future.result()
                     journal.write(json.dumps(record, ensure_ascii=False)+"\n"); journal.flush(); os.fsync(journal.fileno())
                     previous[record["id"]] = record
-                    failed |= not bool(record["rejected"])
+                    failed |= not bool(record["rejected"]) and not (args.continue_on_input_rejection and input_rejected(record))
                     print(json.dumps(dict(saved=len(previous), total=len(selected), id=record["id"], valid=bool(record["rejected"]),
                                           usage=record["annotation_api"].get("response", {}).get("usage"))), flush=True)
                 if not failed:
@@ -226,8 +235,11 @@ def main():
             stream.write(json.dumps(previous[row["id"]], ensure_ascii=False)+"\n")
         stream.flush(); os.fsync(stream.fileno())
     os.replace(temporary, args.output)
+    failed_ids = [row["id"] for row in selected if not previous[row["id"]].get("rejected")]
     save_json(args.output.with_suffix(".complete.json"), dict(samples=len(selected), original_samples=len(rows),
-              full_dataset=len(selected)==len(rows), sha256=video_digest(args.output), settings=settings,
+              processed_all=len(selected)==len(rows), successful=len(selected)-len(failed_ids),
+              failed_ids=failed_ids, full_dataset=len(selected)==len(rows) and not failed_ids,
+              sha256=video_digest(args.output), settings=settings,
               note="Synthetic negatives; integrity checks do not establish semantic preference quality."))
 
 
