@@ -114,7 +114,7 @@ NEGATIVE_INSTRUCTION = (
 )
 
 
-def qwen_negative(row, video_url, endpoint, api_key, max_tokens):
+def qwen_negative(row, video_url, endpoint, api_key, max_tokens, context=None):
     """Official Chat Completions video_url + SSE protocol; no local AV decoding."""
     payload = dict(model=NEGATIVE_MODEL, modalities=["text"], stream=True,
                    stream_options={"include_usage": True}, messages=[
@@ -123,6 +123,8 @@ def qwen_negative(row, video_url, endpoint, api_key, max_tokens):
             {"type": "video_url", "video_url": {"url": video_url}},
             {"type": "text", "text": row["prompt"]},
             {"type": "text", "text": "Dataset reference answer:\n" + row["ground_truth_answer"]}]}])
+    if context:
+        payload["messages"][1]["content"].insert(0, {"type": "text", "text": context})
     if max_tokens is not None:
         payload["max_tokens"] = max_tokens
     request = urllib.request.Request(endpoint + "/chat/completions",
