@@ -244,10 +244,15 @@ def annotate(args):
 def train(args):
     if sys.platform != "linux" or sys.version_info[:2] != (3, 10):
         raise RuntimeError("Use Linux/Python 3.10 for the unchanged official DPO NumPy seed handling")
-    if not math.isfinite(args.beta) or args.beta <= 0:
+    if not args.preflight_only and (args.beta is None or not math.isfinite(args.beta) or args.beta <= 0):
         raise ValueError("beta must be finite and positive")
+    if not args.preflight_only and args.adapter is None:
+        raise ValueError("Training requires the verified epoch30 --adapter")
+    if not math.isfinite(args.lr) or args.lr <= 0 or args.max_length < 2:
+        raise ValueError("lr must be finite and positive; max-length must be at least 2")
+    os.environ.setdefault("PYTORCH_CUDA_ALLOC_CONF", "expandable_segments:True")
     rows, eval_rows = read_pairs(args.pairs), read_pairs(args.eval_pairs)
-    dataset, _ = training_dataset(args)
+    dataset, _ = training_dataset(args, metadata_only=True)
     source = {sample["name"]: sample for sample in dataset.annotation}
     if {row["id"] for row in rows} != set(source):
         raise ValueError("Preference membership differs from original training annotations")
@@ -268,8 +273,6 @@ def train(args):
     for module in (preference_datasets, trainers, utils):
         if Path(module.__file__).resolve().parent != DPO:
             raise RuntimeError(f"Module collision with official DPO: {module.__file__}")
-    if not torch.cuda.is_available() or torch.cuda.device_count() != 1 or not torch.cuda.is_bf16_supported():
-        raise RuntimeError("Requires one visible CUDA GPU with BF16 support")
     # Import and call the actual official worker, including its W&B setup.
     spec = importlib.util.spec_from_file_location("official_dpo_entrypoint", DPO / "train.py")
     official = importlib.util.module_from_spec(spec)
@@ -284,7 +287,11 @@ def train(args):
     cfg.datasets, cfg.trainer = ["affectgpt_preferences"], "OmniTrainer"
     cfg.local_run_dir, cfg.local_dirs = str(args.output), [str(args.runtime / "cache")]
     cfg.exp_name = "epoch30_standard_dpo_affectgpt"
-    cfg.max_length = cfg.max_prompt_length = 4096
+    cfg.lr = args.lr
+    cfg.max_length, cfg.max_prompt_length = args.max_length, args.max_length - 1
+    cfg.n_eval_examples = args.n_eval_examples
+    cfg.sample_during_eval = args.sample_during_eval
+    cfg.activation_checkpointing = args.gradient_checkpointing
     for name in ("batch_size", "eval_batch_size", "gradient_accumulation_steps"):
         if getattr(args, name) is not None:
             cfg[name] = getattr(args, name)
@@ -296,20 +303,45 @@ def train(args):
         raise ValueError("batch_size must divide pair count and eval_every; no samples may be silently dropped")
     if len(eval_rows) < cfg.eval_batch_size:
         raise ValueError("Supply at least one complete preference-evaluation batch; evaluation is not disabled")
+    if cfg.n_eval_examples < cfg.eval_batch_size or cfg.n_eval_examples % cfg.eval_batch_size:
+        raise ValueError("n-eval-examples must be positive and divisible by eval-batch-size")
+    if args.smoke_test:
+        cfg.exp_name += "_longest_batch_20_step_smoke"
+        cfg.n_epochs, cfg.n_examples = None, 20 * cfg.batch_size
+    args.output.mkdir(parents=True, exist_ok=False)
+    processor = load_processor(str(args.snapshot))
+    data = PairData(rows, eval_rows, processor, args.dataset_root,
+                    preference_datasets.tokenize_batch_element)
+    report = data.preflight(processor.tokenizer, cfg.max_length, cfg.max_prompt_length,
+                            args.output / "length-check.json")
+    if args.preflight_only:
+        print(f"Length preflight passed; truncated rows: {report['truncated_rows']}; no training started")
+        return
+    if args.smoke_test:
+        # Real training rows only, selected after the complete data scan.
+        # Upstream's n_examples loop repeats this longest batch for 20 updates.
+        lengths = {r["id"]: r["total"] for r in report["rows"] if r["split"] == "train"}
+        data.rows["train"] = sorted(rows, key=lambda r: lengths[r["id"]], reverse=True)[:cfg.batch_size]
+        (args.output / "smoke-samples.json").write_text(json.dumps(
+            {"purpose": "20-step diagnostic, not a full experiment",
+             "ids": [r["id"] for r in data.rows["train"]]}, indent=2), encoding="utf-8")
+    if not torch.cuda.is_available() or torch.cuda.device_count() != 1 or not torch.cuda.is_bf16_supported():
+        raise RuntimeError("Requires one visible CUDA GPU with BF16 support")
     OmegaConf.resolve(cfg)
     missing = OmegaConf.missing_keys(cfg)
     if missing:
         raise ValueError(f"Missing official configuration fields: {missing}")
-    args.output.mkdir(parents=True, exist_ok=False)
     (args.runtime / "cache").mkdir(parents=True, exist_ok=True)
     os.environ["XDG_CACHE_HOME"] = utils.get_local_dir(cfg.local_dirs)
     OmegaConf.save(cfg, args.output / "config.yaml")
     policy = OmniModel(load_sft_model(args.snapshot, args.adapter, trainable=True))
     reference = OmniModel(load_sft_model(args.snapshot, args.adapter, trainable=False))
+    if cfg.activation_checkpointing:
+        # BasicTrainer's upstream checkpointing switch only affects FSDP.
+        # Apply the native Thinker API here, without replacing the DPO trainer.
+        policy.thinker.gradient_checkpointing_enable(gradient_checkpointing_kwargs={"use_reentrant": False})
     utils.disable_dropout(policy)
     utils.disable_dropout(reference)
-    data = PairData(rows, eval_rows, load_processor(str(args.snapshot)), args.dataset_root,
-                    preference_datasets.tokenize_batch_element)
     with interfaces(preference_datasets, trainers, data):
         official.worker_main(0, 1, cfg, policy, reference)
 
@@ -354,7 +386,7 @@ def main():
             sub.add_argument("--dataset-root", type=Path, required=True)
         if name in ("candidates", "train"):
             sub.add_argument("--snapshot", type=Path, required=True)
-            sub.add_argument("--adapter", type=Path, required=True)
+            sub.add_argument("--adapter", type=Path, required=name == "candidates")
             sub.add_argument("--output", type=Path, required=True)
         if name == "candidates":
             sub.add_argument("--seed", type=int, default=0)
@@ -373,10 +405,20 @@ def main():
                              help="Original training rows with already labelled chosen/rejected")
             sub.add_argument("--eval-pairs", type=Path, required=True,
                              help="Explicitly supplied preference-validation rows; no automatic split")
-            sub.add_argument("--beta", type=float, required=True)
-            sub.add_argument("--batch-size", type=int)
-            sub.add_argument("--eval-batch-size", type=int)
+            sub.add_argument("--beta", type=float, help="Required for training; not needed for --preflight-only")
+            sub.add_argument("--lr", type=float, default=5e-6)
+            sub.add_argument("--batch-size", type=int, default=1)
+            sub.add_argument("--eval-batch-size", type=int, default=1)
             sub.add_argument("--gradient-accumulation-steps", type=int)
+            sub.add_argument("--n-eval-examples", type=int, default=16)
+            sub.add_argument("--sample-during-eval", action=argparse.BooleanOptionalAction, default=False)
+            sub.add_argument("--gradient-checkpointing", action=argparse.BooleanOptionalAction, default=True)
+            sub.add_argument("--max-length", type=int, default=4096,
+                             help="Native prompt plus answer/EOS; long answers use original DPO truncation")
+            sub.add_argument("--preflight-only", action="store_true",
+                             help="Scan all train/eval lengths on CPU and exit before GPU model loading")
+            sub.add_argument("--smoke-test", action="store_true",
+                             help="After the full length scan, run 20 updates on the longest training batch")
         if name == "infer":
             sub.add_argument("--checkpoints", type=Path, required=True)
     sub = commands.add_parser("export")

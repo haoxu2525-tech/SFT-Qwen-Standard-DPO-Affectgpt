@@ -146,16 +146,22 @@ class PairData:
         prefix = native.pop("input_ids")[0].tolist()
         prompt_mask = native.pop("attention_mask")[0].tolist()
         native.pop("use_audio_in_video")
-        # Native media cannot be silently truncated without breaking alignment.
-        # Within the authorized 4096 capacity, original DPO truncation is a no-op.
+        # Keep native AV tokens paired with their tensors. Upstream truncates
+        # response tokens using the space remaining after this native prefix.
         lengths = [len(tokenizer(answer, add_special_tokens=False)["input_ids"]) + 1
                    for answer in (chosen, rejected)]
-        if len(prefix) > max_prompt_length or len(prefix) + max(lengths) > max_length:
-            raise ValueError(f"{metadata['id']}: native prompt/answer exceeds capacity; no truncation")
-        # Original tokenizer supplies the exact answer tokens, EOS and labels.
-        # Do not append an invented answer delimiter or change the supplied text.
+        budget = max_length - len(prefix)
+        if len(prefix) > max_prompt_length or budget < 1:
+            raise ValueError(f"{metadata['id']}: native AV prompt alone exceeds the input budget; "
+                             "media tokens cannot be sliced independently of media tensors")
+        # Empty text prompt: the full prompt is already serialized above.
+        # max_prompt_length=0 makes upstream's response budget exactly `budget`.
+        # Its EOS append/slicing behavior is retained, including a clipped EOS.
         item = self.tokenize_response("", chosen, rejected, truncation_mode,
-                                      tokenizer, max_length, max_prompt_length)
+                                      tokenizer, budget, 0)
+        if item["chosen_input_ids"] == item["rejected_input_ids"]:
+            raise ValueError(f"{metadata['id']}: chosen/rejected have identical retained tokens; "
+                             "the preference cannot be learned at this length")
         for label in ("chosen", "rejected"):
             item[label + "_input_ids"] = prefix + item[label + "_input_ids"]
             item[label + "_attention_mask"] = prompt_mask + item[label + "_attention_mask"]
@@ -163,7 +169,38 @@ class PairData:
             item[label] = metadata["prompt"] + item[label]
         item.update(prompt=metadata["prompt"], prompt_input_ids=prefix,
                     prompt_attention_mask=prompt_mask, media=native, id=metadata["id"])
+        item["length_info"] = dict(prompt=len(prefix), chosen_before=lengths[0],
+            rejected_before=lengths[1], chosen_after=len(item["chosen_input_ids"])-len(prefix),
+            rejected_after=len(item["rejected_input_ids"])-len(prefix))
         return item
+
+    def preflight(self, tokenizer, max_length, max_prompt_length, report_path):
+        """Scan all real rows before allocating either GPU model; never drop rows."""
+        report = {"max_length": max_length, "max_prompt_length": max_prompt_length,
+                  "rows": [], "errors": []}
+        for split, rows in self.rows.items():
+            for index, row in enumerate(rows):
+                route = json.dumps({k: row[k] for k in ("id", "prompt", "video")})
+                try:
+                    item = self.tokenize(route, row["chosen"], row["rejected"], "keep_end",
+                                         tokenizer, max_length, max_prompt_length)
+                    info = item["length_info"]
+                    report["rows"].append(dict(split=split, id=row["id"], **info,
+                        total=info["prompt"]+max(info["chosen_after"], info["rejected_after"])))
+                    del item
+                except Exception as exc:
+                    report["errors"].append(dict(split=split, id=row["id"],
+                                                 error=f"{type(exc).__name__}: {exc}"))
+                if (index + 1) % 100 == 0:
+                    print(f"Length preflight {split}: {index+1}/{len(rows)}", flush=True)
+        report["truncated_rows"] = sum(r["chosen_before"] != r["chosen_after"] or
+                                       r["rejected_before"] != r["rejected_after"]
+                                       for r in report["rows"])
+        Path(report_path).write_text(json.dumps(report, ensure_ascii=False, indent=2), encoding="utf-8")
+        if report["errors"]:
+            raise ValueError(f"Preflight found {len(report['errors'])} invalid rows; see {report_path}. "
+                             "No GPU training started; no rows were silently excluded.")
+        return report
 
 
 def trainer_class(upstream):
