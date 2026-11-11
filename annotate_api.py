@@ -21,6 +21,7 @@ import time
 from types import SimpleNamespace
 import urllib.request
 import urllib.error
+import uuid
 from urllib.parse import urlsplit
 
 import numpy as np
@@ -80,26 +81,45 @@ def original_rows(root, seed):
     return rows
 
 
-def temporary_video(path, endpoint, key):
+class UploadError(RuntimeError):
+    def __init__(self, stage, status=None, curl_code=None):
+        super().__init__(stage)
+        self.stage, self.status, self.curl_code = stage, status, curl_code
+
+
+def temporary_video(path, endpoint, key, progress=None):
     # Official temporary-storage API; private, account/model-bound, expires after 48h.
     base = endpoint.split("/compatible-mode/")[0]
+    if progress is not None:
+        progress["stage"] = "upload_policy"
     response = requests.get(base+"/api/v1/uploads", params={"action": "getPolicy", "model": NEGATIVE_MODEL},
                             headers={"Authorization": "Bearer "+key}, timeout=(30, 120))
     if response.status_code != 200:
-        raise RuntimeError(f"Temporary-upload policy failed: HTTP {response.status_code}")
+        raise UploadError("upload_policy", response.status_code)
     policy = response.json()["data"]
     if urlsplit(policy["upload_host"]).scheme != "https" or not urlsplit(policy["upload_host"]).hostname.endswith(".aliyuncs.com"):
         raise ValueError("Unexpected official upload host")
-    object_key = policy["upload_dir"]+"/"+path.name
-    fields = {"OSSAccessKeyId": (None, policy["oss_access_key_id"]), "Signature": (None, policy["signature"]),
-              "policy": (None, policy["policy"]), "x-oss-object-acl": (None, policy["x_oss_object_acl"]),
-              "x-oss-forbid-overwrite": (None, policy["x_oss_forbid_overwrite"]),
-              "key": (None, object_key), "success_action_status": (None, "200")}
-    with path.open("rb") as stream:
-        fields["file"] = (path.name, stream)
-        response = requests.post(policy["upload_host"], files=fields, timeout=(30, 180))
-    if response.status_code != 200:
-        raise RuntimeError(f"Temporary video upload failed: HTTP {response.status_code}")
+    # A unique object avoids overwrite conflicts after an ambiguous network failure.
+    object_key = policy["upload_dir"]+"/"+uuid.uuid4().hex+"-"+path.name
+    fields = {"OSSAccessKeyId": policy["oss_access_key_id"], "Signature": policy["signature"],
+              "policy": policy["policy"], "x-oss-object-acl": policy["x_oss_object_acl"],
+              "x-oss-forbid-overwrite": policy["x_oss_forbid_overwrite"],
+              "key": object_key, "success_action_status": "200"}
+    if progress is not None:
+        progress["stage"] = "video_upload"
+    # curl streams multipart file bytes; credentials travel through stdin, not argv.
+    def quote(value):
+        return '"'+str(value).replace('\\', '\\\\').replace('"', '\\"').replace('\n', '\\n').replace('\r', '\\r')+'"'
+    config = ['url = '+quote(policy["upload_host"])]
+    config += ['form-string = '+quote(k+'='+v) for k, v in fields.items()]
+    config += ['form = '+quote('file=@"'+str(path).replace('\\', '\\\\').replace('"', '\\"')+'"')]
+    result = subprocess.run(["curl", "--silent", "--show-error", "--connect-timeout", "30",
+                             "--max-time", "180", "--output", os.devnull,
+                             "--write-out", "%{http_code}", "--config", "-"],
+                            input='\n'.join(config)+'\n', text=True, capture_output=True, timeout=195)
+    status = int(result.stdout.strip()) if result.stdout.strip().isdigit() else None
+    if result.returncode or status != 200:
+        raise UploadError("video_upload", status, result.returncode)
     return "oss://"+object_key
 
 
@@ -116,6 +136,56 @@ def input_rejected(record):
     return error.get("http_status") == 400 and "data_inspection_failed" in error.get("body", "")
 
 
+def annotate_one(row, root, endpoint, key, settings, folder, max_attempts):
+    path = root/row["video"]
+    large = 4*((path.stat().st_size+2)//3) >= 10_000_000
+    record = dict(row, chosen=row["ground_truth_answer"], rejected="")
+    meta = record["annotation_api"] = dict(settings=settings, video_sha256=video_digest(path),
+        transport="temporary_oss_curl" if large else "base64", attempts=[])
+    video_url = None
+    for attempt in range(1, max_attempts+1):
+        meta.pop("error", None)
+        meta.pop("response", None)
+        try:
+            if video_url is None:
+                meta["stage"] = "prepare_video"
+                video_url = temporary_video(path, endpoint, key, meta) if large else "data:video/mp4;base64,"+base64.b64encode(path.read_bytes()).decode("ascii")
+            meta["stage"] = "inference"
+            result = qwen_negative(row, video_url, endpoint, key, settings["max_tokens"])
+            meta["response"] = result
+            if (result["stream_complete"] and result["finish_reason"] == "stop" and result["content"].strip()
+                    and result["content"].strip() != row["ground_truth_answer"].strip()):
+                record["rejected"] = result["content"]
+            else:
+                meta["error"] = dict(type="InvalidResponse")
+        except urllib.error.HTTPError as exc:
+            body = exc.read(4096).decode(errors="replace").replace(key, "[REDACTED]")
+            meta["error"] = dict(http_status=exc.code, body=body)
+        except Exception as exc:
+            # Do not persist request URLs, signed credentials or authorization headers.
+            meta["error"] = dict(type=type(exc).__name__)
+            if isinstance(exc, UploadError):
+                meta["error"].update(http_status=exc.status, curl_code=exc.curl_code)
+            cause = exc.__cause__ or exc.__context__
+            if cause is not None:
+                meta["error"]["cause_type"] = type(cause).__name__
+        outcome = dict(attempt=attempt, stage=meta["stage"], success=bool(record["rejected"]))
+        if "error" in meta:
+            outcome["error"] = meta["error"].copy()
+        if "response" in meta:
+            outcome["response"] = meta["response"]
+        meta["attempts"].append(outcome)
+        save_json(folder/(row["id"]+".json"), record)
+        if record["rejected"] or input_rejected(record):
+            break
+        status = meta.get("error", {}).get("http_status")
+        if status in (400, 401, 403, 404, 413, 422):
+            break
+        if attempt < max_attempts:
+            time.sleep((60 if status == 429 else 5*3**(attempt-1))+random.uniform(0, 2))
+    return record
+
+
 def main():
     parser = argparse.ArgumentParser(description=__doc__)
     parser.add_argument("--dataset-root", type=Path, required=True)
@@ -128,8 +198,11 @@ def main():
     parser.add_argument("--wait-for-download", action="store_true")
     parser.add_argument("--continue-on-input-rejection", action="store_true",
                         help="Retain API content-rejection records and continue the remaining samples")
+    parser.add_argument("--continue-on-error", action="store_true",
+                        help="Save exhausted failures and continue; retain saved failures on resume")
+    parser.add_argument("--max-attempts", type=int, default=3)
     args = parser.parse_args()
-    if args.workers < 1 or (args.limit is not None and args.limit < 1):
+    if args.workers < 1 or args.max_attempts < 1 or (args.limit is not None and args.limit < 1):
         parser.error("workers and limit must be positive")
     args.dataset_root = args.dataset_root.resolve()
     args.output = args.output.resolve()
@@ -175,7 +248,7 @@ def main():
             raise ValueError(f"Resume metadata changed: {record['id']}")
         if record["chosen"] != row["ground_truth_answer"]:
             raise ValueError(f"Changed chosen answer: {record['id']}")
-        if not record.get("rejected") and not (args.continue_on_input_rejection and input_rejected(record)):
+        if not record.get("rejected") and not (args.continue_on_error or (args.continue_on_input_rejection and input_rejected(record))):
             raise ValueError(f"Saved unsuccessful attempt needs review: {record['id']}")
         if record["annotation_api"]["video_sha256"] != video_digest(args.dataset_root/row["video"]):
             raise ValueError("Original media changed")
@@ -183,25 +256,7 @@ def main():
     print(json.dumps(dict(selected=len(selected), completed=len(previous), workers=args.workers)), flush=True)
 
     def annotate(row):
-        path = args.dataset_root/row["video"]
-        sha = video_digest(path)
-        large = 4*((path.stat().st_size+2)//3) >= 10_000_000
-        record = dict(row, chosen=row["ground_truth_answer"], rejected="")
-        record["annotation_api"] = dict(settings=settings, video_sha256=sha,
-                                         transport="temporary_oss" if large else "base64")
-        try:
-            video_url = temporary_video(path, endpoint, key) if large else "data:video/mp4;base64,"+base64.b64encode(path.read_bytes()).decode("ascii")
-            result = qwen_negative(row, video_url, endpoint, key, args.max_tokens)
-            record["annotation_api"]["response"] = result
-            if (result["stream_complete"] and result["finish_reason"] == "stop" and result["content"].strip()
-                    and result["content"].strip() != row["ground_truth_answer"].strip()):
-                record["rejected"] = result["content"]
-        except urllib.error.HTTPError as exc:
-            record["annotation_api"]["error"] = dict(http_status=exc.code, body=exc.read(4096).decode(errors="replace"))
-        except Exception as exc:
-            record["annotation_api"]["error"] = dict(type=type(exc).__name__)
-        save_json(folder/(row["id"]+".json"), record)
-        return record
+        return annotate_one(row, args.dataset_root, endpoint, key, settings, folder, args.max_attempts)
 
     pending = iter(row for row in selected if row["id"] not in previous)
     failed = False
@@ -218,9 +273,11 @@ def main():
                     record = future.result()
                     journal.write(json.dumps(record, ensure_ascii=False)+"\n"); journal.flush(); os.fsync(journal.fileno())
                     previous[record["id"]] = record
-                    failed |= not bool(record["rejected"]) and not (args.continue_on_input_rejection and input_rejected(record))
+                    failed |= not bool(record["rejected"]) and not (args.continue_on_error or (args.continue_on_input_rejection and input_rejected(record)))
                     print(json.dumps(dict(saved=len(previous), total=len(selected), id=record["id"], valid=bool(record["rejected"]),
-                                          usage=record["annotation_api"].get("response", {}).get("usage"))), flush=True)
+                                          usage=record["annotation_api"].get("response", {}).get("usage"),
+                                          error=record["annotation_api"].get("error"),
+                                          stage=record["annotation_api"].get("stage"))), flush=True)
                 if not failed:
                     while len(active) < args.workers:
                         row = next(pending, None)
