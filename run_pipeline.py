@@ -1,19 +1,22 @@
-"""Epoch30 SFT candidates and original AffectGPT evaluation.
+"""Epoch30 Omni LoRA -> official DPO -> original AffectGPT evaluation.
 
-DPO source is verbatim in vendor/dpo. Use its train.py, requirements.txt and
-configuration directly. Native Omni audiovisual DPO training is not connected.
-Commands: prepare, fetch, candidates, infer, evaluate.
+Linux/Python 3.10, existing Qwen SFT environment plus requirements-interface.txt.
+Commands: prepare, fetch, candidates, train, export, infer, evaluate.
+Training requires already labelled --pairs and --eval-pairs; no ranking or
+split creation is performed. Official source files are pinned and unchanged.
 """
 import argparse
+import importlib.util
 import json
+import math
 import os
 from pathlib import Path
 import random
 import subprocess
 import sys
 
-from dpo_interface import (AFFECTGPT, SFT_INTERFACE, ADAPTER_REPO,
-    ADAPTER_REVISION, add_sft_path, verify_epoch30)
+from dpo_interface import (DPO, AFFECTGPT, SFT_INTERFACE, ADAPTER_REPO,
+    ADAPTER_REVISION, add_sft_path, verify_epoch30, read_pairs)
 
 
 def enter_affectgpt(args, native=False):
@@ -84,6 +87,101 @@ def candidates(args):
             stream.flush()
 
 
+def train(args):
+    if sys.platform != "linux" or sys.version_info[:2] != (3, 10):
+        raise RuntimeError("Use Linux/Python 3.10 for the unchanged official DPO NumPy seed handling")
+    if not math.isfinite(args.beta) or args.beta <= 0:
+        raise ValueError("beta must be finite and positive")
+    rows, eval_rows = read_pairs(args.pairs), read_pairs(args.eval_pairs)
+    dataset, _ = training_dataset(args)
+    source = {sample["name"]: sample for sample in dataset.annotation}
+    if {row["id"] for row in rows} != set(source):
+        raise ValueError("Preference membership differs from original training annotations")
+    for row in rows:
+        expected = original_row(dataset, source[row["id"]], row["label_type"], args.dataset_root)
+        if any(row.get(key) != value for key, value in expected.items()):
+            raise ValueError(f"Changed original annotation/prompt/media: {row['id']}")
+        if "candidates" in row and sorted([row["chosen"], row["rejected"]]) != sorted(row["candidates"]):
+            raise ValueError(f"{row['id']}: preferences differ from the supplied candidates")
+    sys.path.insert(0, str(DPO))
+    import torch
+    from omegaconf import OmegaConf
+    import preference_datasets
+    import trainers
+    import utils
+    from omni_components import load_processor
+    from dpo_interface import load_sft_model, OmniModel, PairData, interfaces
+    for module in (preference_datasets, trainers, utils):
+        if Path(module.__file__).resolve().parent != DPO:
+            raise RuntimeError(f"Module collision with official DPO: {module.__file__}")
+    if not torch.cuda.is_available() or torch.cuda.device_count() != 1 or not torch.cuda.is_bf16_supported():
+        raise RuntimeError("Requires one visible CUDA GPU with BF16 support")
+    # Import and call the actual official worker, including its W&B setup.
+    spec = importlib.util.spec_from_file_location("official_dpo_entrypoint", DPO / "train.py")
+    official = importlib.util.module_from_spec(spec)
+    spec.loader.exec_module(official)
+    cfg = OmegaConf.load(DPO / "config/config.yaml")
+    cfg.pop("defaults")
+    cfg.model = OmegaConf.load(DPO / "config/model/blank_model.yaml")
+    cfg.loss = OmegaConf.load(DPO / "config/loss/dpo.yaml")
+    cfg.loss.beta = args.beta
+    cfg.model.name_or_path = cfg.model.tokenizer_name_or_path = str(args.snapshot)
+    cfg.model.policy_dtype = cfg.model.reference_dtype = "bfloat16"
+    cfg.datasets, cfg.trainer = ["affectgpt_preferences"], "OmniTrainer"
+    cfg.local_run_dir, cfg.local_dirs = str(args.output), [str(args.runtime / "cache")]
+    cfg.exp_name = "epoch30_standard_dpo_affectgpt"
+    cfg.max_length = cfg.max_prompt_length = 4096
+    for name in ("batch_size", "eval_batch_size", "gradient_accumulation_steps"):
+        if getattr(args, name) is not None:
+            cfg[name] = getattr(args, name)
+    if min(cfg.batch_size, cfg.eval_batch_size, cfg.gradient_accumulation_steps) < 1:
+        raise ValueError("Batch sizes and gradient accumulation must be positive")
+    if cfg.batch_size % cfg.gradient_accumulation_steps:
+        raise ValueError("batch_size must be divisible by gradient_accumulation_steps")
+    if len(rows) % cfg.batch_size or cfg.eval_every % cfg.batch_size:
+        raise ValueError("batch_size must divide pair count and eval_every; no samples may be silently dropped")
+    if len(eval_rows) < cfg.eval_batch_size:
+        raise ValueError("Supply at least one complete preference-evaluation batch; evaluation is not disabled")
+    OmegaConf.resolve(cfg)
+    missing = OmegaConf.missing_keys(cfg)
+    if missing:
+        raise ValueError(f"Missing official configuration fields: {missing}")
+    args.output.mkdir(parents=True, exist_ok=False)
+    (args.runtime / "cache").mkdir(parents=True, exist_ok=True)
+    os.environ["XDG_CACHE_HOME"] = utils.get_local_dir(cfg.local_dirs)
+    OmegaConf.save(cfg, args.output / "config.yaml")
+    policy = OmniModel(load_sft_model(args.snapshot, args.adapter, trainable=True))
+    reference = OmniModel(load_sft_model(args.snapshot, args.adapter, trainable=False))
+    utils.disable_dropout(policy)
+    utils.disable_dropout(reference)
+    data = PairData(rows, eval_rows, load_processor(str(args.snapshot)), args.dataset_root,
+                    preference_datasets.tokenize_batch_element)
+    with interfaces(preference_datasets, trainers, data):
+        official.worker_main(0, 1, cfg, policy, reference)
+
+
+def export(args):
+    """Copy trained LoRA tensors into the existing SFT inference checkpoint format."""
+    import torch
+    from safetensors.torch import load_file
+    verify_epoch30(args.adapter)
+    state = torch.load(args.checkpoint, map_location="cpu", weights_only=True)["state"]
+    original = load_file(str(args.adapter / "adapter_model.safetensors"))
+    expected = {"thinker." + key.replace(".lora_A.weight", ".lora_A.default.weight").replace(
+                ".lora_B.weight", ".lora_B.default.weight"): value for key, value in original.items()}
+    trained = {key: value for key, value in state.items() if ".lora_" in key}
+    if set(trained) != set(expected) or any(trained[k].shape != expected[k].shape for k in expected):
+        raise ValueError("Checkpoint does not contain the complete language LoRA")
+    if not all(torch.isfinite(value).all() for value in trained.values()):
+        raise ValueError("Nonfinite checkpoint")
+    args.output.mkdir(parents=True, exist_ok=False)
+    destination = args.output / "checkpoint_000001_dpo_final.pth"
+    torch.save({"model": trained, "epoch": 1}, destination)
+    reloaded = torch.load(destination, map_location="cpu", weights_only=True)["model"]
+    if set(reloaded) != set(trained) or not all(torch.equal(value, reloaded[key]) for key, value in trained.items()):
+        raise RuntimeError("Checkpoint conversion changed tensor values")
+
+
 def evaluate(args):
     cmd = [sys.executable, str(SFT_INTERFACE / "run_affectgpt_omni.py"), args.command,
            "--source", str(AFFECTGPT), "--runtime", str(args.runtime), "--dataset-root", str(args.dataset_root)]
@@ -95,20 +193,32 @@ def evaluate(args):
 def main():
     parser = argparse.ArgumentParser(description=__doc__)
     commands = parser.add_subparsers(dest="command", required=True)
-    for name in ("prepare", "fetch", "candidates", "infer", "evaluate"):
+    for name in ("prepare", "fetch", "candidates", "train", "infer", "evaluate"):
         sub = commands.add_parser(name)
         sub.add_argument("--runtime", type=Path, required=True)
         if name != "fetch":
             sub.add_argument("--dataset-root", type=Path, required=True)
-        if name == "candidates":
+        if name in ("candidates", "train"):
             sub.add_argument("--snapshot", type=Path, required=True)
             sub.add_argument("--adapter", type=Path, required=True)
-        if name == "candidates":
             sub.add_argument("--output", type=Path, required=True)
         if name == "candidates":
             sub.add_argument("--seed", type=int, default=0)
+        if name == "train":
+            sub.add_argument("--pairs", type=Path, required=True,
+                             help="Original training rows with already labelled chosen/rejected")
+            sub.add_argument("--eval-pairs", type=Path, required=True,
+                             help="Explicitly supplied preference-validation rows; no automatic split")
+            sub.add_argument("--beta", type=float, required=True)
+            sub.add_argument("--batch-size", type=int)
+            sub.add_argument("--eval-batch-size", type=int)
+            sub.add_argument("--gradient-accumulation-steps", type=int)
         if name == "infer":
             sub.add_argument("--checkpoints", type=Path, required=True)
+    sub = commands.add_parser("export")
+    sub.add_argument("--checkpoint", type=Path, required=True)
+    sub.add_argument("--adapter", type=Path, required=True)
+    sub.add_argument("--output", type=Path, required=True)
     args = parser.parse_args()
     for key, value in vars(args).items():
         if isinstance(value, Path):

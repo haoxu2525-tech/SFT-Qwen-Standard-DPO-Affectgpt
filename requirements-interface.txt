@@ -1,7 +1,17 @@
-# Only for the existing Qwen SFT candidate-generation/evaluation environment.
-# Official DPO uses vendor/dpo/requirements.txt in its own environment.
+# Add to the existing Qwen SFT-compatible environment (Linux/Python 3.10).
+# Original DPO's Transformers 4.29.2 cannot load Omni; retain the existing
+# Qwen environment. Both upstream requirements files remain unchanged.
 transformers==4.52.4
 qwen-omni-utils==0.0.8
 peft==0.13.2
 accelerate==1.0.0
 omegaconf==2.3.0
+numpy==1.24.3
+hydra-core==1.3.2
+tensor-parallel==1.2.4
+wandb==0.15.3
+beautifulsoup4==4.12.2
+datasets==2.14.4
+pyarrow==14.0.2
+fsspec==2023.6.0
+setuptools==75.1.0
