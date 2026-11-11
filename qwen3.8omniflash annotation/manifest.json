@@ -1,0 +1,79 @@
+{
+  "name": "qwen3.8omniflash annotation",
+  "model": "qwen3.8-omni-flash",
+  "dataset": "MERCaptionPlus",
+  "samples": 31327,
+  "successful": 31256,
+  "failed": 71,
+  "failure_categories": {
+    "audit_rejection": 66,
+    "video_too_short": 5
+  },
+  "source_sha256": "c9440428330f9c0f9e7b677bf37a447d2131be135dab831744b66c9a034e0458",
+  "files": [
+    {
+      "name": "successful-001.jsonl.gz",
+      "rows": 5000,
+      "kind": "successful",
+      "bytes": 7424139,
+      "sha256": "8d41d714f1ea6778e78e3dc8efe7ec5ffd1ea3531424f3fd35fdce0d667aaed5"
+    },
+    {
+      "name": "successful-002.jsonl.gz",
+      "rows": 5000,
+      "kind": "successful",
+      "bytes": 7591796,
+      "sha256": "186aa5a77dcf9c224ce100866b057da8c837853e0657cc700bb100c8d33f625b"
+    },
+    {
+      "name": "successful-003.jsonl.gz",
+      "rows": 5000,
+      "kind": "successful",
+      "bytes": 7890055,
+      "sha256": "7cf13a10c1ac6bea9f6db2d8d6949fac78b3e4507725d069993bed5702f72090"
+    },
+    {
+      "name": "successful-004.jsonl.gz",
+      "rows": 5000,
+      "kind": "successful",
+      "bytes": 7721590,
+      "sha256": "12ffb7463d7202929473d889eefa379e00462aea71caa2711671457c8bfcb29f"
+    },
+    {
+      "name": "successful-005.jsonl.gz",
+      "rows": 5000,
+      "kind": "successful",
+      "bytes": 7667061,
+      "sha256": "dbfc3025527b8e4e97e2c9fbf15d95b79c4a9b6de7b33ce0ec9ece2eac837e73"
+    },
+    {
+      "name": "successful-006.jsonl.gz",
+      "rows": 5000,
+      "kind": "successful",
+      "bytes": 7645495,
+      "sha256": "cba44040cdfd9c5a7aeb370f0072b8974caaba4a3338032bc0c4c698617b3f35"
+    },
+    {
+      "name": "successful-007.jsonl.gz",
+      "rows": 1256,
+      "kind": "successful",
+      "bytes": 1977036,
+      "sha256": "d8a5f3d5392a20c0b42df6d664fe5dda1d57469b3525425b5549d75b068c14b3"
+    },
+    {
+      "name": "failed.jsonl",
+      "rows": 71,
+      "kind": "failed",
+      "bytes": 262917,
+      "sha256": "4380510ab5657d80f2ba2c6988646e79d24498fb39d7d54c3e90c6076cc1a8d4"
+    },
+    {
+      "name": "failure-attempt-history.jsonl.gz",
+      "rows": 12,
+      "kind": "archived_attempts",
+      "bytes": 3213,
+      "sha256": "ceb62e50d9c58728deaf52cf05024c118e5128f90b7dc522f466da96271e01f4"
+    }
+  ],
+  "export_note": "Only the account-specific API endpoint is omitted. Original questions, chosen, rejected, media references, responses and failure details are preserved."
+}
