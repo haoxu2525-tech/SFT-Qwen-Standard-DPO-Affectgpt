@@ -1,11 +1,15 @@
 """Epoch30 Omni LoRA -> official DPO -> original AffectGPT evaluation.
 
 Linux/Python 3.10, existing Qwen SFT environment plus requirements-interface.txt.
-Commands: prepare, fetch, candidates, train, export, infer, evaluate.
+Commands: prepare, fetch, candidates, annotate, train, export, infer, evaluate.
 Training requires already labelled --pairs and --eval-pairs; no ranking or
 split creation is performed. Official source files are pinned and unchanged.
+annotate constructs synthetic rejected answers through Qwen's API; it is
+project data preparation, not part of the original DPO algorithm.
 """
 import argparse
+import base64
+import hashlib
 import importlib.util
 import json
 import math
@@ -14,6 +18,8 @@ from pathlib import Path
 import random
 import subprocess
 import sys
+import urllib.request
+from urllib.parse import urlsplit
 
 from dpo_interface import (DPO, AFFECTGPT, SFT_INTERFACE, ADAPTER_REPO,
     ADAPTER_REVISION, add_sft_path, verify_epoch30, read_pairs)
@@ -31,13 +37,18 @@ def enter_affectgpt(args, native=False):
     return execution
 
 
-def training_dataset(args):
-    enter_affectgpt(args, native=True)
+def training_dataset(args, metadata_only=False):
+    enter_affectgpt(args, native=not metadata_only)
     from omegaconf import OmegaConf
     from run_affectgpt_omni import REFERENCE_CONFIG
     from my_affectgpt.datasets.datasets.mercaptionplus_dataset import MERCaptionPlus_Dataset
     cfg = OmegaConf.load(REFERENCE_CONFIG)
-    return MERCaptionPlus_Dataset(dataset_cfg=cfg.datasets.mercaptionplus, model_cfg=cfg.model), cfg
+    # The original constructor supports model_cfg=None for annotation-only use.
+    # No tokenizer, model weights, or GPU are needed for API annotation.
+    if metadata_only and cfg.datasets.mercaptionplus.get("ratio", 1) != 1:
+        raise ValueError("Annotation-only loading requires the complete original dataset")
+    return MERCaptionPlus_Dataset(dataset_cfg=cfg.datasets.mercaptionplus,
+                                 model_cfg=None if metadata_only else cfg.model), cfg
 
 
 def original_row(dataset, sample, label_type, root):
@@ -85,6 +96,149 @@ def candidates(args):
                     max_new_tokens=1200, max_length=2000) for _ in range(2)]
             stream.write(json.dumps(row, ensure_ascii=False, allow_nan=False) + "\n")
             stream.flush()
+
+
+NEGATIVE_MODEL = "qwen3.8-omni-flash"
+# An explicit synthetic-negative instruction, not an upstream DPO prompt.
+NEGATIVE_INSTRUCTION = (
+    "Create one rejected answer for preference training. Inspect the supplied video "
+    "and its embedded audio, the original question/subtitle, and the dataset's "
+    "reference answer. The reference answer will be kept unchanged as the chosen "
+    "answer. Write a plausible but substantively less accurate answer to the same "
+    "question, relative to the reference and the audiovisual evidence. Use the "
+    "same language and answer format as the reference, with comparable length. "
+    "Do not merely paraphrase the reference or produce an equally correct answer. "
+    "Return only the rejected answer, without a heading, explanation of the "
+    "construction, or any statement that it is deliberately incorrect."
+)
+
+
+def qwen_negative(row, video_url, endpoint, api_key, max_tokens):
+    """Official Chat Completions video_url + SSE protocol; no local AV decoding."""
+    payload = dict(model=NEGATIVE_MODEL, modalities=["text"], stream=True,
+                   stream_options={"include_usage": True}, messages=[
+        {"role": "system", "content": NEGATIVE_INSTRUCTION},
+        {"role": "user", "content": [
+            {"type": "video_url", "video_url": {"url": video_url}},
+            {"type": "text", "text": row["prompt"]},
+            {"type": "text", "text": "Dataset reference answer:\n" + row["ground_truth_answer"]}]}])
+    if max_tokens is not None:
+        payload["max_tokens"] = max_tokens
+    request = urllib.request.Request(endpoint + "/chat/completions",
+        data=json.dumps(payload, ensure_ascii=False).encode("utf-8"),
+        headers={"Authorization": "Bearer " + api_key, "Content-Type": "application/json"})
+    result = dict(content="", reasoning_content="", finish_reason=None, usage=None)
+    complete = False
+    # No automatic retry: a timed-out request may already have been billed.
+    with urllib.request.urlopen(request, timeout=300) as response:
+        for line in response:
+            if not line.startswith(b"data:"):
+                continue
+            data = line[5:].strip()
+            if data == b"[DONE]":
+                complete = True
+                break
+            chunk = json.loads(data)
+            if "error" in chunk:
+                raise RuntimeError("Qwen returned a streaming API error; no pair accepted")
+            for key in ("id", "model", "created"):
+                if key in chunk:
+                    result[key] = chunk[key]
+            if chunk.get("usage") is not None:
+                result["usage"] = chunk["usage"]
+            for choice in chunk.get("choices", []):
+                if choice.get("index", 0) != 0:
+                    raise ValueError("Expected exactly one API answer")
+                delta = choice.get("delta", {})
+                for key in ("content", "reasoning_content"):
+                    result[key] += delta.get(key) or ""
+                if choice.get("finish_reason") is not None:
+                    result["finish_reason"] = choice["finish_reason"]
+    result["stream_complete"] = complete
+    return result
+
+
+def video_digest(path):
+    checksum = hashlib.sha256()
+    with path.open("rb") as stream:
+        for chunk in iter(lambda: stream.read(1024 * 1024), b""):
+            checksum.update(chunk)
+    return checksum.hexdigest()
+
+
+def annotate(args):
+    """Keep original targets; request one synthetic negative per original row."""
+    if args.limit is not None and args.limit < 1:
+        raise ValueError("limit must be positive")
+    if args.max_tokens is not None and args.max_tokens < 1:
+        raise ValueError("max-tokens must be positive")
+    endpoint = os.environ.get("DASHSCOPE_BASE_URL", "").rstrip("/")
+    api_key = os.environ.get("DASHSCOPE_API_KEY", "")
+    if not args.dry_run and (not api_key or urlsplit(endpoint).scheme != "https"):
+        raise ValueError("Set DASHSCOPE_API_KEY and your region's HTTPS DASHSCOPE_BASE_URL")
+    dataset, _ = training_dataset(args, metadata_only=True)
+    random.seed(args.seed)
+    rows = [original_row(dataset, sample,
+        dataset.get_cur_label_type(dataset.label_type_candidates, dataset.label_type),
+        args.dataset_root) for sample in dataset.annotation]
+    if not rows or len({row["id"] for row in rows}) != len(rows):
+        raise ValueError("Empty annotations or duplicate sample IDs")
+    rows = rows[:args.limit]
+    urls = json.loads(args.video_urls.read_text(encoding="utf-8")) if args.video_urls else {}
+    # Check every selected media reference before the first paid request.
+    for row in rows:
+        if not isinstance(row["ground_truth_answer"], str) or not row["ground_truth_answer"].strip():
+            raise ValueError(f"{row['id']}: missing original answer")
+        path = (args.dataset_root / row["video"]).resolve()
+        if not path.is_relative_to(args.dataset_root) or not path.is_file():
+            raise ValueError(f"{row['id']}: missing original video or path outside dataset root")
+        if row["id"] in urls:
+            if not isinstance(urls[row["id"]], str) or urlsplit(urls[row["id"]]).scheme != "https":
+                raise ValueError(f"{row['id']}: video URL must be HTTPS")
+        elif 4 * ((path.stat().st_size + 2) // 3) >= 10_000_000:
+            raise ValueError(f"{row['id']}: exceeds API Base64 limit; supply an HTTPS URL "
+                             "for the unchanged original video using --video-urls (JSON id -> URL)")
+    settings = dict(model=NEGATIVE_MODEL, instruction=NEGATIVE_INSTRUCTION,
+                    endpoint=endpoint, seed=args.seed, max_tokens=args.max_tokens)
+    previous = read_pairs(args.output) if args.output.exists() and args.output.stat().st_size else []
+    if len(previous) > len(rows):
+        raise ValueError("Existing output contains more rows than this selection")
+    for old, row in zip(previous, rows):
+        if (any(old.get(k) != v for k, v in row.items()) or
+                old["chosen"] != row["ground_truth_answer"] or
+                old.get("annotation_api", {}).get("settings") != settings):
+            raise ValueError(f"{row['id']}: resume data or API settings differ")
+        media_hash = video_digest(args.dataset_root / row["video"])
+        if old["annotation_api"].get("video_sha256") != media_hash:
+            raise ValueError(f"{row['id']}: original video changed since annotation")
+    print(json.dumps(dict(selected=len(rows), completed=len(previous),
+                          remaining=len(rows)-len(previous), output=str(args.output))))
+    if args.dry_run or len(previous) == len(rows):
+        return
+    args.output.parent.mkdir(parents=True, exist_ok=True)
+    with args.output.open("a", encoding="utf-8", newline="\n") as stream:
+        for index, row in enumerate(rows[len(previous):], start=len(previous)+1):
+            media_path = args.dataset_root / row["video"]
+            media_hash = video_digest(media_path)
+            video_url = urls.get(row["id"])
+            if video_url is None:
+                video_url = "data:video/mp4;base64," + base64.b64encode(media_path.read_bytes()).decode("ascii")
+            result = qwen_negative(row, video_url, endpoint, api_key, args.max_tokens)
+            answer = result["content"]
+            valid = (result["stream_complete"] and result["finish_reason"] == "stop" and
+                     bool(answer.strip()) and answer.strip() != row["ground_truth_answer"].strip())
+            # These are integrity checks, not a semantic score or quality guarantee.
+            row.update(chosen=row["ground_truth_answer"], rejected=answer if valid else "",
+                annotation_api=dict(settings=settings, response=result,
+                    video_sha256=media_hash,
+                    transport="https_url" if row["id"] in urls else "base64"))
+            stream.write(json.dumps(row, ensure_ascii=False, allow_nan=False) + "\n")
+            stream.flush()
+            os.fsync(stream.fileno())
+            if not valid:
+                raise ValueError(f"{row['id']}: incomplete, empty or identical answer; raw response "
+                                 "saved with empty rejected. Resolve before resuming/training.")
+            print(json.dumps(dict(completed=index, total=len(rows), id=row["id"], usage=result["usage"])))
 
 
 def train(args):
@@ -193,7 +347,7 @@ def evaluate(args):
 def main():
     parser = argparse.ArgumentParser(description=__doc__)
     commands = parser.add_subparsers(dest="command", required=True)
-    for name in ("prepare", "fetch", "candidates", "train", "infer", "evaluate"):
+    for name in ("prepare", "fetch", "candidates", "annotate", "train", "infer", "evaluate"):
         sub = commands.add_parser(name)
         sub.add_argument("--runtime", type=Path, required=True)
         if name != "fetch":
@@ -204,6 +358,16 @@ def main():
             sub.add_argument("--output", type=Path, required=True)
         if name == "candidates":
             sub.add_argument("--seed", type=int, default=0)
+        if name == "annotate":
+            sub.add_argument("--output", type=Path, required=sys.platform != "win32",
+                             default=Path("C:/SFT Qwen/qwen3.8-omni-flash-preferences.jsonl")
+                             if sys.platform == "win32" else None)
+            sub.add_argument("--seed", type=int, default=0)
+            sub.add_argument("--limit", type=int, help="First N original rows; omit for the full dataset")
+            sub.add_argument("--max-tokens", type=int, help="Optional API output limit including thinking")
+            sub.add_argument("--video-urls", type=Path,
+                             help="Optional JSON mapping sample IDs to HTTPS URLs of original videos")
+            sub.add_argument("--dry-run", action="store_true", help="Check inputs without API calls/writes")
         if name == "train":
             sub.add_argument("--pairs", type=Path, required=True,
                              help="Original training rows with already labelled chosen/rejected")
