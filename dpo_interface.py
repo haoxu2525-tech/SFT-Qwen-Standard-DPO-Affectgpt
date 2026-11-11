@@ -1,8 +1,12 @@
 """Native Omni signatures around the unchanged official DPO implementation."""
 import contextlib
+import ast
+from functools import lru_cache
 import hashlib
+import importlib.util
 import json
 from pathlib import Path
+import runpy
 import sys
 import torch
 
@@ -17,6 +21,49 @@ ADAPTER_REVISION = "06e534a6f43782296b33e134c6d52ce324b100c8"
 def add_sft_path():
     if str(SFT_INTERFACE) not in sys.path:
         sys.path.insert(0, str(SFT_INTERFACE))
+
+
+@lru_cache(maxsize=1)
+def original_audio_loader():
+    """Execute the pinned author's functions, without importing unrelated encoders."""
+    import torchaudio
+    package = importlib.util.find_spec("pytorchvideo")
+    sampler_path = Path(next(iter(package.submodule_search_locations))) / "data/clip_sampling.py"
+    sampler = runpy.run_path(str(sampler_path))["ConstantClipsPerVideoSampler"]
+    source = AFFECTGPT / "my_affectgpt/models/ImageBind/data.py"
+    tree = ast.parse(source.read_text(encoding="utf-8"))
+    namespace = dict(torch=torch, torchaudio=torchaudio,
+                     ConstantClipsPerVideoSampler=sampler)
+    for name in ("get_clip_timepoints", "load_audio"):
+        node, = [n for n in tree.body if isinstance(n, ast.FunctionDef) and n.name == name]
+        exec(compile(ast.Module(body=[node], type_ignores=[]), str(source), "exec"), namespace)
+    return namespace["load_audio"]
+
+
+def encode_sampled_audio(processor, prompt, video, audio):
+    """Original AffectGPT WAV sampling; native Omni video and separate audio inputs."""
+    add_sft_path()
+    from omni_components import native_messages, install_short_video_compatibility
+    from qwen_omni_utils import process_mm_info
+    install_short_video_compatibility()
+    clips = original_audio_loader()([audio], "cpu", clips_per_video=8)[0]
+    if clips.shape != (8, 1, 32000):
+        raise ValueError(f"Original audio sampler returned {tuple(clips.shape)}: {audio}")
+    messages = native_messages(prompt, video)
+    # Discontinuous clips stay distinct; never invent synchronized AV timestamps.
+    messages[1]["content"][1:1] = [
+        {"type": "audio", "audio": clip[0].numpy()} for clip in clips]
+    text = processor.apply_chat_template(messages, tokenize=False, add_generation_prompt=True)
+    audios, images, videos, video_kwargs = process_mm_info(
+        messages, use_audio_in_video=False, return_video_kwargs=True)
+    if len(audios) != 8 or len(videos) != 1:
+        raise ValueError("Expected one video and the eight original audio clips")
+    inputs = dict(processor(text=text, images=images, videos=videos, audio=audios,
+        return_tensors="pt", add_special_tokens=False, padding=False,
+        truncation=False, use_audio_in_video=False, fps=video_kwargs["fps"][0],
+        do_resize=False))
+    inputs["use_audio_in_video"] = False
+    return inputs
 
 
 def verify_epoch30(adapter):
@@ -58,7 +105,7 @@ def read_pairs(path):
     if not rows or len({row["id"] for row in rows}) != len(rows):
         raise ValueError("Empty preference data or duplicate sample IDs")
     for row in rows:
-        for key in ("prompt", "video", "chosen", "rejected"):
+        for key in ("prompt", "video", "audio", "chosen", "rejected"):
             if not isinstance(row.get(key), str) or not row[key].strip():
                 raise ValueError(f"{row['id']}: missing {key}; supply already labelled preferences")
         if row["chosen"] == row["rejected"]:
@@ -95,7 +142,7 @@ class OmniModel(torch.nn.Module):
         if any(set(row) != keys for row in self._media):
             raise ValueError("Inconsistent native AV fields")
         inputs = {key: torch.cat([row[key] for row in self._media], dim=0) for key in keys}
-        inputs.update(input_ids=input_ids, attention_mask=attention_mask, use_audio_in_video=True)
+        inputs.update(input_ids=input_ids, attention_mask=attention_mask, use_audio_in_video=False)
         return thinker_inputs(self.thinker, inputs)
 
     def precision_context(self):
@@ -116,11 +163,10 @@ class PairData:
     """Native prompt serialization; upstream owns response tokens and batching."""
     def __init__(self, train_rows, eval_rows, processor, dataset_root, tokenize):
         add_sft_path()
-        from omni_components import encode_prompt
         self.rows = {"train": train_rows, "test": eval_rows}
         self.processor = processor
         self.root = Path(dataset_root).resolve()
-        self.encode = encode_prompt
+        self.encode = encode_sampled_audio
         self.tokenize_response = tokenize
 
     def get_dataset(self, name, split, **kwargs):
@@ -130,7 +176,7 @@ class PairData:
         for row in self.rows[split]:
             # Routing identity only; it never becomes model text. Distinct videos
             # must not collapse when their original question/subtitle is equal.
-            key = json.dumps({k: row[k] for k in ("id", "prompt", "video")},
+            key = json.dumps({k: row[k] for k in ("id", "prompt", "video", "audio")},
                              ensure_ascii=False, sort_keys=True)
             result[key] = {"responses": [row["chosen"], row["rejected"]],
                            "pairs": [(0, 1)], "sft_target": row["chosen"]}
@@ -140,9 +186,10 @@ class PairData:
                  max_length, max_prompt_length):
         metadata = json.loads(prompt)
         source = (self.root / metadata["video"]).resolve()
-        if not source.is_relative_to(self.root):
-            raise ValueError("Video escapes the original dataset root")
-        native = dict(self.encode(self.processor, metadata["prompt"], str(source)))
+        audio = (self.root / metadata["audio"]).resolve()
+        if not source.is_relative_to(self.root) or not audio.is_relative_to(self.root):
+            raise ValueError("Media escapes the original dataset root")
+        native = dict(self.encode(self.processor, metadata["prompt"], str(source), str(audio)))
         prefix = native.pop("input_ids")[0].tolist()
         prompt_mask = native.pop("attention_mask")[0].tolist()
         native.pop("use_audio_in_video")
@@ -180,7 +227,7 @@ class PairData:
                   "rows": [], "errors": []}
         for split, rows in self.rows.items():
             for index, row in enumerate(rows):
-                route = json.dumps({k: row[k] for k in ("id", "prompt", "video")})
+                route = json.dumps({k: row[k] for k in ("id", "prompt", "video", "audio")})
                 try:
                     item = self.tokenize(route, row["chosen"], row["rejected"], "keep_end",
                                          tokenizer, max_length, max_prompt_length)

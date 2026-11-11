@@ -55,8 +55,9 @@ def original_row(dataset, sample, label_type, root):
     qa = dataset.get_qa_pairs(dataset.dataset, label_type, sample)
     prompt = dataset.get_prompt_for_multimodal("textonly", sample["subtitle"], qa["question"])
     video = Path(dataset._get_video_path(sample)).resolve().relative_to(root).as_posix()
+    audio = Path(dataset._get_audio_path(sample)).resolve().relative_to(root).as_posix()
     return dict(id=sample["name"], dataset="MERCaptionPlus", split="train", label_type=label_type,
-        prompt=prompt, video=video, ground_truth_answer=qa["answer"], annotation=dict(sample))
+        prompt=prompt, video=video, audio=audio, ground_truth_answer=qa["answer"], annotation=dict(sample))
 
 
 def fetch(args):
