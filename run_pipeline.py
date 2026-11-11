@@ -128,6 +128,8 @@ def qwen_negative(row, video_url, endpoint, api_key, max_tokens):
     request = urllib.request.Request(endpoint + "/chat/completions",
         data=json.dumps(payload, ensure_ascii=False).encode("utf-8"),
         headers={"Authorization": "Bearer " + api_key, "Content-Type": "application/json"})
+    if video_url.startswith("oss://"):
+        request.add_header("X-DashScope-OssResourceResolve", "enable")
     result = dict(content="", reasoning_content="", finish_reason=None, usage=None)
     complete = False
     # No automatic retry: a timed-out request may already have been billed.
