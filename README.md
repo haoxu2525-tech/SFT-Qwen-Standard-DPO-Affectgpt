@@ -119,31 +119,12 @@ reference, and annotation. Unknown IDs and modified source data fail. Each run
 writes `membership.json` and `excluded-ids.txt`, rather than requiring exact equality
 with all 31,327 source IDs. MELD is not included in this training set.
 
-## Native length preflight
+## Direct DPO training
 
-This is an explicit, optional diagnostic, not part of the original DPO trainer.
-Normal `train` runs do not repeat the full scan or run a preliminary smoke test.
-Each training batch still rejects overlong inputs rather than silently truncating.
-
-Use the pinned processor snapshot, original dataset, and a new output directory:
-
-```bash
-python run_pipeline.py train \
-  --runtime ./runtime --dataset-root /path/to/dataset \
-  --snapshot /path/to/pinned-qwen-snapshot \
-  --pairs "qwen3.8omniflash annotation" \
-  --output ./native-length-check --preflight-only --preflight-workers 8
-```
-
-Preflight loads no model weights and starts no GPU training. It runs the same
-native encoder for every selected row, measures the complete audiovisual prompt
-plus each answer and EOS, and saves maxima, longest IDs, capacity violations, and
-encoding errors in `length-check.json`. Parallel workers only distribute CPU work;
-they do not change the media representation. The configured limit is 4,096 tokens.
-Overflowing rows are reported with their full lengths, never silently truncated
-or excluded. `--preflight-only` needs neither an adapter nor preference-validation
-pairs. Actual training still requires an explicit adapter, beta, and eval pairs;
-this code does not invent a validation split.
+Training loads the supplied SFT weights and fixed preference pairs, then calls
+the unchanged official DPO worker. The added full-dataset preflight and
+20-step diagnostic have been removed. Per-batch capacity handling preserves
+complete audiovisual input and answers without silent truncation.
 
 `--adapter` accepts either the checksummed Hugging Face epoch-030 adapter directory
 or the original SFT runner file `checkpoint_000030_loss_0.737.pth` (SHA-256
@@ -158,8 +139,7 @@ checkpointing enabled. In the official DPO implementation, batch size already
 includes accumulation: this means eight preference pairs per optimizer update,
 one pair per microbatch, and 3,907 updates per full training epoch. The chosen and
 rejected sequences are both evaluated for each pair. This is not a claim that
-eight simultaneous audiovisual pairs fit GPU memory; CPU preflight does not
-measure forward/backward VRAM.
+eight simultaneous audiovisual pairs fit GPU memory.
 
 ## Text audit
 
@@ -179,4 +159,4 @@ this warrants review and is not proof of incorrect labels. Human review is still
 pending; no additional rows have been excluded based on these heuristics.
 
 Run CPU contract checks with `python -m unittest test_dpo_native_input test_annotation_recovery`.
-Real-data preflight results and GPU memory checks are separate evidence.
+Previously recorded length scans remain historical evidence; they are not a training prerequisite.

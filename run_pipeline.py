@@ -250,17 +250,17 @@ def annotate(args):
 
 
 def train(args):
-    if not args.preflight_only and (sys.platform != "linux" or sys.version_info[:2] != (3, 10)):
+    if sys.platform != "linux" or sys.version_info[:2] != (3, 10):
         raise RuntimeError("Use Linux/Python 3.10 for the unchanged official DPO NumPy seed handling")
-    if not args.preflight_only and (args.beta is None or not math.isfinite(args.beta) or args.beta <= 0):
+    if args.beta is None or not math.isfinite(args.beta) or args.beta <= 0:
         raise ValueError("beta must be finite and positive")
-    if not args.preflight_only and args.adapter is None:
+    if args.adapter is None:
         raise ValueError("Training requires the verified epoch30 --adapter")
     if not math.isfinite(args.lr) or args.lr <= 0 or args.max_length < 2:
         raise ValueError("lr must be finite and positive; max-length must be at least 2")
     os.environ.setdefault("PYTORCH_CUDA_ALLOC_CONF", "expandable_segments:True")
-    if not args.preflight_only and args.eval_pairs is None:
-        raise ValueError('Training requires explicit --eval-pairs; preflight does not create a split')
+    if args.eval_pairs is None:
+        raise ValueError('Training requires explicit --eval-pairs; no automatic split')
     rows = read_pairs(args.pairs)
     eval_rows = read_pairs(args.eval_pairs) if args.eval_pairs else []
     from annotate_api import original_dataset
@@ -280,15 +280,6 @@ def train(args):
     print(json.dumps(dict(original_samples=membership['original_count'],selected_samples=len(rows),
                           excluded_samples=len(membership['excluded_ids']),exclusions_file=str(args.output/'excluded-ids.txt'))),flush=True)
     add_sft_path()
-    from omni_components import load_processor
-    from dpo_interface import PairData
-    if args.preflight_only:
-        processor=load_processor(str(args.snapshot))
-        data=PairData(rows,eval_rows,processor,args.dataset_root,None)
-        report=data.preflight(processor.tokenizer,args.max_length,args.max_length-1,args.output/'length-check.json',
-                              workers=args.preflight_workers, snapshot=args.snapshot)
-        print(json.dumps(dict(preflight_only=True,summary=report['summary'],over_max_length_rows=report['over_max_length_rows'])),flush=True)
-        return
     sys.path.insert(0, str(DPO))
     import torch
     from omegaconf import OmegaConf
@@ -418,7 +409,7 @@ def main():
                              help="Original training rows with already labelled chosen/rejected")
             sub.add_argument("--eval-pairs", type=Path,
                              help="Explicitly supplied preference-validation rows; no automatic split")
-            sub.add_argument("--beta", type=float, help="Required for training; not needed for --preflight-only")
+            sub.add_argument("--beta", type=float, required=True, help="DPO beta")
             sub.add_argument("--lr", type=float, default=5e-6)
             sub.add_argument("--batch-size", type=int, default=8,
                              help="Official DPO effective batch per optimizer update, including accumulation")
@@ -430,10 +421,6 @@ def main():
             sub.add_argument("--gradient-checkpointing", action=argparse.BooleanOptionalAction, default=True)
             sub.add_argument("--max-length", type=int, default=4096,
                              help="Native prompt plus full answer/EOS; overflow fails without truncation")
-            sub.add_argument("--preflight-only", action="store_true",
-                             help="Scan all train/eval lengths on CPU and exit before GPU model loading")
-            sub.add_argument("--preflight-workers", type=int, default=1,
-                             help="CPU processes for the identical SFT encoder; does not change media settings")
         if name == "infer":
             sub.add_argument("--checkpoints", type=Path, required=True)
             sub.add_argument("--checkpoint-epoch", type=int, default=1,

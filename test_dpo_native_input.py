@@ -7,15 +7,14 @@ import json
 from pathlib import Path
 import sys
 import tempfile
-import time
 from types import SimpleNamespace
 import unittest
 from unittest.mock import patch
 
 ROOT = Path(__file__).resolve().parent
 tree = ast.parse((ROOT/'dpo_interface.py').read_text(encoding='utf-8'))
-names = {'read_pairs','membership_report','measure_pair','PairData'}
-ns = dict(Path=Path, gzip=gzip, json=json, contextlib=contextlib, time=time,
+names = {'read_pairs','membership_report','PairData'}
+ns = dict(Path=Path, gzip=gzip, json=json, contextlib=contextlib,
           add_sft_path=lambda: None)
 exec(compile(ast.Module(body=[n for n in tree.body if getattr(n,'name',None) in names],
                         type_ignores=[]),'dpo_interface.py','exec'),ns)
@@ -51,22 +50,6 @@ class NativeInputTests(unittest.TestCase):
         p.write_text(json.dumps(dict(self.row,ground_truth_answer='different')))
         with self.assertRaises(ValueError):ns['read_pairs'](p)
 
-    def test_overflow_is_measured_without_clipping_or_losing_row(self):
-        info,error=ns['measure_pair'](self.encode,None,self.tokenizer,self.root,('train',self.row),10,9)
-        self.assertEqual((info['prompt'],info['total'],info['chosen_after']),(20,24,4))
-        self.assertEqual(error['kind'],'length_limit')
-
-    def test_answer_overflow_also_fails(self):
-        info,error=ns['measure_pair'](self.encode,None,self.tokenizer,self.root,('train',self.row),22,21)
-        self.assertEqual(error['kind'],'length_limit')
-        self.assertEqual(info['chosen_before'],info['chosen_after'])
-
-    def test_false_audio_flag_and_path_escape_fail(self):
-        wrong=lambda *args:dict(input_ids=SimpleNamespace(shape=(1,5)),use_audio_in_video=False)
-        for encode,row in [(wrong,self.row),(self.encode,dict(self.row,video='../escape.mp4'))]:
-            info,error=ns['measure_pair'](encode,None,self.tokenizer,self.root,('train',row),100,99)
-            self.assertIsNone(info)
-            self.assertEqual(error['kind'],'encoding_error')
 
     def test_pair_route_uses_shared_encoder_and_ignores_api_metadata(self):
         with patch.dict(sys.modules,{'omni_components':SimpleNamespace(encode_prompt=self.encode)}):
@@ -77,16 +60,5 @@ class NativeInputTests(unittest.TestCase):
         self.assertEqual(pair['responses'],['yes','no'])
         self.assertEqual(pair['pairs'],[(0,1)])
 
-    def test_preflight_records_all_rows_before_raising(self):
-        with patch.dict(sys.modules,{'omni_components':SimpleNamespace(encode_prompt=self.encode)}):
-            data=ns['PairData']([self.row,dict(self.row,id='b')],[],None,self.root,None)
-        p=self.root/'report.json'
-        with self.assertRaises(ValueError):data.preflight(self.tokenizer,10,9,p)
-        report=json.loads(p.read_text())
-        self.assertTrue(report['complete'])
-        self.assertEqual(report['processed'],2)
-        self.assertEqual(report['summary']['train']['max_prompt'],20)
-        self.assertEqual(report['over_max_length_rows'],2)
-        self.assertEqual(report['truncated_rows'],0)
 
 if __name__=='__main__':unittest.main()

@@ -1,13 +1,10 @@
 """Native Omni signatures around the unchanged official DPO implementation."""
 import contextlib
-from concurrent.futures import ProcessPoolExecutor
 import gzip
 import hashlib
 import json
-import multiprocessing
 from pathlib import Path
 import sys
-import time
 import torch
 
 ROOT = Path(__file__).resolve().parent
@@ -121,48 +118,6 @@ def membership_report(rows, original_ids):
                 excluded_ids=sorted(original_ids-set(ids)))
 
 
-def measure_pair(encode, processor, tokenizer, root, item, max_length, max_prompt_length):
-    """Measure full native inputs and answers; never truncate media or text."""
-    split, row = item
-    try:
-        source = (root / row['video']).resolve()
-        if not source.is_relative_to(root):
-            raise ValueError('Video escapes dataset root')
-        native = encode(processor, row['prompt'], str(source))
-        if native.get('use_audio_in_video') is not True:
-            raise ValueError('Expected synchronized native AV input')
-        prompt = int(native['input_ids'].shape[-1])
-        lengths = [len(tokenizer(row[key], add_special_tokens=False)['input_ids']) + 1
-                   for key in ('chosen', 'rejected')]
-        info = dict(split=split, id=row['id'], prompt=prompt,
-                    chosen_before=lengths[0], rejected_before=lengths[1],
-                    chosen_after=lengths[0], rejected_after=lengths[1],
-                    total=prompt+max(lengths), total_before=prompt+max(lengths))
-        error = None
-        if prompt > max_prompt_length or info['total'] > max_length:
-            error = dict(split=split, id=row['id'], kind='length_limit',
-                         error='Full native input plus answer exceeds configured capacity; no truncation applied')
-        return info, error
-    except Exception as exc:
-        return None, dict(split=split, id=row['id'], kind='encoding_error',
-                          error=f'{type(exc).__name__}: {exc}')
-
-
-def initialize_preflight_worker(snapshot, root, max_length, max_prompt_length):
-    global _preflight_worker
-    torch.set_num_threads(1)
-    add_sft_path()
-    from omni_components import load_processor, encode_prompt
-    processor = load_processor(str(snapshot))
-    _preflight_worker = (encode_prompt, processor, processor.tokenizer, Path(root),
-                         max_length, max_prompt_length)
-
-
-def measure_in_worker(item):
-    encode, processor, tokenizer, root, max_length, max_prompt_length = _preflight_worker
-    return measure_pair(encode, processor, tokenizer, root, item, max_length, max_prompt_length)
-
-
 class OmniModel(torch.nn.Module):
     """Supply native AV tensors to the original forward/generate call signatures.
 
@@ -273,50 +228,6 @@ class PairData:
             rejected_before=lengths[1], chosen_after=len(item["chosen_input_ids"])-len(prefix),
             rejected_after=len(item["rejected_input_ids"])-len(prefix))
         return item
-
-    def preflight(self, tokenizer, max_length, max_prompt_length, report_path, workers=1, snapshot=None):
-        """Scan all real rows before allocating either GPU model; never drop rows."""
-        if workers < 1 or (workers > 1 and snapshot is None):
-            raise ValueError('Preflight requires positive workers and a processor snapshot for parallel work')
-        started = time.monotonic()
-        report = {"max_length": max_length, "max_prompt_length": max_prompt_length,
-                  "encoder": "SFT omni_components.encode_prompt", "use_audio_in_video": True,
-                  "workers": workers, "truncated_rows": 0, "rows": [], "errors": []}
-        items = [(split, {k: row[k] for k in ('id','video','prompt','chosen','rejected')})
-                 for split, rows in self.rows.items() for row in rows]
-        with contextlib.ExitStack() as stack:
-            if workers == 1:
-                results = (measure_pair(self.encode, self.processor, tokenizer, self.root, item,
-                                        max_length, max_prompt_length) for item in items)
-            else:
-                pool = stack.enter_context(ProcessPoolExecutor(max_workers=workers,
-                    mp_context=multiprocessing.get_context('spawn'),
-                    initializer=initialize_preflight_worker,
-                    initargs=(str(snapshot), str(self.root), max_length, max_prompt_length)))
-                results = pool.map(measure_in_worker, items, chunksize=8)
-            for index, (info, error) in enumerate(results, 1):
-                if info is not None: report['rows'].append(info)
-                if error is not None: report['errors'].append(error)
-                report['processed'] = index
-                if index % 100 == 0:
-                    report['elapsed_seconds'] = round(time.monotonic()-started, 1)
-                    print(json.dumps(dict(preflight_processed=index, total=len(items),
-                                          errors=len(report['errors']), elapsed_seconds=report['elapsed_seconds'])), flush=True)
-                    Path(report_path).write_text(json.dumps(report,ensure_ascii=False),encoding='utf-8')
-        report['elapsed_seconds'] = round(time.monotonic()-started, 1)
-        report['complete'] = True
-        report['over_max_length_rows'] = sum(r['total']>max_length for r in report['rows'])
-        report['summary'] = {split: dict(rows=len(items),
-            max_prompt=max((r['prompt'] for r in items),default=0),
-            max_total_before_truncation=max((r['total_before'] for r in items),default=0),
-            over_max_length=sum(r['total_before']>max_length for r in items),
-            longest_ids=[r['id'] for r in sorted(items,key=lambda r:r['total'],reverse=True)[:10]])
-            for split in self.rows for items in [[r for r in report['rows'] if r['split']==split]]}
-        Path(report_path).write_text(json.dumps(report, ensure_ascii=False, indent=2), encoding="utf-8")
-        if report["errors"]:
-            raise ValueError(f"Preflight found {len(report['errors'])} invalid rows; see {report_path}. "
-                             "No GPU training started; no rows were silently excluded.")
-        return report
 
 
 def trainer_class(upstream):
