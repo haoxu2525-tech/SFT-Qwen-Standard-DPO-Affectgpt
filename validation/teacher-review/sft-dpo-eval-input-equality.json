@@ -1,0 +1,22 @@
+{
+  "actual_cpu_input_regression_passed": true,
+  "model_weights_loaded": false,
+  "sample_ids": [
+    "samplenew3_00000058",
+    "samplenew3_00001105",
+    "samplenew3_00098643"
+  ],
+  "sft_dpo_eval_tensors_identical": true,
+  "checked_fields": [
+    "input_ids",
+    "attention_mask",
+    "use_audio_in_video",
+    "feature_attention_mask",
+    "input_features",
+    "pixel_values_videos",
+    "video_grid_thw",
+    "video_second_per_grid"
+  ],
+  "sft_dpo_chosen_sequence_and_labels_identical": true,
+  "scope": "Three real original videos; actual pinned SFT collator and DPO tokenizer, evaluation input adapter with model-call capture; no GPU forward/backward or generation benchmark."
+}

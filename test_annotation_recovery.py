@@ -12,6 +12,7 @@ from types import SimpleNamespace
 import unittest
 from unittest.mock import Mock, patch
 import urllib.error
+import urllib.request
 from urllib.parse import urlsplit
 import uuid
 import base64
@@ -69,6 +70,23 @@ class RecoveryTests(unittest.TestCase):
         r, sleep = self.run_one()
         self.assertEqual(r["rejected"], "rejected")
         self.assertGreaterEqual(sleep.call_args.args[0], 60)
+
+    def test_streaming_audit_rejection_retains_code_and_skips_retry(self):
+        tree = ast.parse(Path(__file__).with_name('run_pipeline.py').read_text(encoding='utf-8'))
+        ns = dict(globals(), NEGATIVE_MODEL='model', NEGATIVE_INSTRUCTION='instruction')
+        node = next(n for n in tree.body if getattr(n, 'name', None) == 'qwen_negative')
+        exec(compile(ast.Module(body=[node], type_ignores=[]), 'run_pipeline.py', 'exec'), ns)
+        event = b'data: {"error":{"code":"data_inspection_failed","message":"audit"},"id":"request-id"}\n'
+        with patch.object(urllib.request, 'urlopen', return_value=io.BytesIO(event)):
+            with self.assertRaises(RuntimeError) as caught:
+                ns['qwen_negative'](self.row, 'https://example.com/video', 'https://api.example', 'secret', None)
+        self.assertEqual(caught.exception.api_error['code'], 'data_inspection_failed')
+        self.ns['qwen_negative'].side_effect = caught.exception
+        record, sleep = self.run_one()
+        self.assertTrue(self.ns['input_rejected'](record))
+        self.assertEqual(record['annotation_api']['error']['request_id'], 'request-id')
+        self.assertEqual(self.ns['qwen_negative'].call_count, 1)
+        sleep.assert_not_called()
 
     def test_upload_streams_and_hides_credentials_from_argv(self):
         policy = dict(upload_host="https://bucket.oss-cn-beijing.aliyuncs.com", upload_dir="private",

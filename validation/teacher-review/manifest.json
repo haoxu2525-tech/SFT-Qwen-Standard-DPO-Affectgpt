@@ -1,0 +1,56 @@
+{
+  "annotation_commit": "802cb59f9d7b273f93dd82baea91319e0cc14962",
+  "manual_review_completed": false,
+  "manual_review_samples": 61,
+  "style_probe_versions": {
+    "numpy": "1.26.4",
+    "scikit-learn": "1.4.2"
+  },
+  "files": [
+    {
+      "name": "all-field-chinese-summary.json",
+      "sha256": "01e8e6fd213f85b10f304a769d4bf99bf63065206394cd1cc3cd1cdfef953f6a",
+      "bytes": 5034
+    },
+    {
+      "name": "excluded-ids.txt",
+      "sha256": "8191b0f6efb4e6f44b0a0c84d79e8cec0b9496b5f5868061f368b18610362691",
+      "bytes": 1420
+    },
+    {
+      "name": "language-review.csv",
+      "sha256": "3c64347aaf68a57b810461e43b95bd5386f2b14da73635960a760eb71ac6460a",
+      "bytes": 373
+    },
+    {
+      "name": "manual-review-sample.jsonl",
+      "sha256": "64acc08fc89ca6454b8eb0ccadc5ef90f149ea2c49e01f59eb7b8e6232177110",
+      "bytes": 89529
+    },
+    {
+      "name": "native-environment.json",
+      "sha256": "871e1c096c619046469bf08b64ff708dff54c60f08261ddefde41e552f7f557a",
+      "bytes": 1580
+    },
+    {
+      "name": "native-length-summary.json",
+      "sha256": "ec7b4492b8c088f53292d13b85a83bad24529207b0492f91f78618e7a1689b1d",
+      "bytes": 6279
+    },
+    {
+      "name": "native-lengths.jsonl.gz",
+      "sha256": "1f3baf7fcbfe8fca9330cab9da769d9eea77d4a2059d2f9d5640480231abfb68",
+      "bytes": 489882
+    },
+    {
+      "name": "preference-audit-summary.json",
+      "sha256": "f82f5b431df0d62e034e2a8aa8b449a51b5efedf09f36106e01d72db624682c6",
+      "bytes": 15761
+    },
+    {
+      "name": "sft-dpo-eval-input-equality.json",
+      "sha256": "8cdf5df9448e610a11f1103be8028a577e4f27620b458a40e7094d2f287253c2",
+      "bytes": 691
+    }
+  ]
+}

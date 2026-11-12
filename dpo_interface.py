@@ -1,13 +1,13 @@
 """Native Omni signatures around the unchanged official DPO implementation."""
 import contextlib
-import ast
-from functools import lru_cache
+from concurrent.futures import ProcessPoolExecutor
+import gzip
 import hashlib
-import importlib.util
 import json
+import multiprocessing
 from pathlib import Path
-import runpy
 import sys
+import time
 import torch
 
 ROOT = Path(__file__).resolve().parent
@@ -21,49 +21,6 @@ ADAPTER_REVISION = "06e534a6f43782296b33e134c6d52ce324b100c8"
 def add_sft_path():
     if str(SFT_INTERFACE) not in sys.path:
         sys.path.insert(0, str(SFT_INTERFACE))
-
-
-@lru_cache(maxsize=1)
-def original_audio_loader():
-    """Execute the pinned author's functions, without importing unrelated encoders."""
-    import torchaudio
-    package = importlib.util.find_spec("pytorchvideo")
-    sampler_path = Path(next(iter(package.submodule_search_locations))) / "data/clip_sampling.py"
-    sampler = runpy.run_path(str(sampler_path))["ConstantClipsPerVideoSampler"]
-    source = AFFECTGPT / "my_affectgpt/models/ImageBind/data.py"
-    tree = ast.parse(source.read_text(encoding="utf-8"))
-    namespace = dict(torch=torch, torchaudio=torchaudio,
-                     ConstantClipsPerVideoSampler=sampler)
-    for name in ("get_clip_timepoints", "load_audio"):
-        node, = [n for n in tree.body if isinstance(n, ast.FunctionDef) and n.name == name]
-        exec(compile(ast.Module(body=[node], type_ignores=[]), str(source), "exec"), namespace)
-    return namespace["load_audio"]
-
-
-def encode_sampled_audio(processor, prompt, video, audio):
-    """Original AffectGPT WAV sampling; native Omni video and separate audio inputs."""
-    add_sft_path()
-    from omni_components import native_messages, install_short_video_compatibility
-    from qwen_omni_utils import process_mm_info
-    install_short_video_compatibility()
-    clips = original_audio_loader()([audio], "cpu", clips_per_video=8)[0]
-    if clips.shape != (8, 1, 32000):
-        raise ValueError(f"Original audio sampler returned {tuple(clips.shape)}: {audio}")
-    messages = native_messages(prompt, video)
-    # Discontinuous clips stay distinct; never invent synchronized AV timestamps.
-    messages[1]["content"][1:1] = [
-        {"type": "audio", "audio": clip[0].numpy()} for clip in clips]
-    text = processor.apply_chat_template(messages, tokenize=False, add_generation_prompt=True)
-    audios, images, videos, video_kwargs = process_mm_info(
-        messages, use_audio_in_video=False, return_video_kwargs=True)
-    if len(audios) != 8 or len(videos) != 1:
-        raise ValueError("Expected one video and the eight original audio clips")
-    inputs = dict(processor(text=text, images=images, videos=videos, audio=audios,
-        return_tensors="pt", add_special_tokens=False, padding=False,
-        truncation=False, use_audio_in_video=False, fps=video_kwargs["fps"][0],
-        do_resize=False))
-    inputs["use_audio_in_video"] = False
-    return inputs
 
 
 def verify_epoch30(adapter):
@@ -100,17 +57,81 @@ def load_sft_model(snapshot, adapter, device="cuda:0", trainable=False):
 
 def read_pairs(path):
     """Read supplied preferences, without judging, filtering or creating splits."""
-    with Path(path).open(encoding="utf-8") as stream:
-        rows = [json.loads(line) for line in stream if line.strip()]
+    path = Path(path)
+    if path.is_dir():
+        from audit_preferences import rows_from
+        rows = [row for row, _, _ in rows_from(path)]
+    else:
+        opener = gzip.open if path.suffix == '.gz' else open
+        with opener(path, 'rt', encoding="utf-8") as stream:
+            rows = [json.loads(line) for line in stream if line.strip()]
     if not rows or len({row["id"] for row in rows}) != len(rows):
         raise ValueError("Empty preference data or duplicate sample IDs")
     for row in rows:
-        for key in ("prompt", "video", "audio", "chosen", "rejected"):
+        for key in ("prompt", "video", "chosen", "rejected"):
             if not isinstance(row.get(key), str) or not row[key].strip():
                 raise ValueError(f"{row['id']}: missing {key}; supply already labelled preferences")
         if row["chosen"] == row["rejected"]:
             raise ValueError(f"{row['id']}: identical answers do not specify a preference")
+        if 'ground_truth_answer' in row and row['chosen'] != row['ground_truth_answer']:
+            raise ValueError(f"{row['id']}: changed chosen answer")
     return rows
+
+
+def membership_report(rows, original_ids):
+    original_ids = set(original_ids)
+    ids = [r['id'] for r in rows]
+    if len(ids) != len(set(ids)):
+        raise ValueError('Duplicated preference IDs')
+    unknown = sorted(set(ids) - original_ids)
+    if unknown:
+        raise ValueError(f'Preference IDs outside original training annotations: {unknown}')
+    if not ids:
+        raise ValueError('No successful preference pairs supplied')
+    return dict(original_count=len(original_ids), selected_count=len(ids),
+                excluded_ids=sorted(original_ids-set(ids)))
+
+
+def measure_pair(encode, processor, tokenizer, root, item, max_length, max_prompt_length):
+    """Measure full native inputs and answers; never truncate media or text."""
+    split, row = item
+    try:
+        source = (root / row['video']).resolve()
+        if not source.is_relative_to(root):
+            raise ValueError('Video escapes dataset root')
+        native = encode(processor, row['prompt'], str(source))
+        if native.get('use_audio_in_video') is not True:
+            raise ValueError('Expected synchronized native AV input')
+        prompt = int(native['input_ids'].shape[-1])
+        lengths = [len(tokenizer(row[key], add_special_tokens=False)['input_ids']) + 1
+                   for key in ('chosen', 'rejected')]
+        info = dict(split=split, id=row['id'], prompt=prompt,
+                    chosen_before=lengths[0], rejected_before=lengths[1],
+                    chosen_after=lengths[0], rejected_after=lengths[1],
+                    total=prompt+max(lengths), total_before=prompt+max(lengths))
+        error = None
+        if prompt > max_prompt_length or info['total'] > max_length:
+            error = dict(split=split, id=row['id'], kind='length_limit',
+                         error='Full native input plus answer exceeds configured capacity; no truncation applied')
+        return info, error
+    except Exception as exc:
+        return None, dict(split=split, id=row['id'], kind='encoding_error',
+                          error=f'{type(exc).__name__}: {exc}')
+
+
+def initialize_preflight_worker(snapshot, root, max_length, max_prompt_length):
+    global _preflight_worker
+    torch.set_num_threads(1)
+    add_sft_path()
+    from omni_components import load_processor, encode_prompt
+    processor = load_processor(str(snapshot))
+    _preflight_worker = (encode_prompt, processor, processor.tokenizer, Path(root),
+                         max_length, max_prompt_length)
+
+
+def measure_in_worker(item):
+    encode, processor, tokenizer, root, max_length, max_prompt_length = _preflight_worker
+    return measure_pair(encode, processor, tokenizer, root, item, max_length, max_prompt_length)
 
 
 class OmniModel(torch.nn.Module):
@@ -142,7 +163,7 @@ class OmniModel(torch.nn.Module):
         if any(set(row) != keys for row in self._media):
             raise ValueError("Inconsistent native AV fields")
         inputs = {key: torch.cat([row[key] for row in self._media], dim=0) for key in keys}
-        inputs.update(input_ids=input_ids, attention_mask=attention_mask, use_audio_in_video=False)
+        inputs.update(input_ids=input_ids, attention_mask=attention_mask, use_audio_in_video=True)
         return thinker_inputs(self.thinker, inputs)
 
     def precision_context(self):
@@ -166,7 +187,8 @@ class PairData:
         self.rows = {"train": train_rows, "test": eval_rows}
         self.processor = processor
         self.root = Path(dataset_root).resolve()
-        self.encode = encode_sampled_audio
+        from omni_components import encode_prompt
+        self.encode = encode_prompt
         self.tokenize_response = tokenize
 
     def get_dataset(self, name, split, **kwargs):
@@ -176,7 +198,7 @@ class PairData:
         for row in self.rows[split]:
             # Routing identity only; it never becomes model text. Distinct videos
             # must not collapse when their original question/subtitle is equal.
-            key = json.dumps({k: row[k] for k in ("id", "prompt", "video", "audio")},
+            key = json.dumps({k: row[k] for k in ("id", "prompt", "video")},
                              ensure_ascii=False, sort_keys=True)
             result[key] = {"responses": [row["chosen"], row["rejected"]],
                            "pairs": [(0, 1)], "sft_target": row["chosen"]}
@@ -186,24 +208,26 @@ class PairData:
                  max_length, max_prompt_length):
         metadata = json.loads(prompt)
         source = (self.root / metadata["video"]).resolve()
-        audio = (self.root / metadata["audio"]).resolve()
-        if not source.is_relative_to(self.root) or not audio.is_relative_to(self.root):
+        if not source.is_relative_to(self.root):
             raise ValueError("Media escapes the original dataset root")
-        native = dict(self.encode(self.processor, metadata["prompt"], str(source), str(audio)))
+        native = dict(self.encode(self.processor, metadata["prompt"], str(source)))
         prefix = native.pop("input_ids")[0].tolist()
         prompt_mask = native.pop("attention_mask")[0].tolist()
-        native.pop("use_audio_in_video")
-        # Keep native AV tokens paired with their tensors. Upstream truncates
-        # response tokens using the space remaining after this native prefix.
+        if native.pop("use_audio_in_video") is not True:
+            raise ValueError('DPO must use the SFT/evaluation native synchronized AV encoder')
+        # Keep full native AV tokens paired with their tensors and full answers.
         lengths = [len(tokenizer(answer, add_special_tokens=False)["input_ids"]) + 1
                    for answer in (chosen, rejected)]
         budget = max_length - len(prefix)
         if len(prefix) > max_prompt_length or budget < 1:
             raise ValueError(f"{metadata['id']}: native AV prompt alone exceeds the input budget; "
                              "media tokens cannot be sliced independently of media tensors")
+        if max(lengths) > budget:
+            raise ValueError(f"{metadata['id']}: full native input plus answer exceeds max_length; "
+                             "no answer or media truncation is permitted")
         # Empty text prompt: the full prompt is already serialized above.
         # max_prompt_length=0 makes upstream's response budget exactly `budget`.
-        # Its EOS append/slicing behavior is retained, including a clipped EOS.
+        # The capacity guard above ensures upstream never slices answers/EOS.
         item = self.tokenize_response("", chosen, rejected, truncation_mode,
                                       tokenizer, budget, 0)
         if item["chosen_input_ids"] == item["rejected_input_ids"]:
@@ -221,28 +245,44 @@ class PairData:
             rejected_after=len(item["rejected_input_ids"])-len(prefix))
         return item
 
-    def preflight(self, tokenizer, max_length, max_prompt_length, report_path):
+    def preflight(self, tokenizer, max_length, max_prompt_length, report_path, workers=1, snapshot=None):
         """Scan all real rows before allocating either GPU model; never drop rows."""
+        if workers < 1 or (workers > 1 and snapshot is None):
+            raise ValueError('Preflight requires positive workers and a processor snapshot for parallel work')
+        started = time.monotonic()
         report = {"max_length": max_length, "max_prompt_length": max_prompt_length,
-                  "rows": [], "errors": []}
-        for split, rows in self.rows.items():
-            for index, row in enumerate(rows):
-                route = json.dumps({k: row[k] for k in ("id", "prompt", "video", "audio")})
-                try:
-                    item = self.tokenize(route, row["chosen"], row["rejected"], "keep_end",
-                                         tokenizer, max_length, max_prompt_length)
-                    info = item["length_info"]
-                    report["rows"].append(dict(split=split, id=row["id"], **info,
-                        total=info["prompt"]+max(info["chosen_after"], info["rejected_after"])))
-                    del item
-                except Exception as exc:
-                    report["errors"].append(dict(split=split, id=row["id"],
-                                                 error=f"{type(exc).__name__}: {exc}"))
-                if (index + 1) % 100 == 0:
-                    print(f"Length preflight {split}: {index+1}/{len(rows)}", flush=True)
-        report["truncated_rows"] = sum(r["chosen_before"] != r["chosen_after"] or
-                                       r["rejected_before"] != r["rejected_after"]
-                                       for r in report["rows"])
+                  "encoder": "SFT omni_components.encode_prompt", "use_audio_in_video": True,
+                  "workers": workers, "truncated_rows": 0, "rows": [], "errors": []}
+        items = [(split, {k: row[k] for k in ('id','video','prompt','chosen','rejected')})
+                 for split, rows in self.rows.items() for row in rows]
+        with contextlib.ExitStack() as stack:
+            if workers == 1:
+                results = (measure_pair(self.encode, self.processor, tokenizer, self.root, item,
+                                        max_length, max_prompt_length) for item in items)
+            else:
+                pool = stack.enter_context(ProcessPoolExecutor(max_workers=workers,
+                    mp_context=multiprocessing.get_context('spawn'),
+                    initializer=initialize_preflight_worker,
+                    initargs=(str(snapshot), str(self.root), max_length, max_prompt_length)))
+                results = pool.map(measure_in_worker, items, chunksize=8)
+            for index, (info, error) in enumerate(results, 1):
+                if info is not None: report['rows'].append(info)
+                if error is not None: report['errors'].append(error)
+                report['processed'] = index
+                if index % 100 == 0:
+                    report['elapsed_seconds'] = round(time.monotonic()-started, 1)
+                    print(json.dumps(dict(preflight_processed=index, total=len(items),
+                                          errors=len(report['errors']), elapsed_seconds=report['elapsed_seconds'])), flush=True)
+                    Path(report_path).write_text(json.dumps(report,ensure_ascii=False),encoding='utf-8')
+        report['elapsed_seconds'] = round(time.monotonic()-started, 1)
+        report['complete'] = True
+        report['over_max_length_rows'] = sum(r['total']>max_length for r in report['rows'])
+        report['summary'] = {split: dict(rows=len(items),
+            max_prompt=max((r['prompt'] for r in items),default=0),
+            max_total_before_truncation=max((r['total_before'] for r in items),default=0),
+            over_max_length=sum(r['total_before']>max_length for r in items),
+            longest_ids=[r['id'] for r in sorted(items,key=lambda r:r['total'],reverse=True)[:10]])
+            for split in self.rows for items in [[r for r in report['rows'] if r['split']==split]]}
         Path(report_path).write_text(json.dumps(report, ensure_ascii=False, indent=2), encoding="utf-8")
         if report["errors"]:
             raise ValueError(f"Preflight found {len(report['errors'])} invalid rows; see {report_path}. "

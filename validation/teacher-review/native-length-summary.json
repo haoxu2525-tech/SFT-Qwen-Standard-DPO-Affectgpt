@@ -1,0 +1,271 @@
+{
+  "complete": true,
+  "dataset": "MERCaptionPlus",
+  "annotation_commit": "802cb59f9d7b273f93dd82baea91319e0cc14962",
+  "original_samples": 31327,
+  "checked_unique_samples": 31256,
+  "excluded_samples": 71,
+  "encoding_errors": 0,
+  "capacity": 4096,
+  "over_capacity": 0,
+  "truncated_rows": 0,
+  "prompt_tokens": {
+    "min": 368,
+    "p50": 424,
+    "p95": 531,
+    "p99": 627,
+    "max": 1107
+  },
+  "chosen_answer_tokens_including_eos": {
+    "min": 9,
+    "p50": 88,
+    "p95": 155,
+    "p99": 179,
+    "max": 243
+  },
+  "rejected_answer_tokens_including_eos": {
+    "min": 7,
+    "p50": 85,
+    "p95": 177,
+    "p99": 206,
+    "max": 300
+  },
+  "total_tokens": {
+    "min": 381,
+    "p50": 524,
+    "p95": 656,
+    "p99": 764,
+    "max": 1328
+  },
+  "longest_rows": [
+    {
+      "split": "train",
+      "id": "samplenew3_00098643",
+      "prompt": 1107,
+      "chosen_before": 221,
+      "rejected_before": 217,
+      "chosen_after": 221,
+      "rejected_after": 217,
+      "total": 1328,
+      "total_before": 1328
+    },
+    {
+      "split": "train",
+      "id": "samplenew3_00059678",
+      "prompt": 1014,
+      "chosen_before": 138,
+      "rejected_before": 157,
+      "chosen_after": 138,
+      "rejected_after": 157,
+      "total": 1171,
+      "total_before": 1171
+    },
+    {
+      "split": "train",
+      "id": "samplenew3_00019998",
+      "prompt": 949,
+      "chosen_before": 170,
+      "rejected_before": 204,
+      "chosen_after": 170,
+      "rejected_after": 204,
+      "total": 1153,
+      "total_before": 1153
+    },
+    {
+      "split": "train",
+      "id": "samplenew3_00001105",
+      "prompt": 817,
+      "chosen_before": 212,
+      "rejected_before": 300,
+      "chosen_after": 212,
+      "rejected_after": 300,
+      "total": 1117,
+      "total_before": 1117
+    },
+    {
+      "split": "train",
+      "id": "samplenew3_00013668",
+      "prompt": 867,
+      "chosen_before": 173,
+      "rejected_before": 149,
+      "chosen_after": 173,
+      "rejected_after": 149,
+      "total": 1040,
+      "total_before": 1040
+    },
+    {
+      "split": "train",
+      "id": "samplenew3_00060077",
+      "prompt": 782,
+      "chosen_before": 231,
+      "rejected_before": 213,
+      "chosen_after": 231,
+      "rejected_after": 213,
+      "total": 1013,
+      "total_before": 1013
+    },
+    {
+      "split": "train",
+      "id": "samplenew3_00105602",
+      "prompt": 806,
+      "chosen_before": 182,
+      "rejected_before": 194,
+      "chosen_after": 182,
+      "rejected_after": 194,
+      "total": 1000,
+      "total_before": 1000
+    },
+    {
+      "split": "train",
+      "id": "samplenew3_00090375",
+      "prompt": 755,
+      "chosen_before": 175,
+      "rejected_before": 238,
+      "chosen_after": 175,
+      "rejected_after": 238,
+      "total": 993,
+      "total_before": 993
+    },
+    {
+      "split": "train",
+      "id": "samplenew3_00054380",
+      "prompt": 736,
+      "chosen_before": 211,
+      "rejected_before": 244,
+      "chosen_after": 211,
+      "rejected_after": 244,
+      "total": 980,
+      "total_before": 980
+    },
+    {
+      "split": "train",
+      "id": "samplenew3_00019562",
+      "prompt": 796,
+      "chosen_before": 169,
+      "rejected_before": 182,
+      "chosen_after": 169,
+      "rejected_after": 182,
+      "total": 978,
+      "total_before": 978
+    }
+  ],
+  "longest_prompt_rows": [
+    {
+      "split": "train",
+      "id": "samplenew3_00098643",
+      "prompt": 1107,
+      "chosen_before": 221,
+      "rejected_before": 217,
+      "chosen_after": 221,
+      "rejected_after": 217,
+      "total": 1328,
+      "total_before": 1328
+    },
+    {
+      "split": "train",
+      "id": "samplenew3_00059678",
+      "prompt": 1014,
+      "chosen_before": 138,
+      "rejected_before": 157,
+      "chosen_after": 138,
+      "rejected_after": 157,
+      "total": 1171,
+      "total_before": 1171
+    },
+    {
+      "split": "train",
+      "id": "samplenew3_00019998",
+      "prompt": 949,
+      "chosen_before": 170,
+      "rejected_before": 204,
+      "chosen_after": 170,
+      "rejected_after": 204,
+      "total": 1153,
+      "total_before": 1153
+    },
+    {
+      "split": "train",
+      "id": "samplenew3_00110593",
+      "prompt": 945,
+      "chosen_before": 11,
+      "rejected_before": 11,
+      "chosen_after": 11,
+      "rejected_after": 11,
+      "total": 956,
+      "total_before": 956
+    },
+    {
+      "split": "train",
+      "id": "samplenew3_00000327",
+      "prompt": 934,
+      "chosen_before": 13,
+      "rejected_before": 14,
+      "chosen_after": 13,
+      "rejected_after": 14,
+      "total": 948,
+      "total_before": 948
+    },
+    {
+      "split": "train",
+      "id": "samplenew3_00013668",
+      "prompt": 867,
+      "chosen_before": 173,
+      "rejected_before": 149,
+      "chosen_after": 173,
+      "rejected_after": 149,
+      "total": 1040,
+      "total_before": 1040
+    },
+    {
+      "split": "train",
+      "id": "samplenew3_00068892",
+      "prompt": 850,
+      "chosen_before": 20,
+      "rejected_before": 20,
+      "chosen_after": 20,
+      "rejected_after": 20,
+      "total": 870,
+      "total_before": 870
+    },
+    {
+      "split": "train",
+      "id": "samplenew3_00016978",
+      "prompt": 821,
+      "chosen_before": 12,
+      "rejected_before": 14,
+      "chosen_after": 12,
+      "rejected_after": 14,
+      "total": 835,
+      "total_before": 835
+    },
+    {
+      "split": "train",
+      "id": "samplenew3_00001105",
+      "prompt": 817,
+      "chosen_before": 212,
+      "rejected_before": 300,
+      "chosen_after": 212,
+      "rejected_after": 300,
+      "total": 1117,
+      "total_before": 1117
+    },
+    {
+      "split": "train",
+      "id": "samplenew3_00049119",
+      "prompt": 817,
+      "chosen_before": 20,
+      "rejected_before": 18,
+      "chosen_after": 20,
+      "rejected_after": 18,
+      "total": 837,
+      "total_before": 837
+    }
+  ],
+  "cross_pod_overlap_checked": 5200,
+  "cross_pod_token_counts_identical": true,
+  "identical_encoder_processor_and_dependency_versions": true,
+  "compression_applied": false,
+  "model_weights_loaded": false,
+  "gpu_training_started": false,
+  "note": "Native SFT encoder with one original video and continuous embedded audio. Length validation only, not GPU forward/backward memory validation."
+}

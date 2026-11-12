@@ -145,7 +145,10 @@ def qwen_negative(row, video_url, endpoint, api_key, max_tokens, context=None):
                 break
             chunk = json.loads(data)
             if "error" in chunk:
-                raise RuntimeError("Qwen returned a streaming API error; no pair accepted")
+                error = RuntimeError("Qwen returned a streaming API error; no pair accepted")
+                error.api_error = chunk["error"]
+                error.request_id = chunk.get("id")
+                raise error
             for key in ("id", "model", "created"):
                 if key in chunk:
                     result[key] = chunk[key]
@@ -247,7 +250,7 @@ def annotate(args):
 
 
 def train(args):
-    if sys.platform != "linux" or sys.version_info[:2] != (3, 10):
+    if not args.preflight_only and (sys.platform != "linux" or sys.version_info[:2] != (3, 10)):
         raise RuntimeError("Use Linux/Python 3.10 for the unchanged official DPO NumPy seed handling")
     if not args.preflight_only and (args.beta is None or not math.isfinite(args.beta) or args.beta <= 0):
         raise ValueError("beta must be finite and positive")
@@ -256,17 +259,36 @@ def train(args):
     if not math.isfinite(args.lr) or args.lr <= 0 or args.max_length < 2:
         raise ValueError("lr must be finite and positive; max-length must be at least 2")
     os.environ.setdefault("PYTORCH_CUDA_ALLOC_CONF", "expandable_segments:True")
-    rows, eval_rows = read_pairs(args.pairs), read_pairs(args.eval_pairs)
-    dataset, _ = training_dataset(args, metadata_only=True)
+    if not args.preflight_only and args.eval_pairs is None:
+        raise ValueError('Training requires explicit --eval-pairs; preflight does not create a split')
+    rows = read_pairs(args.pairs)
+    eval_rows = read_pairs(args.eval_pairs) if args.eval_pairs else []
+    from annotate_api import original_dataset
+    dataset = original_dataset(args.dataset_root)
     source = {sample["name"]: sample for sample in dataset.annotation}
-    if {row["id"] for row in rows} != set(source):
-        raise ValueError("Preference membership differs from original training annotations")
+    from dpo_interface import membership_report
+    membership = membership_report(rows, source)
     for row in rows:
         expected = original_row(dataset, source[row["id"]], row["label_type"], args.dataset_root)
         if any(row.get(key) != value for key, value in expected.items()):
             raise ValueError(f"Changed original annotation/prompt/media: {row['id']}")
         if "candidates" in row and sorted([row["chosen"], row["rejected"]]) != sorted(row["candidates"]):
             raise ValueError(f"{row['id']}: preferences differ from the supplied candidates")
+    args.output.mkdir(parents=True, exist_ok=False)
+    (args.output/'membership.json').write_text(json.dumps(membership,indent=2),encoding='utf-8')
+    (args.output/'excluded-ids.txt').write_text(''.join(i+'\n' for i in membership['excluded_ids']),encoding='utf-8')
+    print(json.dumps(dict(original_samples=membership['original_count'],selected_samples=len(rows),
+                          excluded_samples=len(membership['excluded_ids']),exclusions_file=str(args.output/'excluded-ids.txt'))),flush=True)
+    add_sft_path()
+    from omni_components import load_processor
+    from dpo_interface import PairData
+    if args.preflight_only:
+        processor=load_processor(str(args.snapshot))
+        data=PairData(rows,eval_rows,processor,args.dataset_root,None)
+        report=data.preflight(processor.tokenizer,args.max_length,args.max_length-1,args.output/'length-check.json',
+                              workers=args.preflight_workers, snapshot=args.snapshot)
+        print(json.dumps(dict(preflight_only=True,summary=report['summary'],over_max_length_rows=report['over_max_length_rows'])),flush=True)
+        return
     sys.path.insert(0, str(DPO))
     import torch
     from omegaconf import OmegaConf
@@ -313,15 +335,11 @@ def train(args):
     if args.smoke_test:
         cfg.exp_name += "_longest_batch_20_step_smoke"
         cfg.n_epochs, cfg.n_examples = None, 20 * cfg.batch_size
-    args.output.mkdir(parents=True, exist_ok=False)
     processor = load_processor(str(args.snapshot))
     data = PairData(rows, eval_rows, processor, args.dataset_root,
                     preference_datasets.tokenize_batch_element)
     report = data.preflight(processor.tokenizer, cfg.max_length, cfg.max_prompt_length,
-                            args.output / "length-check.json")
-    if args.preflight_only:
-        print(f"Length preflight passed; truncated rows: {report['truncated_rows']}; no training started")
-        return
+                            args.output / "length-check.json", workers=args.preflight_workers, snapshot=args.snapshot)
     if args.smoke_test:
         # Real training rows only, selected after the complete data scan.
         # Upstream's n_examples loop repeats this longest batch for 20 updates.
@@ -408,20 +426,24 @@ def main():
         if name == "train":
             sub.add_argument("--pairs", type=Path, required=True,
                              help="Original training rows with already labelled chosen/rejected")
-            sub.add_argument("--eval-pairs", type=Path, required=True,
+            sub.add_argument("--eval-pairs", type=Path,
                              help="Explicitly supplied preference-validation rows; no automatic split")
             sub.add_argument("--beta", type=float, help="Required for training; not needed for --preflight-only")
             sub.add_argument("--lr", type=float, default=5e-6)
-            sub.add_argument("--batch-size", type=int, default=1)
+            sub.add_argument("--batch-size", type=int, default=8,
+                             help="Official DPO effective batch per optimizer update, including accumulation")
             sub.add_argument("--eval-batch-size", type=int, default=1)
-            sub.add_argument("--gradient-accumulation-steps", type=int)
+            sub.add_argument("--gradient-accumulation-steps", type=int, default=8,
+                             help="Official DPO divides batch-size into this many microbatches")
             sub.add_argument("--n-eval-examples", type=int, default=16)
             sub.add_argument("--sample-during-eval", action=argparse.BooleanOptionalAction, default=False)
             sub.add_argument("--gradient-checkpointing", action=argparse.BooleanOptionalAction, default=True)
             sub.add_argument("--max-length", type=int, default=4096,
-                             help="Native prompt plus answer/EOS; long answers use original DPO truncation")
+                             help="Native prompt plus full answer/EOS; overflow fails without truncation")
             sub.add_argument("--preflight-only", action="store_true",
                              help="Scan all train/eval lengths on CPU and exit before GPU model loading")
+            sub.add_argument("--preflight-workers", type=int, default=1,
+                             help="CPU processes for the identical SFT encoder; does not change media settings")
             sub.add_argument("--smoke-test", action="store_true",
                              help="After the full length scan, run 20 updates on the longest training batch")
         if name == "infer":

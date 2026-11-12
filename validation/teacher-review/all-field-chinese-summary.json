@@ -1,0 +1,162 @@
+{
+  "commit": "802cb59f9d7b273f93dd82baea91319e0cc14962",
+  "files": 12,
+  "strings_scanned": 3055528,
+  "chinese_field_hits": 23910,
+  "records_with_chinese_by_kind": {
+    "documentation": 1,
+    "archived_attempts": 1,
+    "successful": 12083
+  },
+  "file_stats": [
+    {
+      "file": "qwen3.8omniflash annotation/README.md",
+      "kind": "documentation",
+      "rows": 28,
+      "sha256": "76a7a2e262936194d78c5c4e46c9d7d8af9cd02d281a26688cedc63c7a7e7db6",
+      "bytes": 1985,
+      "chinese_field_hits": 1
+    },
+    {
+      "file": "qwen3.8omniflash annotation/english-reannotation-validation.json",
+      "kind": "validation",
+      "rows": 1,
+      "sha256": "bda56395f5724482ad76dae8f10ad3427442669250a40045a0614bf72e727ffb",
+      "bytes": 38142,
+      "chinese_field_hits": 0
+    },
+    {
+      "file": "qwen3.8omniflash annotation/failed.jsonl",
+      "kind": "failed",
+      "rows": 71,
+      "sha256": "4380510ab5657d80f2ba2c6988646e79d24498fb39d7d54c3e90c6076cc1a8d4",
+      "bytes": 262917,
+      "chinese_field_hits": 0
+    },
+    {
+      "file": "qwen3.8omniflash annotation/failure-attempt-history.jsonl.gz",
+      "kind": "archived_attempts",
+      "rows": 12,
+      "sha256": "ceb62e50d9c58728deaf52cf05024c118e5128f90b7dc522f466da96271e01f4",
+      "bytes": 3213,
+      "chinese_field_hits": 1
+    },
+    {
+      "file": "qwen3.8omniflash annotation/manifest.json",
+      "kind": "metadata",
+      "rows": 1,
+      "sha256": "2ea42fc26c247d758ea60ea62cc7c1da7db97666c540a0ba064db9462e3f1222",
+      "bytes": 3752,
+      "chinese_field_hits": 0
+    },
+    {
+      "file": "qwen3.8omniflash annotation/successful-001.jsonl.gz",
+      "kind": "successful",
+      "rows": 5000,
+      "sha256": "ad347cc2612ddcfc7f78f9e774ef8ec279cb525c9c470d24c6f4cd98fa448b64",
+      "bytes": 7512212,
+      "chinese_field_hits": 3419
+    },
+    {
+      "file": "qwen3.8omniflash annotation/successful-002.jsonl.gz",
+      "kind": "successful",
+      "rows": 5000,
+      "sha256": "b0a955e051ee6fc873101c527f9435a3a7086d4fba305a23f7339aab8e04ab5f",
+      "bytes": 7626240,
+      "chinese_field_hits": 3824
+    },
+    {
+      "file": "qwen3.8omniflash annotation/successful-003.jsonl.gz",
+      "kind": "successful",
+      "rows": 5000,
+      "sha256": "99d317cff1d648973f07d2afc3ec278e596abea938b5be0328a2c945dcf60020",
+      "bytes": 7927815,
+      "chinese_field_hits": 3962
+    },
+    {
+      "file": "qwen3.8omniflash annotation/successful-004.jsonl.gz",
+      "kind": "successful",
+      "rows": 5000,
+      "sha256": "a68fbbf33223fddb5471d8a2c4fa743a04cb61cc3dca3306f3e6f9abd886f45e",
+      "bytes": 7777085,
+      "chinese_field_hits": 3945
+    },
+    {
+      "file": "qwen3.8omniflash annotation/successful-005.jsonl.gz",
+      "kind": "successful",
+      "rows": 5000,
+      "sha256": "6459b85209d284d5f0053fecdb14073a5063a938d534e64f1510ea8d3d187e33",
+      "bytes": 7736044,
+      "chinese_field_hits": 3892
+    },
+    {
+      "file": "qwen3.8omniflash annotation/successful-006.jsonl.gz",
+      "kind": "successful",
+      "rows": 5000,
+      "sha256": "69ca946c5bcb3fbdd39f88a33643b6e12f1399e5e4be3fa93da8dc4331505c65",
+      "bytes": 7655391,
+      "chinese_field_hits": 3912
+    },
+    {
+      "file": "qwen3.8omniflash annotation/successful-007.jsonl.gz",
+      "kind": "successful",
+      "rows": 1256,
+      "sha256": "392a2c1d8e97d101d53074cfbcf5a709676d6d5702d986c2efd9fb327ed8bb7f",
+      "bytes": 1992518,
+      "chinese_field_hits": 954
+    }
+  ],
+  "fields": [
+    {
+      "kind": "archived_attempts",
+      "field": "$.annotation_api.request_context",
+      "occurrences": 1,
+      "records": 1,
+      "chinese_characters": 49
+    },
+    {
+      "kind": "documentation",
+      "field": "$",
+      "occurrences": 1,
+      "records": 1,
+      "chinese_characters": 2
+    },
+    {
+      "kind": "successful",
+      "field": "$.annotation.ovlabel",
+      "occurrences": 3,
+      "records": 3,
+      "chinese_characters": 12
+    },
+    {
+      "kind": "successful",
+      "field": "$.annotation_api.attempts[].response.reasoning_content",
+      "occurrences": 11822,
+      "records": 11822,
+      "chinese_characters": 182943
+    },
+    {
+      "kind": "successful",
+      "field": "$.annotation_api.response.reasoning_content",
+      "occurrences": 12081,
+      "records": 12081,
+      "chinese_characters": 186690
+    },
+    {
+      "kind": "successful",
+      "field": "$.chosen",
+      "occurrences": 1,
+      "records": 1,
+      "chinese_characters": 2
+    },
+    {
+      "kind": "successful",
+      "field": "$.ground_truth_answer",
+      "occurrences": 1,
+      "records": 1,
+      "chinese_characters": 2
+    }
+  ],
+  "scope": "Every tracked file in the current annotation export, including recursively decoded JSON string values and keys. Historical Git commits are separate versions, not current training rows.",
+  "detection": "Han ideographs including U+3007 and CJK extension ranges; JSON Unicode escapes decoded before checking. This is a script audit, not linguistic or semantic evaluation."
+}

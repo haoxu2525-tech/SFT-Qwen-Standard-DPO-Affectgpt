@@ -1,0 +1,650 @@
+{
+  "samples": 31256,
+  "language": {
+    "chosen": {
+      "latin_script_no_chinese": 31255,
+      "mixed_with_chinese": 1
+    },
+    "rejected": {
+      "latin_script_no_chinese": 31256
+    }
+  },
+  "chinese_fields": {
+    "chosen": 1,
+    "rejected": 0
+  },
+  "flagged_pairs": 10587,
+  "language_review_pairs": 1,
+  "no_detected_chinese_or_other_non_latin_script": 31255,
+  "lengths": {
+    "ovlabel/chosen/words": {
+      "count": 15566,
+      "mean": 8.771,
+      "p0": 6,
+      "p50": 8,
+      "p90": 11,
+      "p95": 12,
+      "p99": 14,
+      "p100": 26
+    },
+    "ovlabel/chosen/characters": {
+      "count": 15566,
+      "mean": 72.497,
+      "p0": 39,
+      "p50": 70,
+      "p90": 96,
+      "p95": 107,
+      "p99": 129,
+      "p100": 208
+    },
+    "ovlabel/rejected/words": {
+      "count": 15566,
+      "mean": 9.051,
+      "p0": 3,
+      "p50": 9,
+      "p90": 11,
+      "p95": 12,
+      "p99": 16,
+      "p100": 31
+    },
+    "ovlabel/rejected/characters": {
+      "count": 15566,
+      "mean": 73.124,
+      "p0": 24,
+      "p50": 71,
+      "p90": 95,
+      "p95": 106,
+      "p99": 132,
+      "p100": 206
+    },
+    "description/chosen/words": {
+      "count": 15690,
+      "mean": 108.04,
+      "p0": 52,
+      "p50": 105,
+      "p90": 131,
+      "p95": 140,
+      "p99": 161,
+      "p100": 206
+    },
+    "description/chosen/characters": {
+      "count": 15690,
+      "mean": 650.699,
+      "p0": 329,
+      "p50": 633,
+      "p90": 792,
+      "p95": 848,
+      "p99": 973,
+      "p100": 1267
+    },
+    "description/rejected/words": {
+      "count": 15690,
+      "mean": 117.664,
+      "p0": 39,
+      "p50": 115,
+      "p90": 148,
+      "p95": 159,
+      "p99": 182,
+      "p100": 249
+    },
+    "description/rejected/characters": {
+      "count": 15690,
+      "mean": 717.307,
+      "p0": 247,
+      "p50": 700,
+      "p90": 905,
+      "p95": 974,
+      "p99": 1120,
+      "p100": 1529
+    }
+  },
+  "marker_document_counts": {
+    "description/contrast_phrase": {
+      "rejected": 10438,
+      "chosen": 447
+    },
+    "description/assistant_refusal": {
+      "chosen": 10,
+      "rejected": 6
+    },
+    "ovlabel/contrast_phrase": {
+      "rejected": 6
+    },
+    "description/explicit_negative": {
+      "rejected": 2
+    }
+  },
+  "phrase_imbalance": {
+    "description": [
+      {
+        "phrase": "rather than",
+        "chosen": 120,
+        "rejected": 10278,
+        "difference_percentage_points": 64.742
+      },
+      {
+        "phrase": "to be",
+        "chosen": 733,
+        "rejected": 6430,
+        "difference_percentage_points": 36.31
+      },
+      {
+        "phrase": "might be",
+        "chosen": 9742,
+        "rejected": 4082,
+        "difference_percentage_points": -36.074
+      },
+      {
+        "phrase": "appears to",
+        "chosen": 143,
+        "rejected": 4982,
+        "difference_percentage_points": 30.841
+      },
+      {
+        "phrase": "appears to be",
+        "chosen": 121,
+        "rejected": 4682,
+        "difference_percentage_points": 29.069
+      },
+      {
+        "phrase": "that this",
+        "chosen": 11725,
+        "rejected": 7589,
+        "difference_percentage_points": -26.361
+      },
+      {
+        "phrase": "sentence might",
+        "chosen": 7076,
+        "rejected": 3119,
+        "difference_percentage_points": -25.22
+      },
+      {
+        "phrase": "this sentence might",
+        "chosen": 6851,
+        "rejected": 3008,
+        "difference_percentage_points": -24.493
+      },
+      {
+        "phrase": "infer that this",
+        "chosen": 10645,
+        "rejected": 6887,
+        "difference_percentage_points": -23.952
+      },
+      {
+        "phrase": "sentence might be",
+        "chosen": 5905,
+        "rejected": 2533,
+        "difference_percentage_points": -21.491
+      },
+      {
+        "phrase": "could be",
+        "chosen": 6390,
+        "rejected": 3199,
+        "difference_percentage_points": -20.338
+      },
+      {
+        "phrase": "man's s",
+        "chosen": 3093,
+        "rejected": 90,
+        "difference_percentage_points": -19.14
+      },
+      {
+        "phrase": "as well as",
+        "chosen": 6685,
+        "rejected": 3883,
+        "difference_percentage_points": -17.859
+      },
+      {
+        "phrase": "well as",
+        "chosen": 6685,
+        "rejected": 3884,
+        "difference_percentage_points": -17.852
+      },
+      {
+        "phrase": "as well",
+        "chosen": 6704,
+        "rejected": 3906,
+        "difference_percentage_points": -17.833
+      },
+      {
+        "phrase": "sentence appears",
+        "chosen": 31,
+        "rejected": 2800,
+        "difference_percentage_points": 17.648
+      },
+      {
+        "phrase": "sentence appears to",
+        "chosen": 31,
+        "rejected": 2797,
+        "difference_percentage_points": 17.629
+      },
+      {
+        "phrase": "the man's s",
+        "chosen": 2839,
+        "rejected": 76,
+        "difference_percentage_points": -17.61
+      },
+      {
+        "phrase": "this sentence appears",
+        "chosen": 28,
+        "rejected": 2790,
+        "difference_percentage_points": 17.604
+      },
+      {
+        "phrase": "he is",
+        "chosen": 1003,
+        "rejected": 3738,
+        "difference_percentage_points": 17.431
+      },
+      {
+        "phrase": "carry a",
+        "chosen": 4944,
+        "rejected": 2307,
+        "difference_percentage_points": -16.807
+      },
+      {
+        "phrase": "that this sentence",
+        "chosen": 6834,
+        "rejected": 4208,
+        "difference_percentage_points": -16.737
+      },
+      {
+        "phrase": "might carry",
+        "chosen": 4260,
+        "rejected": 1645,
+        "difference_percentage_points": -16.667
+      },
+      {
+        "phrase": "seems to",
+        "chosen": 152,
+        "rejected": 2746,
+        "difference_percentage_points": 16.533
+      },
+      {
+        "phrase": "body language",
+        "chosen": 4107,
+        "rejected": 1524,
+        "difference_percentage_points": -16.463
+      },
+      {
+        "phrase": "given the",
+        "chosen": 7316,
+        "rejected": 4797,
+        "difference_percentage_points": -16.055
+      },
+      {
+        "phrase": "as the",
+        "chosen": 6889,
+        "rejected": 4416,
+        "difference_percentage_points": -15.762
+      },
+      {
+        "phrase": "might be a",
+        "chosen": 3972,
+        "rejected": 1563,
+        "difference_percentage_points": -15.354
+      },
+      {
+        "phrase": "well as the",
+        "chosen": 5884,
+        "rejected": 3501,
+        "difference_percentage_points": -15.188
+      },
+      {
+        "phrase": "in the audio",
+        "chosen": 6952,
+        "rejected": 4586,
+        "difference_percentage_points": -15.08
+      },
+      {
+        "phrase": "to be a",
+        "chosen": 92,
+        "rejected": 2403,
+        "difference_percentage_points": 14.729
+      },
+      {
+        "phrase": "we can infer",
+        "chosen": 13332,
+        "rejected": 11029,
+        "difference_percentage_points": -14.678
+      },
+      {
+        "phrase": "can infer that",
+        "chosen": 13359,
+        "rejected": 11064,
+        "difference_percentage_points": -14.627
+      },
+      {
+        "phrase": "can infer",
+        "chosen": 13363,
+        "rejected": 11073,
+        "difference_percentage_points": -14.595
+      },
+      {
+        "phrase": "evaluation or",
+        "chosen": 2386,
+        "rejected": 256,
+        "difference_percentage_points": -13.576
+      },
+      {
+        "phrase": "carries a",
+        "chosen": 383,
+        "rejected": 2495,
+        "difference_percentage_points": 13.461
+      },
+      {
+        "phrase": "we can",
+        "chosen": 13471,
+        "rejected": 11366,
+        "difference_percentage_points": -13.416
+      },
+      {
+        "phrase": "alignss with",
+        "chosen": 2128,
+        "rejected": 30,
+        "difference_percentage_points": -13.372
+      },
+      {
+        "phrase": "seems to be",
+        "chosen": 108,
+        "rejected": 2195,
+        "difference_percentage_points": 13.301
+      },
+      {
+        "phrase": "infer that",
+        "chosen": 13422,
+        "rejected": 11351,
+        "difference_percentage_points": -13.199
+      }
+    ],
+    "ovlabel": [
+      {
+        "phrase": "state is calm",
+        "chosen": 184,
+        "rejected": 2556,
+        "difference_percentage_points": 15.238
+      },
+      {
+        "phrase": "is calm",
+        "chosen": 184,
+        "rejected": 2556,
+        "difference_percentage_points": 15.238
+      },
+      {
+        "phrase": "state is calmness",
+        "chosen": 20,
+        "rejected": 1297,
+        "difference_percentage_points": 8.204
+      },
+      {
+        "phrase": "is calmness",
+        "chosen": 20,
+        "rejected": 1297,
+        "difference_percentage_points": 8.204
+      },
+      {
+        "phrase": "anger frustration",
+        "chosen": 1025,
+        "rejected": 355,
+        "difference_percentage_points": -4.304
+      },
+      {
+        "phrase": "state is sadness",
+        "chosen": 308,
+        "rejected": 943,
+        "difference_percentage_points": 4.079
+      },
+      {
+        "phrase": "is sadness",
+        "chosen": 308,
+        "rejected": 943,
+        "difference_percentage_points": 4.079
+      },
+      {
+        "phrase": "state is positive",
+        "chosen": 606,
+        "rejected": 43,
+        "difference_percentage_points": -3.617
+      },
+      {
+        "phrase": "is positive",
+        "chosen": 606,
+        "rejected": 43,
+        "difference_percentage_points": -3.617
+      },
+      {
+        "phrase": "state is excited",
+        "chosen": 510,
+        "rejected": 36,
+        "difference_percentage_points": -3.045
+      },
+      {
+        "phrase": "is excited",
+        "chosen": 510,
+        "rejected": 36,
+        "difference_percentage_points": -3.045
+      },
+      {
+        "phrase": "is anger frustration",
+        "chosen": 804,
+        "rejected": 341,
+        "difference_percentage_points": -2.974
+      },
+      {
+        "phrase": "calm indifferent",
+        "chosen": 6,
+        "rejected": 438,
+        "difference_percentage_points": 2.775
+      },
+      {
+        "phrase": "is calm indifferent",
+        "chosen": 6,
+        "rejected": 423,
+        "difference_percentage_points": 2.679
+      },
+      {
+        "phrase": "state is disappointment",
+        "chosen": 409,
+        "rejected": 38,
+        "difference_percentage_points": -2.383
+      },
+      {
+        "phrase": "is disappointment",
+        "chosen": 409,
+        "rejected": 38,
+        "difference_percentage_points": -2.383
+      },
+      {
+        "phrase": "state is concern",
+        "chosen": 434,
+        "rejected": 68,
+        "difference_percentage_points": -2.351
+      },
+      {
+        "phrase": "is concern",
+        "chosen": 434,
+        "rejected": 68,
+        "difference_percentage_points": -2.351
+      },
+      {
+        "phrase": "state is dissatisfaction",
+        "chosen": 349,
+        "rejected": 4,
+        "difference_percentage_points": -2.216
+      },
+      {
+        "phrase": "is dissatisfaction",
+        "chosen": 349,
+        "rejected": 4,
+        "difference_percentage_points": -2.216
+      },
+      {
+        "phrase": "anger dissatisfaction",
+        "chosen": 343,
+        "rejected": 6,
+        "difference_percentage_points": -2.165
+      },
+      {
+        "phrase": "is anger dissatisfaction",
+        "chosen": 308,
+        "rejected": 5,
+        "difference_percentage_points": -1.947
+      },
+      {
+        "phrase": "anger resentment",
+        "chosen": 16,
+        "rejected": 312,
+        "difference_percentage_points": 1.902
+      },
+      {
+        "phrase": "is anger resentment",
+        "chosen": 5,
+        "rejected": 298,
+        "difference_percentage_points": 1.882
+      },
+      {
+        "phrase": "calmness confidence",
+        "chosen": 3,
+        "rejected": 295,
+        "difference_percentage_points": 1.876
+      },
+      {
+        "phrase": "state is negative",
+        "chosen": 61,
+        "rejected": 347,
+        "difference_percentage_points": 1.837
+      },
+      {
+        "phrase": "is negative",
+        "chosen": 61,
+        "rejected": 347,
+        "difference_percentage_points": 1.837
+      },
+      {
+        "phrase": "state is anxiety",
+        "chosen": 461,
+        "rejected": 178,
+        "difference_percentage_points": -1.818
+      },
+      {
+        "phrase": "is anxiety",
+        "chosen": 461,
+        "rejected": 178,
+        "difference_percentage_points": -1.818
+      },
+      {
+        "phrase": "tense anxious",
+        "chosen": 299,
+        "rejected": 19,
+        "difference_percentage_points": -1.799
+      },
+      {
+        "phrase": "state is happiness",
+        "chosen": 94,
+        "rejected": 373,
+        "difference_percentage_points": 1.792
+      },
+      {
+        "phrase": "is happiness",
+        "chosen": 94,
+        "rejected": 373,
+        "difference_percentage_points": 1.792
+      },
+      {
+        "phrase": "calmness indifference",
+        "chosen": 0,
+        "rejected": 279,
+        "difference_percentage_points": 1.792
+      },
+      {
+        "phrase": "anxiety stress",
+        "chosen": 280,
+        "rejected": 1,
+        "difference_percentage_points": -1.792
+      },
+      {
+        "phrase": "is tension",
+        "chosen": 293,
+        "rejected": 16,
+        "difference_percentage_points": -1.78
+      },
+      {
+        "phrase": "state is tension",
+        "chosen": 293,
+        "rejected": 16,
+        "difference_percentage_points": -1.78
+      },
+      {
+        "phrase": "fear anxiety",
+        "chosen": 369,
+        "rejected": 93,
+        "difference_percentage_points": -1.773
+      },
+      {
+        "phrase": "calm confident",
+        "chosen": 16,
+        "rejected": 289,
+        "difference_percentage_points": 1.754
+      },
+      {
+        "phrase": "is calm confident",
+        "chosen": 11,
+        "rejected": 282,
+        "difference_percentage_points": 1.741
+      },
+      {
+        "phrase": "calm relaxed",
+        "chosen": 17,
+        "rejected": 279,
+        "difference_percentage_points": 1.683
+      }
+    ]
+  },
+  "notes": [
+    "Only chosen/rejected were checked, not reasoning_content.",
+    "Script detection is not a complete English language or grammar check. Latin-only text is not certified English.",
+    "No annotation was translated, regenerated, removed or relabelled. Flagged text needs human audiovisual review.",
+    "Phrase imbalance includes genuine emotion/content differences and is not by itself proof of a shortcut."
+  ],
+  "style_probe": {
+    "method": "Length, script and punctuation only; logistic regression; pair-grouped 80/20 holdout; seed 17. Chance=0.5. This measures distinguishability, not semantic preference correctness.",
+    "results": {
+      "all/all": {
+        "train_pairs": 25004,
+        "test_pairs": 6252,
+        "balanced_accuracy": 0.5677,
+        "roc_auc": 0.6124
+      },
+      "all/description": {
+        "train_pairs": 12552,
+        "test_pairs": 3138,
+        "balanced_accuracy": 0.6614,
+        "roc_auc": 0.7167
+      },
+      "all/ovlabel": {
+        "train_pairs": 12452,
+        "test_pairs": 3114,
+        "balanced_accuracy": 0.556,
+        "roc_auc": 0.5906
+      },
+      "no_chinese/all": {
+        "train_pairs": 25004,
+        "test_pairs": 6251,
+        "balanced_accuracy": 0.57,
+        "roc_auc": 0.6115
+      },
+      "no_chinese/description": {
+        "train_pairs": 12552,
+        "test_pairs": 3138,
+        "balanced_accuracy": 0.6614,
+        "roc_auc": 0.7167
+      },
+      "no_chinese/ovlabel": {
+        "train_pairs": 12452,
+        "test_pairs": 3113,
+        "balanced_accuracy": 0.5634,
+        "roc_auc": 0.5954
+      }
+    }
+  }
+}

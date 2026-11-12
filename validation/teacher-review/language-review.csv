@@ -1,0 +1,2 @@
+﻿id,label_type,problem_fields,chosen_chinese_characters,rejected_chinese_characters,chosen,rejected,source_file,source_line
+samplenew3_00063912,ovlabel,chosen_contains_chinese,2,0,"The character's emotional state is angry, frustrated, guilty, ashamed, pleading, 求助.","The character's emotional state is calm, sad, resigned, and hopeful.",successful-004.jsonl.gz,1002

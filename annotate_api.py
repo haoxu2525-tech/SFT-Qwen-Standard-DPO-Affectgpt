@@ -49,7 +49,8 @@ def definitions(path, names, namespace):
     exec(compile(ast.Module(body=selected, type_ignores=[]), str(path), "exec"), namespace)
 
 
-def original_rows(root, seed):
+def original_dataset(root):
+    """Load pinned original metadata without importing media/model backends."""
     revision = subprocess.check_output(["git", "-C", str(SOURCE.parent), "rev-parse", "HEAD"], text=True).strip()
     if revision != SOURCE_REVISION:
         raise ValueError("Original source revision changed")
@@ -68,7 +69,11 @@ def original_rows(root, seed):
     definitions(SOURCE/"toolkit/utils/functions.py", {"string_to_list"}, ns)
     definitions(SOURCE/"my_affectgpt/datasets/datasets/base_dataset.py", {"BaseDataset"}, ns)
     definitions(SOURCE/"my_affectgpt/datasets/datasets/mercaptionplus_dataset.py", {"MERCaptionPlus_Dataset"}, ns)
-    dataset = ns["MERCaptionPlus_Dataset"](dataset_cfg=SimpleNamespace(**cfg), model_cfg=None)
+    return ns["MERCaptionPlus_Dataset"](dataset_cfg=SimpleNamespace(**cfg), model_cfg=None)
+
+
+def original_rows(root, seed):
+    dataset = original_dataset(root)
     random.seed(seed)
     rows = [original_row(dataset, sample,
             dataset.get_cur_label_type(dataset.label_type_candidates, dataset.label_type), root)
@@ -133,7 +138,8 @@ def save_json(path, data):
 
 def input_rejected(record):
     error = record.get("annotation_api", {}).get("error", {})
-    return error.get("http_status") == 400 and "data_inspection_failed" in error.get("body", "")
+    return error.get("code") == "data_inspection_failed" or (
+        error.get("http_status") == 400 and "data_inspection_failed" in error.get("body", ""))
 
 
 def annotate_one(row, root, endpoint, key, settings, folder, max_attempts):
@@ -164,6 +170,9 @@ def annotate_one(row, root, endpoint, key, settings, folder, max_attempts):
         except Exception as exc:
             # Do not persist request URLs, signed credentials or authorization headers.
             meta["error"] = dict(type=type(exc).__name__)
+            if hasattr(exc, "api_error"):
+                meta["error"].update(exc.api_error)
+                meta["error"]["request_id"] = exc.request_id
             if isinstance(exc, UploadError):
                 meta["error"].update(http_status=exc.status, curl_code=exc.curl_code)
             cause = exc.__cause__ or exc.__context__
