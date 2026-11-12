@@ -141,6 +141,14 @@ or excluded. `--preflight-only` needs neither an adapter nor preference-validati
 pairs. Actual training still requires an explicit adapter, beta, and eval pairs;
 this code does not invent a validation split.
 
+`--adapter` accepts either the checksummed Hugging Face epoch-030 adapter directory
+or the original SFT runner file `checkpoint_000030_loss_0.737.pth` (SHA-256
+`e7bc5a7aa4c77ae9b636a902dc03bb17db7ca08e2c50fc394f10142125abdea0`). The latter
+uses the pinned SFT LoRA factory and verifies exact coverage and tensor equality
+before moving the model to CUDA. It does not depend on access to the private
+adapter repository and does not accept arbitrary checkpoints. Both formats are
+also accepted by the DPO export command.
+
 Batch defaults are `--batch-size 8 --gradient-accumulation-steps 8`, with gradient
 checkpointing enabled. In the official DPO implementation, batch size already
 includes accumulation: this means eight preference pairs per optimizer update,

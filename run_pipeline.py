@@ -375,9 +375,12 @@ def export(args):
     from safetensors.torch import load_file
     verify_epoch30(args.adapter)
     state = torch.load(args.checkpoint, map_location="cpu", weights_only=True)["state"]
-    original = load_file(str(args.adapter / "adapter_model.safetensors"))
-    expected = {"thinker." + key.replace(".lora_A.weight", ".lora_A.default.weight").replace(
-                ".lora_B.weight", ".lora_B.default.weight"): value for key, value in original.items()}
+    if args.adapter.is_file():
+        expected = torch.load(args.adapter, map_location="cpu", weights_only=True)["model"]
+    else:
+        original = load_file(str(args.adapter / "adapter_model.safetensors"))
+        expected = {"thinker." + key.replace(".lora_A.weight", ".lora_A.default.weight").replace(
+                    ".lora_B.weight", ".lora_B.default.weight"): value for key, value in original.items()}
     trained = {key: value for key, value in state.items() if ".lora_" in key}
     if set(trained) != set(expected) or any(trained[k].shape != expected[k].shape for k in expected):
         raise ValueError("Checkpoint does not contain the complete language LoRA")

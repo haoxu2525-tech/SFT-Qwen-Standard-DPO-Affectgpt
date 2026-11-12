@@ -16,6 +16,7 @@ AFFECTGPT = ROOT / "vendor/affectgpt/AffectGPT"
 SFT_INTERFACE = ROOT / "vendor/sft/Experiment/SFT Base Model Training"
 ADAPTER_REPO = "Sakie22Anona/SFT-Qwen2.5-Omni-7B-AffectGPT-LoRA-epochs-30-60"
 ADAPTER_REVISION = "06e534a6f43782296b33e134c6d52ce324b100c8"
+EPOCH30_RUNNER_SHA256 = "e7bc5a7aa4c77ae9b636a902dc03bb17db7ca08e2c50fc394f10142125abdea0"
 
 
 def add_sft_path():
@@ -24,6 +25,15 @@ def add_sft_path():
 
 
 def verify_epoch30(adapter):
+    adapter = Path(adapter)
+    if adapter.is_file():
+        checksum = hashlib.sha256()
+        with adapter.open("rb") as stream:
+            for chunk in iter(lambda: stream.read(1024 * 1024), b""):
+                checksum.update(chunk)
+        if checksum.hexdigest() != EPOCH30_RUNNER_SHA256:
+            raise ValueError("Not the verified original epoch30 runner checkpoint")
+        return
     hashes = {
         "adapter_model.safetensors": "5e856ea4effd60ad10bc376f1a4515aa935d68c423128cc60e03aba5d964ad03",
         "adapter_config.json": "2262c2a442439d9b92c953fdcea84b0fa6067302e965f1d1083026bc3a07cbb0"}
@@ -38,7 +48,7 @@ def verify_epoch30(adapter):
 
 def load_sft_model(snapshot, adapter, device="cuda:0", trainable=False):
     add_sft_path()
-    from omni_components import load_thinker_config
+    from omni_components import load_thinker_config, make_lora_model
     from transformers import Qwen2_5OmniThinkerForConditionalGeneration
     from peft import PeftModel
     verify_epoch30(adapter)
@@ -46,7 +56,26 @@ def load_sft_model(snapshot, adapter, device="cuda:0", trainable=False):
         str(snapshot), config=load_thinker_config(snapshot), local_files_only=True,
         torch_dtype=torch.bfloat16)
     native.requires_grad_(False)
-    model = PeftModel.from_pretrained(native, str(adapter), is_trainable=trainable)
+    if Path(adapter).is_file():
+        # Original SFT runner checkpoint: use its unchanged native LoRA factory.
+        # The complete file hash above pins weights AND the recorded SFT config.
+        model = make_lora_model(native)
+        saved = torch.load(adapter, map_location="cpu", weights_only=True)
+        if saved["epoch"] != 30:
+            raise ValueError("Expected epoch30")
+        state = {k.removeprefix("thinker."): v for k, v in saved["model"].items()}
+        required = {n for n, p in model.named_parameters() if p.requires_grad}
+        if set(state) != required:
+            raise ValueError("Original checkpoint does not exactly cover the language LoRA")
+        result = model.load_state_dict(state, strict=False)
+        if result.unexpected_keys or any(".lora_" in k for k in result.missing_keys):
+            raise ValueError("Original SFT LoRA reconstruction failed")
+        for name, parameter in model.named_parameters():
+            if name in state and not torch.equal(parameter.detach().cpu(), state[name]):
+                raise ValueError(f"SFT reconstruction changed tensor values: {name}")
+        del saved, state
+    else:
+        model = PeftModel.from_pretrained(native, str(adapter), is_trainable=trainable)
     if not trainable:
         model.requires_grad_(False)
     for name, parameter in model.named_parameters():
