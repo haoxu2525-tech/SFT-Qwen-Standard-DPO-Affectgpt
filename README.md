@@ -90,6 +90,12 @@ python run_pipeline.py evaluate --runtime ./runtime-eval-dpo-sampled \
   --dataset-root /path/to/original-dataset
 ```
 
+For an already running deployed job, `evaluate_after_training.py` can wait for
+its training/export completion and the original media transfer, then run these
+same inference and scoring commands in sequence. It does not add a scoring
+model or alter the official metrics. The separate Qwen2.5-7B-Instruct model is
+the extractor already loaded by AffectGPT's `evaluation.py`.
+
 CPU validation uses the actual original sampler functions, original dataset
 raw-media path, pinned Omni processor and a tiny randomly initialized Thinker.
 It checks waveform/pixel equality, short-input handling, resampling, forward and
