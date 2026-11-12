@@ -121,6 +121,10 @@ with all 31,327 source IDs. MELD is not included in this training set.
 
 ## Native length preflight
 
+This is an explicit, optional diagnostic, not part of the original DPO trainer.
+Normal `train` runs do not repeat the full scan or run a preliminary smoke test.
+Each training batch still rejects overlong inputs rather than silently truncating.
+
 Use the pinned processor snapshot, original dataset, and a new output directory:
 
 ```bash
