@@ -392,10 +392,10 @@ def export(args):
 
 
 def evaluate(args):
-    cmd = [sys.executable, str(SFT_INTERFACE / "run_affectgpt_omni.py"), args.command,
-           "--source", str(AFFECTGPT), "--runtime", str(args.runtime), "--dataset-root", str(args.dataset_root)]
+    cmd = [sys.executable, str(Path(__file__).resolve().with_name("reference_evaluation.py")), args.command,
+           "--runtime", str(args.runtime), "--dataset-root", str(args.dataset_root)]
     if args.command == "infer":
-        cmd += ["--", "--options", "inference.test_epoch=1", f"inference.ckpt_root={args.checkpoints}"]
+        cmd += ["--checkpoints", str(args.checkpoints), "--checkpoint-epoch", str(args.checkpoint_epoch)]
     subprocess.run(cmd, check=True)
 
 
@@ -448,6 +448,8 @@ def main():
                              help="After the full length scan, run 20 updates on the longest training batch")
         if name == "infer":
             sub.add_argument("--checkpoints", type=Path, required=True)
+            sub.add_argument("--checkpoint-epoch", type=int, default=1,
+                             help="DPO export: 1; original SFT baseline checkpoint: 30")
     sub = commands.add_parser("export")
     sub.add_argument("--checkpoint", type=Path, required=True)
     sub.add_argument("--adapter", type=Path, required=True)

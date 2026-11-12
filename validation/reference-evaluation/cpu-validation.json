@@ -1,0 +1,64 @@
+{
+  "protocol": "affectgpt-sampled-audio-face-omni-v1",
+  "date": "2026-11-12",
+  "affectgpt_revision": "95b9257758df29fa6481c138252cdd317cce1735",
+  "sft_interface_revision": "28ab698d0629528ffb1364c28a5bcdf2632bfef0",
+  "validation": {
+    "cpu_contracts": {
+      "passed": 23,
+      "failed": 0,
+      "command": "python -m pytest test_reference_evaluation.py test_dpo_native_input.py test_annotation_recovery.py -q (before optional archive tests were added)"
+    },
+    "real_archive_tests": {
+      "passed": 3,
+      "failed": 0,
+      "dataset": "MELD",
+      "ids": [
+        "test_dia132_utt17",
+        "test_dia0_utt2",
+        "test_dia100_utt14"
+      ],
+      "checks": [
+        "original Dataset raw audio equals all eight adapter waveforms",
+        "original Dataset raw face pixels equal all eight adapter images",
+        "pinned native processor accepts 8 audio items and 8 image items"
+      ],
+      "command": "MER_UNIBENCH_ARCHIVE=... OMNI_PROCESSOR_SNAPSHOT=... python -m pytest test_reference_evaluation.py -k real_meld -q"
+    },
+    "processor_and_model": [
+      "Pinned real Omni processor",
+      "tiny randomly initialized Thinker finite forward and one-token generation on CPU",
+      "original Chat method identity and generation argument forwarding",
+      "original inference CLI parses epoch 1 / 30",
+      "scoring dispatch has no Omni installer"
+    ]
+  },
+  "limitations": [
+    "No full 7B GPU evaluation under this new protocol",
+    "No new benchmark scores",
+    "Three real-media tests are MELD only, not the full nine-dataset suite",
+    "Windows tests intercept launcher preparation/symlink creation; Linux runtime integration remains to be exercised",
+    "Matching observed raw media does not mean identical encoders, tokenization, normalization, temporal representation or architecture"
+  ],
+  "environment": {
+    "torch": "2.4.0+cpu",
+    "torchaudio": "2.4.0+cpu",
+    "transformers": "4.52.4",
+    "opencv_python_headless": "4.10.0.84",
+    "pytorchvideo": "0.1.5"
+  },
+  "interface_sha256": {
+    "reference_evaluation.py": "b42b5eb9ee07b87a1d641690a366d30e4f4be13081bb5a7f3f108fe6d9931047",
+    "run_pipeline.py": "888f1af8bb10383260f651d4977d65adf3a9ce6392ebf39c8800f7f6d2d8cb69",
+    "test_reference_evaluation.py": "e7512975fcdf238066bcda7e29672328f0031d509dd721f5902f52e19eaca8b4"
+  },
+  "upstream_git_blobs": {
+    "AffectGPT/inference_hybird.py": "f62b90cc24b2f9469bbf7763656b1c32e0df9ca1",
+    "AffectGPT/evaluation.py": "b484bd159b44245aea778479c00e908a35c91c27",
+    "AffectGPT/evaluation-scoreonly.py": "403f1f42656543dd7756f2e41250d5238ad36e13",
+    "AffectGPT/my_affectgpt/datasets/datasets/base_dataset.py": "9e61eec7a55eb516794d4fbded567101bc382734",
+    "AffectGPT/my_affectgpt/models/ImageBind/data.py": "a1eae97fa779c62cae094efcfbe91be22ebea779",
+    "AffectGPT/my_affectgpt/processors/video_processor.py": "dd038e76db9a299c3f5aff4578bf3f7478fbe984",
+    "AffectGPT/my_affectgpt/conversation/conversation_video.py": "debb33429a84f91aa256ac3231ed3154ebfcebab"
+  }
+}
