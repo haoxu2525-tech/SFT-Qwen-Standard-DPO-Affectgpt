@@ -5,6 +5,7 @@ native feature encoding. Eight separate audio clips and eight ordered images
 do not assert a continuous/synchronized timeline. Training is unaffected.
 """
 import argparse
+import copy
 import json
 import os
 from pathlib import Path
@@ -13,8 +14,15 @@ import sys
 ROOT = Path(__file__).resolve().parent
 SFT_INTERFACE = ROOT / "vendor/sft/Experiment/SFT Base Model Training"
 SOURCE = ROOT / "vendor/affectgpt/AffectGPT"
-PROTOCOL = "affectgpt-sampled-audio-face-omni-v1"
+PROTOCOL = "affectgpt-sampled-audio-face-omni-v2-original-generation"
 RESULT_NAME = "emercoarse_highlevelfilter4_outputhybird_bestsetup_bestfusion_lz"
+
+
+def load_reference_generation_config():
+    """Use the original evaluation LLM's defaults, not Omni's different defaults."""
+    from transformers import GenerationConfig
+    return GenerationConfig.from_pretrained(
+        SOURCE / "models/Qwen2.5-7B-Instruct", local_files_only=True)
 
 
 def read_reference_media(source, load_audio, load_face):
@@ -56,6 +64,7 @@ def encode_reference_media(processor, prompt, source, load_audio, load_face):
 def install_reference_media(omni):
     """Replace only the evaluation media/model-call interface after SFT install."""
     from my_affectgpt.datasets.datasets import base_dataset
+    generation_config = load_reference_generation_config()
 
     def read_media(dataset, video_path=None, face_npy=None, audio_path=None, image_path=None):
         if not audio_path or not face_npy:
@@ -72,7 +81,8 @@ def install_reference_media(omni):
                                            base_dataset.load_audio, base_dataset.load_face)
             prefix_length = inputs["input_ids"].shape[1]
             output = self.chat.model.generate(
-                **omni.thinker_inputs(self.chat.model, inputs), **generation_kwargs)
+                **omni.thinker_inputs(self.chat.model, inputs),
+                generation_config=copy.deepcopy(generation_config), **generation_kwargs)
             return output[:, prefix_length:]
 
     base_dataset.BaseDataset.read_frame_face_audio_text = read_media
@@ -126,11 +136,15 @@ def main():
                       audio="original load_audio: 8 x 2 seconds, 16 kHz",
                       vision="original load_face: 8 ordered face crops, 224 x 224",
                       serialization="8 native audio items + 8 native image items; no AV synchronization",
+                      generation_config=load_reference_generation_config().to_dict(),
                       scoring="unchanged AffectGPT evaluation.py")
         receipt = runtime / "evaluation-protocol.json"
         if receipt.exists() and json.loads(receipt.read_text()) != record:
             raise ValueError("Use a new runtime for a different evaluation/checkpoint")
         receipt.write_text(json.dumps(record, indent=2) + "\n", encoding="utf-8")
+        print(json.dumps(dict(reference_generation_defaults={
+            key: record["generation_config"][key] for key in ("eos_token_id", "top_k")
+        })), flush=True)
         import omni_components as omni
         original_install = omni.install
 

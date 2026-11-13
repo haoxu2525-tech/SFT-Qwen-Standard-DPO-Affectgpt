@@ -60,6 +60,15 @@ architecture reproduction. Question/subtitle prose comes from the original
 text-only branch as in the SFT interface; legacy model-specific media wrappers
 are replaced by native roles/media tokens.
 
+The evaluation interface explicitly supplies the original Qwen2.5-7B-Instruct
+`generation_config.json` to native generation. This preserves inherited defaults,
+including `top_k=20` and EOS IDs `[151645, 151643]` (`<|im_end|>` and
+`<|endoftext|>`), while the original `Chat.answer_sample` arguments retain precedence.
+The prior v1 interface inherited Omni defaults (`top_k=50`, only EOS 151645);
+its predictions are not aligned results and must not be mixed with v2 outputs.
+Use a fresh evaluation runtime when switching to v2. Existing DPO weights are
+read directly through a directory symlink; evaluation does not copy or save them.
+
 Original nine-dataset membership, `Chat.answer_sample`, text selection, decoding
 parameters, stopping/answer parsing, Qwen2.5-7B-Instruct label extraction and
 `evaluation.py` metrics remain in the pinned source. Single fixed checkpoints

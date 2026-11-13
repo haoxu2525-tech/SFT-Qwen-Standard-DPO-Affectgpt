@@ -23,6 +23,17 @@ sys.path.insert(0, str(evaluation.SFT_INTERFACE))
 import omni_components as omni
 
 
+@pytest.fixture(autouse=True)
+def original_generation_defaults(monkeypatch):
+    from transformers import GenerationConfig
+    # Values from the original Qwen2.5-7B-Instruct generation_config.json.
+    config = GenerationConfig(bos_token_id=151643, pad_token_id=151643,
+                              eos_token_id=[151645, 151643], do_sample=True,
+                              repetition_penalty=1.05, temperature=.7, top_p=.8, top_k=20)
+    monkeypatch.setattr(evaluation, "load_reference_generation_config", lambda: config)
+    return config
+
+
 def original_nodes(relative, names, namespace):
     path = evaluation.SOURCE / relative
     nodes = [n for n in ast.parse(path.read_text(encoding="utf-8")).body
@@ -204,8 +215,28 @@ def test_install_keeps_original_chat_and_generation_contract(monkeypatch, proces
                                max_new_tokens=1200, max_length=2000)
     assert result == "happy"
     assert captured["use_audio_in_video"] is False
+    assert captured["generation_config"].eos_token_id == [151645, 151643]
+    assert captured["generation_config"].top_k == 20
     for key, value in dict(num_beams=1, temperature=1, do_sample=True, top_p=.9, max_new_tokens=1200).items():
         assert captured[key] == value
+
+
+@pytest.mark.parametrize("ending", [151643, 151645])
+def test_original_eos_stops_native_generation(ending, original_generation_defaults):
+    from transformers import GPT2Config, GPT2LMHeadModel, LogitsProcessor, LogitsProcessorList
+    # A forced sequence proves both EOS tokens end generate before continuation.
+    class ForceEndThenContinuation(LogitsProcessor):
+        def __call__(self, input_ids, scores):
+            scores.fill_(-float("inf"))
+            scores[:, ending if input_ids.shape[1] == 1 else 7] = 0
+            return scores
+    model = GPT2LMHeadModel(GPT2Config(vocab_size=151646, n_positions=8,
+                                      n_embd=8, n_layer=1, n_head=1)).eval()
+    result = model.generate(torch.tensor([[3]]), attention_mask=torch.ones(1, 1, dtype=torch.long),
+                            generation_config=copy.deepcopy(original_generation_defaults),
+                            do_sample=False, max_new_tokens=3,
+                            logits_processor=LogitsProcessorList([ForceEndThenContinuation()]))
+    assert result.tolist() == [[3, ending]]
 
 
 @pytest.mark.parametrize("stage,epoch", [("infer", 1), ("infer", 30), ("evaluate", 1)])
