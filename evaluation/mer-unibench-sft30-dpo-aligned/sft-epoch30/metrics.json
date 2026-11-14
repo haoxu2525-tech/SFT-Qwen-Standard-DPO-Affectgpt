@@ -1,0 +1,39 @@
+{
+  "MER2023": {
+    "hitrate": 0.7427,
+    "mscore": 0.0
+  },
+  "MER2024": {
+    "hitrate": 0.781,
+    "mscore": 0.0
+  },
+  "MELD": {
+    "hitrate": 0.5855,
+    "mscore": 0.0
+  },
+  "IEMOCAPFour": {
+    "hitrate": 0.5757,
+    "mscore": 0.0
+  },
+  "CMUMOSI": {
+    "fscore": 0.8167,
+    "acc": 0.8171
+  },
+  "CMUMOSEI": {
+    "fscore": 0.7534,
+    "acc": 0.7493
+  },
+  "SIMS": {
+    "fscore": 0.8532,
+    "acc": 0.8531
+  },
+  "SIMSv2": {
+    "fscore": 0.8301,
+    "acc": 0.831
+  },
+  "OVMERDPlus": {
+    "fscore": 0.6149,
+    "precision": 0.5899,
+    "recall": 0.6433
+  }
+}

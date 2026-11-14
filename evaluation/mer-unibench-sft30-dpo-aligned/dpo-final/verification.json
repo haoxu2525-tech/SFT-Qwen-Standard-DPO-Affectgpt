@@ -1,0 +1,20 @@
+{
+  "status": "completed",
+  "completion_utc": "2026-11-13T23:35:38.912788+00:00",
+  "counts": {
+    "mer2023": 411,
+    "mer2024": 1169,
+    "meld": 2610,
+    "iemocapfour": 1241,
+    "cmumosi": 686,
+    "cmumosei": 4659,
+    "sims": 457,
+    "simsv2": 1034,
+    "ovmerdplus": 532
+  },
+  "total": 12799,
+  "empty_predictions": 0,
+  "raw_npz_count": 22,
+  "source_infer_log_sha256": "29bba2d1db73b737a2c71ee4debeea1d2586bfe275cc34f11c356ee37648193e",
+  "source_evaluate_log_sha256": "a7b84d2b72656ad2f723a1f4887b6a07c1f291733968971fccfdb7c89b39048b"
+}

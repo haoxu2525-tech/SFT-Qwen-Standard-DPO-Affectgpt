@@ -1,0 +1,10 @@
+MER2023: best hitrate: 0.7427; best mscore: 0.0000
+MER2024: best hitrate: 0.7810; best mscore: 0.0000
+MELD: best hitrate: 0.5855; best mscore: 0.0000
+IEMOCAPFour: best hitrate: 0.5757; best mscore: 0.0000
+CMUMOSI: best fscore: 0.8167; best acc: 0.8171
+CMUMOSEI: best fscore: 0.7534; best acc: 0.7493
+SIMS: best fscore: 0.8532; best acc: 0.8531
+SIMSv2: best fscore: 0.8301; best acc: 0.8310
+OVMERDPlus: best fscore: 0.6149; best precision: 0.5899; best recall: 0.6433
+emercoarse_highlevelfilter4_outputhybird_bestsetup_bestfusion_lz & 74.27 & 78.10 & 58.55 & 57.57 & 81.67 & 75.34 & 85.32 & 83.01 & 61.49 & 72.81

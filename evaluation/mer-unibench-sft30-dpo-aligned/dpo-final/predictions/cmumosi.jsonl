@@ -1,0 +1,686 @@
+{"id": "k5Y_838nuGo_1", "prediction": "The character's emotional state is disinterested, lack of excitement, negative.<|endoftext|>", "extracted_labels": "[disinterested, negative]", "sentiment": "negative"}
+{"id": "k5Y_838nuGo_2", "prediction": "The character's emotional state is surprised, surprised, surprised.<|endoftext|>", "extracted_labels": "[surprised]", "sentiment": "neutral"}
+{"id": "k5Y_838nuGo_3", "prediction": "The character's emotional state is positive, affection, likes, positive mood.<|endoftext|>", "extracted_labels": "[positive, affection, likes, positive mood]", "sentiment": "positive"}
+{"id": "k5Y_838nuGo_4", "prediction": "The character's emotional state: positive, liking.<|endoftext|>", "extracted_labels": "[positive, liking]", "sentiment": "positive"}
+{"id": "k5Y_838nuGo_5", "prediction": "The character's emotional state is disapproval, dissatisfaction, negative.", "extracted_labels": "[disapproval, dissatisfaction, negative]", "sentiment": "negative"}
+{"id": "k5Y_838nuGo_6", "prediction": "The character's emotional state is positive, appreciative.<|endoftext|>", "extracted_labels": "[positive, appreciative]", "sentiment": "positive"}
+{"id": "k5Y_838nuGo_7", "prediction": "The character's emotional state is dissatisfied, negative, critical.", "extracted_labels": "[negative, critical]", "sentiment": "negative"}
+{"id": "k5Y_838nuGo_8", "prediction": "The character's emotional state: disapproval, dissatisfaction, disinterest.<|endoftext|>", "extracted_labels": "[disapproval, dissatisfaction, disinterest]", "sentiment": "negative"}
+{"id": "k5Y_838nuGo_9", "prediction": "The character's emotional state: positive, satisfaction.<|endoftext|>", "extracted_labels": "[positive, satisfaction]", "sentiment": "positive"}
+{"id": "k5Y_838nuGo_10", "prediction": "The character's emotional state is positive, liking.<|endoftext|>", "extracted_labels": "[positive, liking]", "sentiment": "positive"}
+{"id": "k5Y_838nuGo_11", "prediction": "The character's emotional state is positive, negative, complex.<|endoftext|>", "extracted_labels": "[positive, negative, complex]", "sentiment": "complex"}
+{"id": "k5Y_838nuGo_12", "prediction": "The character's emotional state is neutral.<|endoftext|>", "extracted_labels": "[neutral]", "sentiment": "neutral"}
+{"id": "k5Y_838nuGo_13", "prediction": "The character's emotional state: positive, satisfaction.<|endoftext|>", "extracted_labels": "[positive, satisfaction]", "sentiment": "positive"}
+{"id": "k5Y_838nuGo_14", "prediction": "The character's emotional state is dissatisfied, unpleasant, negative.<|endoftext|>", "extracted_labels": "[unsatisfied, unpleasant, negative]", "sentiment": "negative"}
+{"id": "k5Y_838nuGo_15", "prediction": "The character's emotional state is positive, affirmative, appreciation.<|endoftext|>", "extracted_labels": "[positive, affirmative, appreciation]", "sentiment": "positive"}
+{"id": "k5Y_838nuGo_16", "prediction": "The character's emotional state is neutral.<|endoftext|>", "extracted_labels": "[neutral]", "sentiment": "neutral"}
+{"id": "k5Y_838nuGo_17", "prediction": "The character's emotional state is disapproval, dissatisfaction, humor, irony.<|endoftext|>", "extracted_labels": "[disapproval, dissatisfaction, humor, irony]", "sentiment": "negative"}
+{"id": "k5Y_838nuGo_18", "prediction": "The emotional state of the character is contemplative, self-reflection, evaluation, expectation, hope.<|endoftext|>", "extracted_labels": "[contemplative, self-reflection, evaluation, hope]", "sentiment": "positive"}
+{"id": "k5Y_838nuGo_19", "prediction": "The character's emotional state is neutral.<|endoftext|>", "extracted_labels": "[neutral]", "sentiment": "neutral"}
+{"id": "k5Y_838nuGo_20", "prediction": "The character's emotional state is neutral.<|endoftext|>", "extracted_labels": "[neutral]", "sentiment": "neutral"}
+{"id": "k5Y_838nuGo_21", "prediction": "The character's emotional state is disapproval, dissatisfaction, negative.<|endoftext|>", "extracted_labels": "[disapproval, dissatisfaction, negative]", "sentiment": "negative"}
+{"id": "k5Y_838nuGo_22", "prediction": "The character's emotional state is positive, excitement.<|endoftext|>", "extracted_labels": "[positive, excitement]", "sentiment": "positive"}
+{"id": "k5Y_838nuGo_23", "prediction": "The emotional state of the character is neutral.<|endoftext|>", "extracted_labels": "[neutral]", "sentiment": "neutral"}
+{"id": "k5Y_838nuGo_24", "prediction": "The emotional state of the character is neutral.<|endoftext|>", "extracted_labels": "[neutral]", "sentiment": "neutral"}
+{"id": "k5Y_838nuGo_25", "prediction": "The character's emotional state is dissatisfaction, disappointment.<|endoftext|>", "extracted_labels": "[dissatisfaction, disappointment]", "sentiment": "negative"}
+{"id": "k5Y_838nuGo_26", "prediction": "The character's emotional state: positive, positive, positive, positive, positive, positive, positive.<|endoftext|>", "extracted_labels": "[positive]", "sentiment": "positive"}
+{"id": "k5Y_838nuGo_27", "prediction": "The character's emotional state is frustration, anger, anxiety, stress, dissatisfaction, disapproval.", "extracted_labels": "[frustration, anger, anxiety, stress, dissatisfaction, disapproval]", "sentiment": "negative"}
+{"id": "k5Y_838nuGo_28", "prediction": "The character's emotional state is positive, excited, enthusiastic.<|endoftext|>", "extracted_labels": "[positive, excited, enthusiastic]", "sentiment": "positive"}
+{"id": "k5Y_838nuGo_29", "prediction": "The character's emotional state is disapproval, dissatisfaction, disappointment, sadness, anger, frustration.<|endoftext|>", "extracted_labels": "[disapproval, dissatisfaction, disappointment, sadness, anger, frustration]", "sentiment": "negative"}
+{"id": "k5Y_838nuGo_30", "prediction": "The character's emotional state is positive, excited.<|endoftext|>", "extracted_labels": "[positive, excited]", "sentiment": "positive"}
+{"id": "k5Y_838nuGo_31", "prediction": "The character's emotional state is Disatisfaction, Dislike.<|endoftext|>", "extracted_labels": "[Disatisfaction, Dislike]", "sentiment": "negative"}
+{"id": "cXypl4FnoZo_1", "prediction": "The character's emotional state is anticipation, excitement.<|endoftext|>", "extracted_labels": "[anticipation, excitement]", "sentiment": "positive"}
+{"id": "cXypl4FnoZo_2", "prediction": "The character's emotional state is positive, satisfied.<|endoftext|>", "extracted_labels": "[positive, satisfied]", "sentiment": "positive"}
+{"id": "cXypl4FnoZo_3", "prediction": "The character's emotional state is positive, liking.<|endoftext|>", "extracted_labels": "[positive]", "sentiment": "positive"}
+{"id": "cXypl4FnoZo_4", "prediction": "The character's emotional state is uncertainty, concern, unexpected, positive.<|endoftext|>", "extracted_labels": "[uncertainty, concern, positive]", "sentiment": "positive"}
+{"id": "cXypl4FnoZo_5", "prediction": "The character's emotional state: positive, appreciation.<|endoftext|>", "extracted_labels": "[positive, appreciation]", "sentiment": "positive"}
+{"id": "cXypl4FnoZo_6", "prediction": "The character's emotional state is excited, enthusiastic, humorous, positive.<|endoftext|>", "extracted_labels": "[excited, enthusiastic, humorous, positive]", "sentiment": "positive"}
+{"id": "cXypl4FnoZo_7", "prediction": "The emotional state of the character is negative, evaluation, odd.<|endoftext|>", "extracted_labels": "[odd]", "sentiment": "neutral"}
+{"id": "cXypl4FnoZo_8", "prediction": "The character's emotional state is appreciation, positive.", "extracted_labels": "[appreciation, positive]", "sentiment": "positive"}
+{"id": "cXypl4FnoZo_9", "prediction": "The character's emotional state is appreciation, admiration.", "extracted_labels": "[appreciation, admiration]", "sentiment": "positive"}
+{"id": "cXypl4FnoZo_10", "prediction": "The character's emotional state is positive, appreciation.<|endoftext|>", "extracted_labels": "[positive, appreciation]", "sentiment": "positive"}
+{"id": "cXypl4FnoZo_11", "prediction": "The character's emotional state is uncertainty, confusion.<|endoftext|>", "extracted_labels": "[uncertainty, confusion]", "sentiment": "negative"}
+{"id": "cXypl4FnoZo_12", "prediction": "The character's emotional state is positive, enjoyment.<|endoftext|>", "extracted_labels": "[positive, enjoyment]", "sentiment": "positive"}
+{"id": "cXypl4FnoZo_13", "prediction": "The character's emotional state is dissatisfaction, disappointment, confusion, uncertainty.<|endoftext|>", "extracted_labels": "[dissatisfaction, disappointment, confusion, uncertainty]", "sentiment": "negative"}
+{"id": "cXypl4FnoZo_14", "prediction": "The character's emotional state is confused, puzzled.", "extracted_labels": "[confused, puzzled]", "sentiment": "negative"}
+{"id": "cXypl4FnoZo_15", "prediction": "The character's emotional state is neutral, focused.<|endoftext|>", "extracted_labels": "[neutral, focused]", "sentiment": "neutral"}
+{"id": "cXypl4FnoZo_16", "prediction": "The character's emotional state is frustration, impatience, disappointment, dissatisfaction.<|endoftext|>", "extracted_labels": "[frustration, impatience, disappointment, dissatisfaction]", "sentiment": "negative"}
+{"id": "cXypl4FnoZo_17", "prediction": "The character's emotional state is disapproval, dissatisfaction, negative.<|endoftext|>", "extracted_labels": "[disapproval, dissatisfaction, negative]", "sentiment": "negative"}
+{"id": "cXypl4FnoZo_18", "prediction": "The character's emotional state is disapproval, confusion, uncertainty.<|endoftext|>", "extracted_labels": "[disapproval, confusion, uncertainty]", "sentiment": "negative"}
+{"id": "cXypl4FnoZo_19", "prediction": "The character's emotional state is disappointment, surprise, uncertainty.<|endoftext|>", "extracted_labels": "[disappointment, surprise, uncertainty]", "sentiment": "negative"}
+{"id": "cXypl4FnoZo_20", "prediction": "The character's emotional state is disappointment, dissatisfaction, frustration.<|endoftext|>", "extracted_labels": "[disappointment, dissatisfaction, frustration]", "sentiment": "negative"}
+{"id": "cXypl4FnoZo_21", "prediction": "The character's emotional state is dissatisfaction, disappointment.<|endoftext|>", "extracted_labels": "[dissatisfaction, disappointment]", "sentiment": "negative"}
+{"id": "cXypl4FnoZo_22", "prediction": "The character's emotional state is tension, anxiety, stress.<|endoftext|>", "extracted_labels": "[tension, anxiety, stress]", "sentiment": "negative"}
+{"id": "cXypl4FnoZo_23", "prediction": "The character's emotional state is neutral.<|endoftext|>", "extracted_labels": "[neutral]", "sentiment": "neutral"}
+{"id": "cXypl4FnoZo_24", "prediction": "The character's emotional state is disappointment, frustration, anger.<|endoftext|>", "extracted_labels": "[disappointment, frustration, anger]", "sentiment": "negative"}
+{"id": "cXypl4FnoZo_25", "prediction": "The character's emotional state is disappointment, dissatisfaction, anger.<|endoftext|>", "extracted_labels": "[disappointment, dissatisfaction, anger]", "sentiment": "negative"}
+{"id": "cXypl4FnoZo_26", "prediction": "The emotional state of the character is positive, evaluation, comparison, to, Peter.<|endoftext|>", "extracted_labels": "[]", "sentiment": "neutral"}
+{"id": "cXypl4FnoZo_27", "prediction": "The character's emotional state is dissatisfied, angry.<|endoftext|>", "extracted_labels": "[dissatisfied, angry]", "sentiment": "negative"}
+{"id": "cXypl4FnoZo_28", "prediction": "The character's emotional state is dissatisfied, discontented, annoyance.<|endoftext|>", "extracted_labels": "[disatisfied, discontented, annoyance]", "sentiment": "negative"}
+{"id": "cXypl4FnoZo_29", "prediction": "The character's emotional state is dissatisfaction, disliking.", "extracted_labels": "[dissatisfaction, disliking]", "sentiment": "negative"}
+{"id": "yvsjCA6Y5Fc_1", "prediction": "The character's emotional state is anxiety, unease.<|endoftext|>", "extracted_labels": "[anxiety, unease]", "sentiment": "negative"}
+{"id": "yvsjCA6Y5Fc_2", "prediction": "The character's emotional state: disappointment, dissatisfaction.<|endoftext|>", "extracted_labels": "[disappointment, dissatisfaction]", "sentiment": "negative"}
+{"id": "yvsjCA6Y5Fc_3", "prediction": "The character's emotional state is dissatisfaction, disliking, negative.", "extracted_labels": "[dissatisfaction, disliking, negative]", "sentiment": "negative"}
+{"id": "yvsjCA6Y5Fc_4", "prediction": "The character's emotional state is disappointment, dissatisfaction, disheartened, dissatisfied, questioning.<|endoftext|>", "extracted_labels": "[disappointed, dissatisfied, disheartened, questioning]", "sentiment": "negative"}
+{"id": "yvsjCA6Y5Fc_5", "prediction": "The character's emotional state is positive, negative, neutral, indifferent.<|endoftext|>", "extracted_labels": "[positive, negative, neutral, indifferent]", "sentiment": "neutral"}
+{"id": "yvsjCA6Y5Fc_6", "prediction": "The character's emotional state is positive, negative, complex, controlled, out of control, anxiety, anger.<|endoftext|>", "extracted_labels": "[positive, negative, complex, controlled, out of control, anxiety, anger]", "sentiment": "complex"}
+{"id": "yvsjCA6Y5Fc_7", "prediction": "The character's emotional state: negative, dissatisfaction, disliking.<|endoftext|>", "extracted_labels": "[negative, dissatisfaction, disliking]", "sentiment": "negative"}
+{"id": "yvsjCA6Y5Fc_8", "prediction": "The character's emotional state is negative, positive, complex.<|endoftext|>", "extracted_labels": "[positive, negative, complex]", "sentiment": "complex"}
+{"id": "yvsjCA6Y5Fc_9", "prediction": "The character's emotional state is disapproval, dissatisfaction, negative.<|endoftext|>", "extracted_labels": "[disapproval, dissatisfaction, negative]", "sentiment": "negative"}
+{"id": "yvsjCA6Y5Fc_10", "prediction": "The character's emotional state is disappointment, dissatisfaction.", "extracted_labels": "[disappointment, dissatisfaction]", "sentiment": "negative"}
+{"id": "yvsjCA6Y5Fc_11", "prediction": "The character's emotional state is humorous, funny.<|endoftext|>", "extracted_labels": "[humorous, funny]", "sentiment": "positive"}
+{"id": "yvsjCA6Y5Fc_12", "prediction": "The character's emotional state is neutral.<|endoftext|>", "extracted_labels": "[neutral]", "sentiment": "neutral"}
+{"id": "yvsjCA6Y5Fc_13", "prediction": "The character's emotional state is disappointment, dissatisfaction.<|endoftext|>", "extracted_labels": "[disappointment, dissatisfaction]", "sentiment": "negative"}
+{"id": "yvsjCA6Y5Fc_14", "prediction": "The character's emotional state is disapproval, dissatisfaction, criticism.", "extracted_labels": "[disapproval, dissatisfaction, criticism]", "sentiment": "negative"}
+{"id": "yvsjCA6Y5Fc_15", "prediction": "The character's emotional state is Disappointment, Un满足, Criticism.<|endoftext|>", "extracted_labels": "[Disappointment, Un满足, Criticism]", "sentiment": "negative"}
+{"id": "yvsjCA6Y5Fc_16", "prediction": "The character's emotional state is dissatisfaction, disappointment, frustration.<|endoftext|>", "extracted_labels": "[dissatisfaction, disappointment, frustration]", "sentiment": "negative"}
+{"id": "yvsjCA6Y5Fc_17", "prediction": "The character's emotional state is neutral, disinterested.<|endoftext|>", "extracted_labels": "[neutral, disinterested]", "sentiment": "negative"}
+{"id": "yvsjCA6Y5Fc_18", "prediction": "The character's emotional state is disappointment, frustration, anger.<|endoftext|>", "extracted_labels": "[disappointment, frustration, anger]", "sentiment": "negative"}
+{"id": "yvsjCA6Y5Fc_19", "prediction": "The character's emotional state is skepticism, surprise, tension, excitement.<|endoftext|>", "extracted_labels": "[skepticism, surprise, tension, excitement]", "sentiment": "positive"}
+{"id": "yvsjCA6Y5Fc_20", "prediction": "The character's emotional state: positive, appreciation, emphasis, strong emotion, intense.<|endoftext|>", "extracted_labels": "[positive, appreciation, strong emotion, intense]", "sentiment": "positive"}
+{"id": "yvsjCA6Y5Fc_21", "prediction": "The character's emotional state is Disatisfaction, Doubt, Pressure.<|endoftext|>", "extracted_labels": "[Disatisfaction, Doubt, Pressure]", "sentiment": "negative"}
+{"id": "yvsjCA6Y5Fc_22", "prediction": "The character's emotional state is frustration, disappointment, anger.<|endoftext|>", "extracted_labels": "[frustration, disappointment, anger]", "sentiment": "negative"}
+{"id": "yvsjCA6Y5Fc_23", "prediction": "The character's emotional state is excited, enthusiastic, humorous.<|endoftext|>", "extracted_labels": "[excited, enthusiastic, humorous]", "sentiment": "positive"}
+{"id": "f_pcplsH_V0_1", "prediction": "The character's emotional state is frustration, anger, demand, warning.<|endoftext|>", "extracted_labels": "[frustration, anger, demand, warning]", "sentiment": "negative"}
+{"id": "f_pcplsH_V0_2", "prediction": "The character's emotional state is expectation, request, positive.<|endoftext|>", "extracted_labels": "[expectation, request, positive]", "sentiment": "positive"}
+{"id": "f_pcplsH_V0_3", "prediction": "The character's emotional state is neutral.<|endoftext|>", "extracted_labels": "[neutral]", "sentiment": "neutral"}
+{"id": "f_pcplsH_V0_4", "prediction": "The character's emotional state is positive, rational.", "extracted_labels": "[positive]", "sentiment": "positive"}
+{"id": "f_pcplsH_V0_5", "prediction": "The character's emotional state is dissatisfied, disappointment, satisfaction, positivity.<|endoftext|>", "extracted_labels": "[dissatisfied, disappointment, satisfaction, positivity]", "sentiment": "positive"}
+{"id": "f_pcplsH_V0_6", "prediction": "The character's emotional state: positive, satisfaction.<|endoftext|>", "extracted_labels": "[positive, satisfaction]", "sentiment": "positive"}
+{"id": "f_pcplsH_V0_7", "prediction": "The character's emotional state is disapproval, dissatisfaction, disappointment, frustration.<|endoftext|>", "extracted_labels": "[disapproval, dissatisfaction, disappointment, frustration]", "sentiment": "negative"}
+{"id": "f_pcplsH_V0_8", "prediction": "The character's emotional state is positive, affirmation, appreciation.<|endoftext|>", "extracted_labels": "[positive, affirmation, appreciation]", "sentiment": "positive"}
+{"id": "f_pcplsH_V0_9", "prediction": "The character's emotional state is negative, disliking, dissatisfaction.<|endoftext|>", "extracted_labels": "[negative, disliking, dissatisfaction]", "sentiment": "negative"}
+{"id": "f_pcplsH_V0_10", "prediction": "The character's emotional state is positive, evaluation, comparison, excitement.<|endoftext|>", "extracted_labels": "[positive, excited]", "sentiment": "positive"}
+{"id": "f_pcplsH_V0_11", "prediction": "The character's emotional state is Dislike, Unf喜欢<|endoftext|>", "extracted_labels": "[]", "sentiment": "neutral"}
+{"id": "f_pcplsH_V0_12", "prediction": "The character's emotional state is Dislike, Disapproval, Criticism.<|endoftext|>", "extracted_labels": "[Dislike, Disapproval, Criticism]", "sentiment": "negative"}
+{"id": "f_pcplsH_V0_13", "prediction": "The character's emotional state: anticipation, excitement.<|endoftext|>", "extracted_labels": "[anticipation, excitement]", "sentiment": "positive"}
+{"id": "f_pcplsH_V0_14", "prediction": "The character's emotional state is dissatisfaction, criticism, humor, irony.", "extracted_labels": "[dissatisfaction, criticism, humor, irony]", "sentiment": "negative"}
+{"id": "f_pcplsH_V0_15", "prediction": "The character's emotional state is disappointment, frustration, dissatisfaction.", "extracted_labels": "[disappointment, frustration, dissatisfaction]", "sentiment": "negative"}
+{"id": "yDtzw_Y-7RU_1", "prediction": "The character's emotional state is positive, surprise, excitement.<|endoftext|>", "extracted_labels": "[positive, surprise, excitement]", "sentiment": "positive"}
+{"id": "yDtzw_Y-7RU_2", "prediction": "The character's emotional state is appreciative, positive.", "extracted_labels": "[appreciative, positive]", "sentiment": "positive"}
+{"id": "yDtzw_Y-7RU_3", "prediction": "The character's emotional state is fear, tension.<|endoftext|>", "extracted_labels": "[fear, tension]", "sentiment": "negative"}
+{"id": "yDtzw_Y-7RU_4", "prediction": "The character's emotional state is fear, dissatisfaction, frustration.<|endoftext|>", "extracted_labels": "[fear, dissatisfaction, frustration]", "sentiment": "negative"}
+{"id": "yDtzw_Y-7RU_5", "prediction": "The character's emotional state is disapproval, criticism, dissatisfaction.<|endoftext|>", "extracted_labels": "[disapproval, criticism, dissatisfaction]", "sentiment": "negative"}
+{"id": "yDtzw_Y-7RU_6", "prediction": "The character's emotional state is serious, focused, passionate, urgent.<|endoftext|>", "extracted_labels": "[serious, focused, passionate, urgent]", "sentiment": "positive"}
+{"id": "yDtzw_Y-7RU_7", "prediction": "The character's emotional state is humorous, mocking, positive.", "extracted_labels": "[humorous, mocking, positive]", "sentiment": "positive"}
+{"id": "yDtzw_Y-7RU_8", "prediction": "The character's emotional state: disapproval, dissatisfaction, frustration.<|endoftext|>", "extracted_labels": "[disapproval, dissatisfaction, frustration]", "sentiment": "negative"}
+{"id": "yDtzw_Y-7RU_9", "prediction": "The character's emotional state is neutral.<|endoftext|>", "extracted_labels": "[neutral]", "sentiment": "neutral"}
+{"id": "yDtzw_Y-7RU_10", "prediction": "The character's emotional state: frustration, disappointment.<|endoftext|>", "extracted_labels": "[frustration, disappointment]", "sentiment": "negative"}
+{"id": "yDtzw_Y-7RU_11", "prediction": "The character's emotional state is excited, enthusiastic.<|endoftext|>", "extracted_labels": "[excited, enthusiastic]", "sentiment": "positive"}
+{"id": "yDtzw_Y-7RU_12", "prediction": "The character's emotional state is apathetic, disinterested.<|endoftext|>", "extracted_labels": "[apathetic, disinterested]", "sentiment": "negative"}
+{"id": "yDtzw_Y-7RU_13", "prediction": "The character's emotional state is disapproval, confusion, dissatisfaction, anger.<|endoftext|>", "extracted_labels": "[disapproval, confusion, dissatisfaction, anger]", "sentiment": "negative"}
+{"id": "yDtzw_Y-7RU_14", "prediction": "The character's emotional state is excited, enthusiastic.<|endoftext|>", "extracted_labels": "[excited, enthusiastic]", "sentiment": "positive"}
+{"id": "yDtzw_Y-7RU_15", "prediction": "The character's emotional state is excited, enthusiastic.<|endoftext|>", "extracted_labels": "[excited, enthusiastic]", "sentiment": "positive"}
+{"id": "yDtzw_Y-7RU_16", "prediction": "The character's emotional state is excited, surprised, fear.<|endoftext|>", "extracted_labels": "[excited, surprised, fear]", "sentiment": "negative"}
+{"id": "yDtzw_Y-7RU_17", "prediction": "The character's emotional state is tension, anxiety, stress.", "extracted_labels": "[tension, anxiety, stress]", "sentiment": "negative"}
+{"id": "yDtzw_Y-7RU_18", "prediction": "The character's emotional state is disliking, dissatisfaction, negative.<|endoftext|>", "extracted_labels": "[disliking, dissatisfaction, negative]", "sentiment": "negative"}
+{"id": "yDtzw_Y-7RU_19", "prediction": "The character's emotional state is disconnection, lack of participation, dissatisfaction.<|endoftext|>", "extracted_labels": "[disconnection, lack_of_participation, dissatisfaction]", "sentiment": "negative"}
+{"id": "yDtzw_Y-7RU_20", "prediction": "The character's emotional state is positive, excitement, joy, negative, frustration, anger.<|endoftext|>", "extracted_labels": "[positive, excitement, joy, negative, frustration, anger]", "sentiment": "positive"}
+{"id": "yDtzw_Y-7RU_21", "prediction": "The character's emotional state: strong, intense, negative, humor, sarcasm.<|endoftext|>", "extracted_labels": "[strong, intense, negative, humor, sarcasm]", "sentiment": "negative"}
+{"id": "yDtzw_Y-7RU_22", "prediction": "The character's emotional state is positive, liking.<|endoftext|>", "extracted_labels": "[positive, liking]", "sentiment": "positive"}
+{"id": "yDtzw_Y-7RU_23", "prediction": "The character's emotional state is positive, request.<|endoftext|>", "extracted_labels": "[positive]", "sentiment": "positive"}
+{"id": "yDtzw_Y-7RU_24", "prediction": "The character's emotional state is disapproval, dissatisfaction, negative.", "extracted_labels": "[disapproval, dissatisfaction, negative]", "sentiment": "negative"}
+{"id": "fvVhgmXxadc_1", "prediction": "The character's emotional state is positive, evaluation, expectation.", "extracted_labels": "[positive, evaluation, expectation]", "sentiment": "positive"}
+{"id": "fvVhgmXxadc_2", "prediction": "The character's emotional state is negative, dissatisfaction.", "extracted_labels": "[negative, dissatisfaction]", "sentiment": "negative"}
+{"id": "fvVhgmXxadc_3", "prediction": "The character's emotional state is disatisfaction, disappointment.", "extracted_labels": "[disatisfaction, disappointment]", "sentiment": "negative"}
+{"id": "fvVhgmXxadc_4", "prediction": "The character's emotional state is pain, negative, uncomfortable.<|endoftext|>", "extracted_labels": "[pain, negative, uncomfortable]", "sentiment": "negative"}
+{"id": "fvVhgmXxadc_5", "prediction": "The character's emotional state is neutral.<|endoftext|>", "extracted_labels": "[neutral]", "sentiment": "neutral"}
+{"id": "fvVhgmXxadc_6", "prediction": "The character's emotional state is dissatisfaction, pressure.", "extracted_labels": "[dissatisfaction, pressure]", "sentiment": "negative"}
+{"id": "fvVhgmXxadc_7", "prediction": "The character's emotional state is dissatisfaction, concern, dissatisfaction, concern, dissatisfaction, concern.<|endoftext|>", "extracted_labels": "[dissatisfaction, concern]", "sentiment": "negative"}
+{"id": "fvVhgmXxadc_8", "prediction": "The character's emotional state is confusion, uncertainty.<|endoftext|>", "extracted_labels": "[confusion, uncertainty]", "sentiment": "negative"}
+{"id": "fvVhgmXxadc_9", "prediction": "The character's emotional state: neutral, cool, apathetic, observation,思考, video game, digital environment.<|endoftext|>", "extracted_labels": "[neutral, cool, apathetic, observation, thinking]", "sentiment": "neutral"}
+{"id": "fvVhgmXxadc_10", "prediction": "The character's emotional state is neutral.<|endoftext|>", "extracted_labels": "[neutral]", "sentiment": "neutral"}
+{"id": "fvVhgmXxadc_11", "prediction": "The character's emotional state is neutral.<|endoftext|>", "extracted_labels": "[neutral]", "sentiment": "neutral"}
+{"id": "fvVhgmXxadc_12", "prediction": "The character's emotional state is confusion, contemplation, complexity, confusion, contemplation, complexity.<|endoftext|>", "extracted_labels": "[confusion, contemplation, complexity]", "sentiment": "neutral"}
+{"id": "fvVhgmXxadc_13", "prediction": "The character's emotional state is理性和客观, 兴奋, 焦虑, 兴趣, 深思, 理性, 抑制, 内向, 压力.<|endoftext|>", "extracted_labels": "[理性, 客观, 兴奋, 焦虑, 兴趣, 深思, 抑制, 内向, 压力]", "sentiment": "neutral"}
+{"id": "fvVhgmXxadc_14", "prediction": "The character's emotional state is positive, appreciation.", "extracted_labels": "[positive, appreciation]", "sentiment": "positive"}
+{"id": "tmZoasNr4rU_1", "prediction": "The character's emotional state is positive, excited.<|endoftext|>", "extracted_labels": "[positive, excited]", "sentiment": "positive"}
+{"id": "tmZoasNr4rU_2", "prediction": "The character's emotional state is sorry, disappointed.<|endoftext|>", "extracted_labels": "[sorry, disappointed]", "sentiment": "negative"}
+{"id": "tmZoasNr4rU_3", "prediction": "The character's emotional state: disinterest, disconnection, negative.<|endoftext|>", "extracted_labels": "[disinterest, disconnection, negative]", "sentiment": "negative"}
+{"id": "tmZoasNr4rU_4", "prediction": "The character's emotional state is Dislikes/Disapproves,找借口/Reasoning, Humor.<|endoftext|>", "extracted_labels": "[Dislikes/Disapproves, 找借口/Reasoning, Humor]", "sentiment": "negative"}
+{"id": "tmZoasNr4rU_5", "prediction": "The character's emotional state is Uncertain, Uncertain/uncertain, Anxiously, Tense, Uncertain, Uncertain, Anxiously, Tense.<|endoftext|>", "extracted_labels": "[Anxiously, Tense, Uncertain]", "sentiment": "negative"}
+{"id": "tmZoasNr4rU_6", "prediction": "The emotional state of the character is flat, monotonous.<|endoftext|>", "extracted_labels": "[flat, monotonous]", "sentiment": "negative"}
+{"id": "tmZoasNr4rU_7", "prediction": "The character's emotional state is disatisfaction, disappointment.<|endoftext|>", "extracted_labels": "[disatisfaction, disappointment]", "sentiment": "negative"}
+{"id": "tmZoasNr4rU_8", "prediction": "The character's emotional state is disappointment, frustration.", "extracted_labels": "[disappointment, frustration]", "sentiment": "negative"}
+{"id": "tmZoasNr4rU_9", "prediction": "The character's emotional state is disappointment, depression.<|endoftext|>", "extracted_labels": "[disappointment, depression]", "sentiment": "negative"}
+{"id": "tmZoasNr4rU_10", "prediction": "The character's emotional state is dissatisfied, discontent, humorous, lighthearted, satirical, dissatisfaction.", "extracted_labels": "[dissatisfied, discontent, humorous, lighthearted, satirical]", "sentiment": "positive"}
+{"id": "tmZoasNr4rU_11", "prediction": "The character's emotional state is neutral.<|endoftext|>", "extracted_labels": "[neutral]", "sentiment": "neutral"}
+{"id": "tmZoasNr4rU_12", "prediction": "The character's emotional state is disapproval, dissatisfaction, negative.", "extracted_labels": "[disapproval, dissatisfaction, negative]", "sentiment": "negative"}
+{"id": "tmZoasNr4rU_13", "prediction": "The character's emotional state is frustration, anger, stress, anxiety, frustration, dissatisfaction.<|endoftext|>", "extracted_labels": "[frustration, anger, stress, anxiety, dissatisfaction]", "sentiment": "negative"}
+{"id": "tmZoasNr4rU_14", "prediction": "The character's emotional state is disinterested, bored.<|endoftext|>", "extracted_labels": "[disinterested, bored]", "sentiment": "negative"}
+{"id": "tmZoasNr4rU_15", "prediction": "The character's emotional state is positive, evaluation, expectation.<|endoftext|>", "extracted_labels": "[positive, evaluation, expectation]", "sentiment": "positive"}
+{"id": "tmZoasNr4rU_16", "prediction": "The character's emotional state is negative, dissatisfaction, disapproval.", "extracted_labels": "[negative, dissatisfaction, disapproval]", "sentiment": "negative"}
+{"id": "tmZoasNr4rU_17", "prediction": "The character's emotional state is neutral.<|endoftext|>", "extracted_labels": "[neutral]", "sentiment": "neutral"}
+{"id": "tmZoasNr4rU_18", "prediction": "The emotional state of the character is negative, dissatisfaction.<|endoftext|>", "extracted_labels": "[negative, dissatisfaction]", "sentiment": "negative"}
+{"id": "tmZoasNr4rU_19", "prediction": "The character's emotional state is positive, objective.<|endoftext|>", "extracted_labels": "[positive]", "sentiment": "positive"}
+{"id": "tmZoasNr4rU_20", "prediction": "The character's emotional state is Disatisfaction, Disappointment.<|endoftext|>", "extracted_labels": "[Disatisfaction, Disappointment]", "sentiment": "negative"}
+{"id": "nbWiPyCm4g0_1", "prediction": "The character's emotional state is excited, surprised, negative, positive.<|endoftext|>", "extracted_labels": "[excited, surprised, negative, positive]", "sentiment": "positive"}
+{"id": "nbWiPyCm4g0_2", "prediction": "The emotional state of the character is anger, disappointment, dissatisfaction.<|endoftext|>", "extracted_labels": "[anger, disappointment, dissatisfaction]", "sentiment": "negative"}
+{"id": "nbWiPyCm4g0_3", "prediction": "The character's emotional state is dissatisfaction, disappointment, anger.<|endoftext|>", "extracted_labels": "[dissatisfaction, disappointment, anger]", "sentiment": "negative"}
+{"id": "nbWiPyCm4g0_4", "prediction": "The character's emotional state is anger, dissatisfaction, frustration.<|endoftext|>", "extracted_labels": "[anger, dissatisfaction, frustration]", "sentiment": "negative"}
+{"id": "nbWiPyCm4g0_5", "prediction": "The character's emotional state is serious, caution, warning.<|endoftext|>", "extracted_labels": "[serious, cautious, warning]", "sentiment": "negative"}
+{"id": "nbWiPyCm4g0_6", "prediction": "The character's emotional state is neutral.<|endoftext|>", "extracted_labels": "[neutral]", "sentiment": "neutral"}
+{"id": "nbWiPyCm4g0_7", "prediction": "The character's emotional state is uncertain, unsure, neutral.<|endoftext|>", "extracted_labels": "[uncertain, unsure, neutral]", "sentiment": "neutral"}
+{"id": "nbWiPyCm4g0_8", "prediction": "The character's emotional state is apathetic, disinterested.<|endoftext|>", "extracted_labels": "[apathetic, disinterested]", "sentiment": "negative"}
+{"id": "nbWiPyCm4g0_9", "prediction": "The character's emotional state is confusion, uncertainty, stress.<|endoftext|>", "extracted_labels": "[confusion, uncertainty, stress]", "sentiment": "negative"}
+{"id": "nbWiPyCm4g0_10", "prediction": "The character's emotional state is positive, praise.", "extracted_labels": "[positive]", "sentiment": "positive"}
+{"id": "tStelxIAHjw_1", "prediction": "The character's emotional state is neutral.<|endoftext|>", "extracted_labels": "[neutral]", "sentiment": "neutral"}
+{"id": "tStelxIAHjw_2", "prediction": "The character's emotional state is dissatisfaction, dislike.", "extracted_labels": "[dissatisfaction, dislike]", "sentiment": "negative"}
+{"id": "tStelxIAHjw_3", "prediction": "The character's emotional state: firm, strong, emphasis, determination, confidence.<|endoftext|>", "extracted_labels": "[firm, strong, emphasis, determination, confidence]", "sentiment": "positive"}
+{"id": "tStelxIAHjw_4", "prediction": "The character's emotional state is disappointment, frustration.", "extracted_labels": "[disappointment, frustration]", "sentiment": "negative"}
+{"id": "tStelxIAHjw_5", "prediction": "The character's emotional state is negative, disliking, aversion.<|endoftext|>", "extracted_labels": "[negative, disliking, aversion]", "sentiment": "negative"}
+{"id": "tStelxIAHjw_6", "prediction": "The character's emotional state is positive, liking, appreciation.<|endoftext|>", "extracted_labels": "[positive, liking, appreciation]", "sentiment": "positive"}
+{"id": "tStelxIAHjw_7", "prediction": "The character's emotional state is positive, likes, evaluation, humor, tension, anxiety.<|endoftext|>", "extracted_labels": "[positive, likes, evaluation, humor, tension, anxiety]", "sentiment": "positive"}
+{"id": "tStelxIAHjw_8", "prediction": "The character's emotional state: disapproval, dissatisfaction, negative.<|endoftext|>", "extracted_labels": "[disapproval, dissatisfaction, negative]", "sentiment": "negative"}
+{"id": "tStelxIAHjw_9", "prediction": "The character's emotional state is disapproval, dissatisfaction, negative.", "extracted_labels": "[disapproval, dissatisfaction, negative]", "sentiment": "negative"}
+{"id": "tStelxIAHjw_10", "prediction": "The character's emotional state is neutral, positive.<|endoftext|>", "extracted_labels": "[neutral, positive]", "sentiment": "positive"}
+{"id": "tStelxIAHjw_11", "prediction": "The character's emotional state is negative, disliking, dissatisfaction.<|endoftext|>", "extracted_labels": "[negative, disliking, dissatisfaction]", "sentiment": "negative"}
+{"id": "tStelxIAHjw_12", "prediction": "The character's emotional state is strong, important, emphasis, serious.<|endoftext|>", "extracted_labels": "[strong, serious]", "sentiment": "negative"}
+{"id": "tStelxIAHjw_13", "prediction": "The character's emotional state: neutral, indifferent.<|endoftext|>", "extracted_labels": "[neutral, indifferent]", "sentiment": "neutral"}
+{"id": "tStelxIAHjw_14", "prediction": "The character's emotional state is dis有兴趣, disappointment, frustration.<|endoftext|>", "extracted_labels": "[interested, disappointment, frustration]", "sentiment": "negative"}
+{"id": "tStelxIAHjw_15", "prediction": "The character's emotional state is neutral.<|endoftext|>", "extracted_labels": "[neutral]", "sentiment": "neutral"}
+{"id": "tStelxIAHjw_16", "prediction": "The character's emotional state is positive, affection, passion.<|endoftext|>", "extracted_labels": "[positive, affection, passion]", "sentiment": "positive"}
+{"id": "zhpQhgha_KU_1", "prediction": "The character's emotional state is dissatisfied, negative.", "extracted_labels": "[negative, dissatisfied]", "sentiment": "negative"}
+{"id": "zhpQhgha_KU_2", "prediction": "The character's emotional state is positive, liking, anticipation.", "extracted_labels": "[positive, liking, anticipation]", "sentiment": "positive"}
+{"id": "zhpQhgha_KU_3", "prediction": "The character's emotional state is disliking, disappointment, sadness.<|endoftext|>", "extracted_labels": "[disliking, disappointment, sadness]", "sentiment": "negative"}
+{"id": "zhpQhgha_KU_4", "prediction": "The character's emotional state: disapproval, dissatisfaction, concern.<|endoftext|>", "extracted_labels": "[disapproval, dissatisfaction, concern]", "sentiment": "negative"}
+{"id": "zhpQhgha_KU_5", "prediction": "The character's emotional state is disliking, uncertainty, confusion.<|endoftext|>", "extracted_labels": "[disliking, uncertainty, confusion]", "sentiment": "negative"}
+{"id": "zhpQhgha_KU_6", "prediction": "The character's emotional state is positive, negative, complex.<|endoftext|>", "extracted_labels": "[positive, negative, complex]", "sentiment": "complex"}
+{"id": "zhpQhgha_KU_7", "prediction": "The character's emotional state: positive, humorous.<|endoftext|>", "extracted_labels": "[positive, humorous]", "sentiment": "positive"}
+{"id": "zhpQhgha_KU_8", "prediction": "The character's emotional state is very sad, depressed.<|endoftext|>", "extracted_labels": "[sad, depressed]", "sentiment": "negative"}
+{"id": "zhpQhgha_KU_9", "prediction": "The character's emotional state is sadness, disappointment.<|endoftext|>", "extracted_labels": "[sadness, disappointment]", "sentiment": "negative"}
+{"id": "zhpQhgha_KU_10", "prediction": "The character's emotional state is Encouragement, Support.", "extracted_labels": "[Encouragement, Support]", "sentiment": "positive"}
+{"id": "zhpQhgha_KU_11", "prediction": "The character's emotional state is disappointment, dissatisfaction, disliking, liking less.<|endoftext|>", "extracted_labels": "[disappointment, dissatisfaction, disliking, liking less]", "sentiment": "negative"}
+{"id": "zhpQhgha_KU_12", "prediction": "The character's emotional state is dissatisfaction, disappointment.<|endoftext|>", "extracted_labels": "[dissatisfaction, disappointment]", "sentiment": "negative"}
+{"id": "zhpQhgha_KU_13", "prediction": "The character's emotional state: disapproval, dissatisfaction, positive.<|endoftext|>", "extracted_labels": "[disapproval, dissatisfaction, positive]", "sentiment": "negative"}
+{"id": "zhpQhgha_KU_14", "prediction": "The character's emotional state is disapproval, dissatisfaction, negative.<|endoftext|>", "extracted_labels": "[disapproval, dissatisfaction, negative]", "sentiment": "negative"}
+{"id": "zhpQhgha_KU_15", "prediction": "The character's emotional state is dissatisfaction, regret, uncertainty, confusion.<|endoftext|>", "extracted_labels": "[dissatisfaction, regret, uncertainty, confusion]", "sentiment": "negative"}
+{"id": "zhpQhgha_KU_16", "prediction": "The character's emotional state is positive, appreciative.<|endoftext|>", "extracted_labels": "[positive, appreciative]", "sentiment": "positive"}
+{"id": "zhpQhgha_KU_17", "prediction": "The character's emotional state is positive, liking, strong.<|endoftext|>", "extracted_labels": "[positive, liking]", "sentiment": "positive"}
+{"id": "zhpQhgha_KU_18", "prediction": "The character's emotional state is positive, upbeat.<|endoftext|>", "extracted_labels": "[positive, upbeat]", "sentiment": "positive"}
+{"id": "zhpQhgha_KU_19", "prediction": "The character's emotional state is sadness, anger, frustration, disappointment, concern, sympathy.<|endoftext|>", "extracted_labels": "[sadness, anger, frustration, disappointment, concern, sympathy]", "sentiment": "negative"}
+{"id": "zhpQhgha_KU_20", "prediction": "The character's emotional state is concern, dissatisfaction, negative.", "extracted_labels": "[concern, dissatisfaction, negative]", "sentiment": "negative"}
+{"id": "zhpQhgha_KU_21", "prediction": "The emotional state of the character is positive, engaging, humorous, playful.<|endoftext|>", "extracted_labels": "[positive, engaging, humorous, playful]", "sentiment": "positive"}
+{"id": "zhpQhgha_KU_22", "prediction": "The character's emotional state: neutral, apathetic, disinterest.<|endoftext|>", "extracted_labels": "[neutral, apathetic, disinterest]", "sentiment": "negative"}
+{"id": "zhpQhgha_KU_23", "prediction": "The character's emotional state is stress, anxiety, concern, need for self-care.<|endoftext|>", "extracted_labels": "[stress, anxiety, concern, need for self-care]", "sentiment": "negative"}
+{"id": "zhpQhgha_KU_24", "prediction": "The character's emotional state is positive, relaxed.<|endoftext|>", "extracted_labels": "[positive, relaxed]", "sentiment": "positive"}
+{"id": "zhpQhgha_KU_25", "prediction": "The character's emotional state is understanding, resonance, positive.<|endoftext|>", "extracted_labels": "[understanding, resonance, positive]", "sentiment": "positive"}
+{"id": "zhpQhgha_KU_26", "prediction": "The character's emotional state is negative, dissatisfied, concerned.<|endoftext|>", "extracted_labels": "[negative, dissatisfied, concerned]", "sentiment": "negative"}
+{"id": "zhpQhgha_KU_27", "prediction": "The character's emotional state is neutral.<|endoftext|>", "extracted_labels": "[neutral]", "sentiment": "neutral"}
+{"id": "zhpQhgha_KU_28", "prediction": "The character's emotional state is positive, excitement, anxiety, happiness, sadness, anger.<|endoftext|>", "extracted_labels": "[positive, excitement, happiness, sadness, anger]", "sentiment": "positive"}
+{"id": "zhpQhgha_KU_29", "prediction": "The character's emotional state is disapproval, dissatisfaction, neutral, slightly negative.<|endoftext|>", "extracted_labels": "[disapproval, dissatisfaction, neutral, slightly negative]", "sentiment": "slightly negative"}
+{"id": "zhpQhgha_KU_30", "prediction": "The character's emotional state: apathetic, unimportant, negative.<|endoftext|>", "extracted_labels": "[apathetic, negative]", "sentiment": "negative"}
+{"id": "zhpQhgha_KU_31", "prediction": "The character's emotional state is disapproval, dissatisfaction, disinterest.", "extracted_labels": "[disapproval, dissatisfaction, disinterest]", "sentiment": "negative"}
+{"id": "zhpQhgha_KU_32", "prediction": "The character's emotional state is excited, enthusiastic, neutral, slightly negative.<|endoftext|>", "extracted_labels": "[excited, enthusiastic, neutral, slightly negative]", "sentiment": "positive"}
+{"id": "zhpQhgha_KU_33", "prediction": "The character's emotional state is positive, evaluation, suggestion.", "extracted_labels": "[]", "sentiment": "neutral"}
+{"id": "zhpQhgha_KU_34", "prediction": "The character's emotional state is positive, enjoyment.<|endoftext|>", "extracted_labels": "[positive, enjoyment]", "sentiment": "positive"}
+{"id": "zhpQhgha_KU_35", "prediction": "The character's emotional state is positive, excited.<|endoftext|>", "extracted_labels": "[positive, excited]", "sentiment": "positive"}
+{"id": "iiK8YX8oH1E_1", "prediction": "The character's emotional state is negative, aversion, disliking.<|endoftext|>", "extracted_labels": "[negative, aversion, disliking]", "sentiment": "negative"}
+{"id": "iiK8YX8oH1E_2", "prediction": "The character's emotional state is positive, excited.<|endoftext|>", "extracted_labels": "[positive, excited]", "sentiment": "positive"}
+{"id": "iiK8YX8oH1E_3", "prediction": "The character's emotional state is frustration, dissatisfaction.<|endoftext|>", "extracted_labels": "[frustration, dissatisfaction]", "sentiment": "negative"}
+{"id": "iiK8YX8oH1E_4", "prediction": "The character's emotional state is disapproval, dissatisfaction, negative.", "extracted_labels": "[disapproval, dissatisfaction, negative]", "sentiment": "negative"}
+{"id": "iiK8YX8oH1E_5", "prediction": "The character's emotional state is neutral.<|endoftext|>", "extracted_labels": "[neutral]", "sentiment": "neutral"}
+{"id": "iiK8YX8oH1E_6", "prediction": "The character's emotional state: positive, humorous.<|endoftext|>", "extracted_labels": "[positive, humorous]", "sentiment": "positive"}
+{"id": "iiK8YX8oH1E_7", "prediction": "The character's emotional state is dissatisfied, irritated, negative.<|endoftext|>", "extracted_labels": "[dissatisfied, irritated, negative]", "sentiment": "negative"}
+{"id": "iiK8YX8oH1E_8", "prediction": "The character's emotional state is rational, analytical, control, rational, analytical, positive, negative.<|endoftext|>", "extracted_labels": "[positive, negative]", "sentiment": "negative"}
+{"id": "iiK8YX8oH1E_9", "prediction": "The character's emotional state is rational, thinking,预测, analysis.<|endoftext|>", "extracted_labels": "[thinking, prediction, analysis]", "sentiment": "neutral"}
+{"id": "iiK8YX8oH1E_10", "prediction": "The character's emotional state is uncertainty, doubt, confusion.<|endoftext|>", "extracted_labels": "[uncertainty, doubt, confusion]", "sentiment": "negative"}
+{"id": "iiK8YX8oH1E_11", "prediction": "The character's emotional state is appreciation, positive.", "extracted_labels": "[appreciation, positive]", "sentiment": "positive"}
+{"id": "iiK8YX8oH1E_12", "prediction": "The character's emotional state: positive, appreciation.", "extracted_labels": "[positive, appreciation]", "sentiment": "positive"}
+{"id": "iiK8YX8oH1E_13", "prediction": "The character's emotional state is dissatisfaction, disapproval, negative.", "extracted_labels": "[dissatisfaction, disapproval]", "sentiment": "negative"}
+{"id": "iiK8YX8oH1E_14", "prediction": "The character's emotional state is dissatisfaction, frustration.<|endoftext|>", "extracted_labels": "[dissatisfaction, frustration]", "sentiment": "negative"}
+{"id": "iiK8YX8oH1E_15", "prediction": "The character's emotional state is positive, praise, appreciation.", "extracted_labels": "[positive, praise, appreciation]", "sentiment": "positive"}
+{"id": "iiK8YX8oH1E_16", "prediction": "The character's emotional state is disliking, dissatisfaction, disapproval.<|endoftext|>", "extracted_labels": "[disliking, dissatisfaction, disapproval]", "sentiment": "negative"}
+{"id": "iiK8YX8oH1E_17", "prediction": "The character's emotional state is positive, happiness, excitement, surprise, tension, anxiety.<|endoftext|>", "extracted_labels": "[positive, happiness, excitement, surprise, tension, anxiety]", "sentiment": "positive"}
+{"id": "iiK8YX8oH1E_18", "prediction": "The character's emotional state is humorous, playful, positive.<|endoftext|>", "extracted_labels": "[humorous, playful, positive]", "sentiment": "positive"}
+{"id": "wMbj6ajWbic_1", "prediction": "The character's emotional state is disappointment, frustration, unmet expectation.<|endoftext|>", "extracted_labels": "[disappointment, frustration, unmet expectation]", "sentiment": "negative"}
+{"id": "wMbj6ajWbic_2", "prediction": "The character's emotional state is dis喜欢, disliking, neutral.<|endoftext|>", "extracted_labels": "[dislike, neutral]", "sentiment": "negative"}
+{"id": "wMbj6ajWbic_3", "prediction": "The character's emotional state is neutral.<|endoftext|>", "extracted_labels": "[neutral]", "sentiment": "neutral"}
+{"id": "wMbj6ajWbic_4", "prediction": "The character's emotional state is neutral.<|endoftext|>", "extracted_labels": "[neutral]", "sentiment": "neutral"}
+{"id": "wMbj6ajWbic_5", "prediction": "The character's emotional state is excited, humorous, positive, negative.<|endoftext|>", "extracted_labels": "[excited, humorous, positive, negative]", "sentiment": "positive"}
+{"id": "wMbj6ajWbic_6", "prediction": "The character's emotional state is positive, humorous, playful.<|endoftext|>", "extracted_labels": "[positive, humorous, playful]", "sentiment": "positive"}
+{"id": "wMbj6ajWbic_7", "prediction": "The character's emotional state is positive, negative, neutral.<|endoftext|>", "extracted_labels": "[positive, negative, neutral]", "sentiment": "neutral"}
+{"id": "wMbj6ajWbic_8", "prediction": "The character's emotional state is positive, humorous, casual.<|endoftext|>", "extracted_labels": "[positive, humorous, casual]", "sentiment": "positive"}
+{"id": "wMbj6ajWbic_9", "prediction": "The character's emotional state is disapproval, dissatisfaction, humor, playfulness.<|endoftext|>", "extracted_labels": "[disapproval, dissatisfaction, humor, playfulness]", "sentiment": "positive"}
+{"id": "wMbj6ajWbic_10", "prediction": "The character's emotional state: disapproval, dissatisfaction, disappointment.<|endoftext|>", "extracted_labels": "[disapproval, dissatisfaction, disappointment]", "sentiment": "negative"}
+{"id": "wMbj6ajWbic_11", "prediction": "The character's emotional state is Disatisfaction, Disappointment.", "extracted_labels": "[Disatisfaction, Disappointment]", "sentiment": "negative"}
+{"id": "wMbj6ajWbic_12", "prediction": "The character's emotional state is disappointment, regret.<|endoftext|>", "extracted_labels": "[disappointment, regret]", "sentiment": "negative"}
+{"id": "wMbj6ajWbic_13", "prediction": "The character's emotional state is positive, excitement.<|endoftext|>", "extracted_labels": "[positive, excitement]", "sentiment": "positive"}
+{"id": "wMbj6ajWbic_14", "prediction": "The character's emotional state is unease, confusion, anxiety, stress.<|endoftext|>", "extracted_labels": "[unease, confusion, anxiety, stress]", "sentiment": "negative"}
+{"id": "wMbj6ajWbic_15", "prediction": "The character's emotional state is positive, independent, confident, determination.<|endoftext|>", "extracted_labels": "[positive, independent, confident, determination]", "sentiment": "positive"}
+{"id": "wMbj6ajWbic_16", "prediction": "The character's emotional state is disappointment, expectation.<|endoftext|>", "extracted_labels": "[disappointment, expectation]", "sentiment": "negative"}
+{"id": "wMbj6ajWbic_17", "prediction": "The character's emotional state is positive, appreciative.<|endoftext|>", "extracted_labels": "[positive, appreciative]", "sentiment": "positive"}
+{"id": "wMbj6ajWbic_18", "prediction": "The character's emotional state is positive, happy, satisfied, anxiety, tension.<|endoftext|>", "extracted_labels": "[positive, happy, satisfied, anxiety, tension]", "sentiment": "positive"}
+{"id": "wMbj6ajWbic_19", "prediction": "The character's emotional state is humorous, teasing, positive.", "extracted_labels": "[humorous, teasing, positive]", "sentiment": "positive"}
+{"id": "wMbj6ajWbic_20", "prediction": "The character's emotional state is positive, excitement, satisfaction.<|endoftext|>", "extracted_labels": "[positive, excitement, satisfaction]", "sentiment": "positive"}
+{"id": "wMbj6ajWbic_21", "prediction": "The character's emotional state is positive, excited.<|endoftext|>", "extracted_labels": "[positive, excited]", "sentiment": "positive"}
+{"id": "wMbj6ajWbic_22", "prediction": "The character's emotional state is positive, enjoyment.<|endoftext|>", "extracted_labels": "[positive, enjoyment]", "sentiment": "positive"}
+{"id": "wMbj6ajWbic_23", "prediction": "The character's emotional state is positive, appreciation.", "extracted_labels": "[positive, appreciation]", "sentiment": "positive"}
+{"id": "wMbj6ajWbic_24", "prediction": "The character's emotional state is positive, excitement.<|endoftext|>", "extracted_labels": "[positive, excitement]", "sentiment": "positive"}
+{"id": "wMbj6ajWbic_25", "prediction": "The character's emotional state is positive, affirmative.<|endoftext|>", "extracted_labels": "[positive, affirmative]", "sentiment": "positive"}
+{"id": "wMbj6ajWbic_26", "prediction": "The character's emotional state is positive, excitement, excitement.<|endoftext|>", "extracted_labels": "[positive, excited]", "sentiment": "positive"}
+{"id": "wMbj6ajWbic_27", "prediction": "The character's emotional state is认同, appreciation.<|endoftext|>", "extracted_labels": "[认同, 欣赏]", "sentiment": "positive"}
+{"id": "wMbj6ajWbic_28", "prediction": "The character's emotional state is positive, appreciation.", "extracted_labels": "[positive, appreciation]", "sentiment": "positive"}
+{"id": "wMbj6ajWbic_29", "prediction": "The character's emotional state is appreciation, positive evaluation, cool, enjoyment.", "extracted_labels": "[appreciation, positive evaluation, cool, enjoyment]", "sentiment": "positive"}
+{"id": "wMbj6ajWbic_30", "prediction": "The character's emotional state is positive, excited.<|endoftext|>", "extracted_labels": "[positive, excited]", "sentiment": "positive"}
+{"id": "phBUpBr1hSo_1", "prediction": "The character's emotional state is excited.<|endoftext|>", "extracted_labels": "[excited]", "sentiment": "positive"}
+{"id": "phBUpBr1hSo_2", "prediction": "The character's emotional state is excitement, passion, love.<|endoftext|>", "extracted_labels": "[excitement, passion, love]", "sentiment": "positive"}
+{"id": "phBUpBr1hSo_3", "prediction": "The character's emotional state is excited, passionate.<|endoftext|>", "extracted_labels": "[excited, passionate]", "sentiment": "positive"}
+{"id": "phBUpBr1hSo_4", "prediction": "The character's emotional state is dissatisfied, disappointment.", "extracted_labels": "[dissatisfied, disappointment]", "sentiment": "negative"}
+{"id": "phBUpBr1hSo_5", "prediction": "The character's emotional state is negative, dissatisfaction, disapproval.", "extracted_labels": "[negative, dissatisfaction, disapproval]", "sentiment": "negative"}
+{"id": "phBUpBr1hSo_6", "prediction": "The character's emotional state is appreciation, positive.", "extracted_labels": "[appreciation, positive]", "sentiment": "positive"}
+{"id": "phBUpBr1hSo_7", "prediction": "The character's emotional state is neutral.<|endoftext|>", "extracted_labels": "[neutral]", "sentiment": "neutral"}
+{"id": "phBUpBr1hSo_8", "prediction": "The character's emotional state is dissatisfaction, disapproval, frustration.<|endoftext|>", "extracted_labels": "[dissatisfaction, disapproval, frustration]", "sentiment": "negative"}
+{"id": "phBUpBr1hSo_9", "prediction": "The character's emotional state is disappointment, dissatisfaction, frustration, pressure, anxiety.<|endoftext|>", "extracted_labels": "[disappointment, dissatisfaction, frustration, pressure, anxiety]", "sentiment": "negative"}
+{"id": "phBUpBr1hSo_10", "prediction": "The character's emotional state is dissatisfaction, boredom.<|endoftext|>", "extracted_labels": "[dissatisfaction, boredom]", "sentiment": "negative"}
+{"id": "phBUpBr1hSo_11", "prediction": "The character's emotional state is positive, enthusiasm.<|endoftext|>", "extracted_labels": "[positive, enthusiastic]", "sentiment": "positive"}
+{"id": "phBUpBr1hSo_12", "prediction": "The character's emotional state is positive, fond, extended, content.<|endoftext|>", "extracted_labels": "[positive, fond, extended, content]", "sentiment": "positive"}
+{"id": "phBUpBr1hSo_13", "prediction": "The character's emotional state is positive, love, passion.<|endoftext|>", "extracted_labels": "[positive, love, passion]", "sentiment": "positive"}
+{"id": "phBUpBr1hSo_14", "prediction": "The character's emotional state is neutral.<|endoftext|>", "extracted_labels": "[neutral]", "sentiment": "neutral"}
+{"id": "phBUpBr1hSo_15", "prediction": "The character's emotional state is disappointment, frustration.<|endoftext|>", "extracted_labels": "[disappointment, frustration]", "sentiment": "negative"}
+{"id": "phBUpBr1hSo_16", "prediction": "The character's emotional state is determination, motivation.<|endoftext|>", "extracted_labels": "[determination, motivation]", "sentiment": "positive"}
+{"id": "phBUpBr1hSo_17", "prediction": "The character's emotional state: positive, satisfaction.<|endoftext|>", "extracted_labels": "[positive, satisfaction]", "sentiment": "positive"}
+{"id": "phBUpBr1hSo_18", "prediction": "The character's emotional state: neutral, positive.<|endoftext|>", "extracted_labels": "[neutral, positive]", "sentiment": "positive"}
+{"id": "phBUpBr1hSo_19", "prediction": "The character's emotional state is positive, affirmative.<|endoftext|>", "extracted_labels": "[positive, affirmative]", "sentiment": "positive"}
+{"id": "phBUpBr1hSo_20", "prediction": "The character's emotional state is disappointment, dissatisfaction, excitement, tension.<|endoftext|>", "extracted_labels": "[disappointment, dissatisfaction, excitement, tension]", "sentiment": "mixed"}
+{"id": "phBUpBr1hSo_21", "prediction": "The character's emotional state is positive, excited, enthusiastic, slightly anxious, slightly depressed.<|endoftext|>", "extracted_labels": "[positive, excited, enthusiastic, slightly anxious, slightly depressed]", "sentiment": "positive"}
+{"id": "cW1FSBF59ik_1", "prediction": "The character's emotional state is negative, dissatisfaction.<|endoftext|>", "extracted_labels": "[negative, dissatisfaction]", "sentiment": "negative"}
+{"id": "cW1FSBF59ik_2", "prediction": "The character's emotional state is admiration, affection, excitement.<|endoftext|>", "extracted_labels": "[admiration, affection, excitement]", "sentiment": "positive"}
+{"id": "cW1FSBF59ik_3", "prediction": "The character's emotional state is tension, anxiety, fear.<|endoftext|>", "extracted_labels": "[tension, anxiety, fear]", "sentiment": "negative"}
+{"id": "cW1FSBF59ik_4", "prediction": "The character's emotional state is disappointment, frustration, anger, stress, anxiety.<|endoftext|>", "extracted_labels": "[disappointment, frustration, anger, stress, anxiety]", "sentiment": "negative"}
+{"id": "cW1FSBF59ik_5", "prediction": "The character's emotional state is excited, thrilled.<|endoftext|>", "extracted_labels": "[excited, thrilled]", "sentiment": "positive"}
+{"id": "cW1FSBF59ik_6", "prediction": "The character's emotional state is positive, appreciation.<|endoftext|>", "extracted_labels": "[positive, appreciation]", "sentiment": "positive"}
+{"id": "cW1FSBF59ik_7", "prediction": "The character's emotional state: excited, satisfied, negative.<|endoftext|>", "extracted_labels": "[excited, satisfied, negative]", "sentiment": "negative"}
+{"id": "cW1FSBF59ik_8", "prediction": "The character's emotional state is love, positive.<|endoftext|>", "extracted_labels": "[love, positive]", "sentiment": "positive"}
+{"id": "cW1FSBF59ik_9", "prediction": "The character's emotional state is disapproval, dissatisfaction, frustration, anger.", "extracted_labels": "[disapproval, dissatisfaction, frustration, anger]", "sentiment": "negative"}
+{"id": "cW1FSBF59ik_10", "prediction": "The character's emotional state is love, admiration, appreciation.<|endoftext|>", "extracted_labels": "[love, admiration, appreciation]", "sentiment": "positive"}
+{"id": "cW1FSBF59ik_11", "prediction": "The character's emotional state is humor, sarcasm, positive, negative.<|endoftext|>", "extracted_labels": "[humor, sarcasm, positive, negative]", "sentiment": "neutral"}
+{"id": "cW1FSBF59ik_12", "prediction": "The character's emotional state is excited, dissatisfied, angry.<|endoftext|>", "extracted_labels": "[excited, dissatisfied, angry]", "sentiment": "negative"}
+{"id": "cW1FSBF59ik_13", "prediction": "The character's emotional state is excited, thrilled.<|endoftext|>", "extracted_labels": "[excited, thrilled]", "sentiment": "positive"}
+{"id": "cW1FSBF59ik_14", "prediction": "The character's emotional state is dissatisfaction, disappointment, frustration.", "extracted_labels": "[dissatisfaction, disappointment, frustration]", "sentiment": "negative"}
+{"id": "cW1FSBF59ik_15", "prediction": "The character's emotional state is anger, frustration, dissatisfaction.", "extracted_labels": "[anger, frustration, dissatisfaction]", "sentiment": "negative"}
+{"id": "cW1FSBF59ik_16", "prediction": "The character's emotional state is excited, love.<|endoftext|>", "extracted_labels": "[excited, love]", "sentiment": "positive"}
+{"id": "cW1FSBF59ik_17", "prediction": "The character's emotional state is positive, excitement.<|endoftext|>", "extracted_labels": "[positive, excitement]", "sentiment": "positive"}
+{"id": "cW1FSBF59ik_18", "prediction": "The character's emotional state is positive, appreciation.", "extracted_labels": "[positive, appreciation]", "sentiment": "positive"}
+{"id": "cW1FSBF59ik_19", "prediction": "The character's emotional state is disappointment, dissatisfaction, frustration.<|endoftext|>", "extracted_labels": "[disappointment, dissatisfaction, frustration]", "sentiment": "negative"}
+{"id": "cW1FSBF59ik_20", "prediction": "The character's emotional state is surprised, excited, love.<|endoftext|>", "extracted_labels": "[surprised, excited, love]", "sentiment": "positive"}
+{"id": "cW1FSBF59ik_21", "prediction": "The character's emotional state is positive, appreciation.", "extracted_labels": "[positive, appreciation]", "sentiment": "positive"}
+{"id": "cW1FSBF59ik_22", "prediction": "The character's emotional state is neutral.<|endoftext|>", "extracted_labels": "[neutral]", "sentiment": "neutral"}
+{"id": "cW1FSBF59ik_23", "prediction": "The character's emotional state is love, excitement.<|endoftext|>", "extracted_labels": "[love, excitement]", "sentiment": "positive"}
+{"id": "cW1FSBF59ik_24", "prediction": "The character's emotional state is negative, dissatisfied, disliking, humor, parody.<|endoftext|>", "extracted_labels": "[negative, dissatisfied, disliking, humor, parody]", "sentiment": "negative"}
+{"id": "rnaNMUZpvvg_1", "prediction": "The character's emotional state is disappointment, anger.<|endoftext|>", "extracted_labels": "[disappointment, anger]", "sentiment": "negative"}
+{"id": "rnaNMUZpvvg_2", "prediction": "The character's emotional state: positive, negative, complex.<|endoftext|>", "extracted_labels": "[positive, negative, complex]", "sentiment": "complex"}
+{"id": "rnaNMUZpvvg_3", "prediction": "The character's emotional state is surprised, satisfied.<|endoftext|>", "extracted_labels": "[surprised, satisfied]", "sentiment": "positive"}
+{"id": "rnaNMUZpvvg_4", "prediction": "The character's emotional state is disappointment, anger.<|endoftext|>", "extracted_labels": "[disappointment, anger]", "sentiment": "negative"}
+{"id": "rnaNMUZpvvg_5", "prediction": "The character's emotional state is dissatisfaction, disinterest.", "extracted_labels": "[dissatisfaction, disinterest]", "sentiment": "negative"}
+{"id": "rnaNMUZpvvg_6", "prediction": "The character's emotional state: disinterest, exhaustion.<|endoftext|>", "extracted_labels": "[disinterest, exhaustion]", "sentiment": "negative"}
+{"id": "rnaNMUZpvvg_7", "prediction": "The character's emotional state is excited, enthusiastic.<|endoftext|>", "extracted_labels": "[excited, enthusiastic]", "sentiment": "positive"}
+{"id": "rnaNMUZpvvg_8", "prediction": "The character's emotional state is disatisfaction, disappointment.<|endoftext|>", "extracted_labels": "[dis satisfaction, disappointment]", "sentiment": "negative"}
+{"id": "rnaNMUZpvvg_9", "prediction": "The character's emotional state is disapproval, dissatisfaction, disappointment.<|endoftext|>", "extracted_labels": "[disapproval, dissatisfaction, disappointment]", "sentiment": "negative"}
+{"id": "rnaNMUZpvvg_10", "prediction": "The character's emotional state is anger, frustration.<|endoftext|>", "extracted_labels": "[anger, frustration]", "sentiment": "negative"}
+{"id": "rnaNMUZpvvg_11", "prediction": "The character's emotional state is anger, dissatisfaction.<|endoftext|>", "extracted_labels": "[anger, dissatisfaction]", "sentiment": "negative"}
+{"id": "rnaNMUZpvvg_12", "prediction": "The character's emotional state is disapproval, dissatisfaction, negative.<|endoftext|>", "extracted_labels": "[disapproval, dissatisfaction, negative]", "sentiment": "negative"}
+{"id": "rnaNMUZpvvg_13", "prediction": "The character's emotional state is disatisfaction, disappointment.", "extracted_labels": "[disatisfaction, disappointment]", "sentiment": "negative"}
+{"id": "rnaNMUZpvvg_14", "prediction": "The character's emotional state is disapproval, dissatisfaction, disappointment.<|endoftext|>", "extracted_labels": "[disapproval, dissatisfaction, disappointment]", "sentiment": "negative"}
+{"id": "rnaNMUZpvvg_15", "prediction": "The character's emotional state is disapproval, dissatisfaction, disappointment.", "extracted_labels": "[disapproval, dissatisfaction, disappointment]", "sentiment": "negative"}
+{"id": "rnaNMUZpvvg_16", "prediction": "The character's emotional state is anger, disappointment.<|endoftext|>", "extracted_labels": "[anger, disappointment]", "sentiment": "negative"}
+{"id": "rnaNMUZpvvg_17", "prediction": "The character's emotional state is anger, frustration, dissatisfaction.<|endoftext|>", "extracted_labels": "[anger, frustration, dissatisfaction]", "sentiment": "negative"}
+{"id": "rnaNMUZpvvg_18", "prediction": "The character's emotional state is disappointment, frustration, anger.<|endoftext|>", "extracted_labels": "[disappointment, frustration, anger]", "sentiment": "negative"}
+{"id": "rnaNMUZpvvg_19", "prediction": "The character's emotional state is anger, frustration, dissatisfaction.", "extracted_labels": "[anger, frustration, dissatisfaction]", "sentiment": "negative"}
+{"id": "rnaNMUZpvvg_20", "prediction": "The character's emotional state is excited, enthusiastic, surprised, shocked.<|endoftext|>", "extracted_labels": "[excited, enthusiastic, surprised, shocked]", "sentiment": "positive"}
+{"id": "rnaNMUZpvvg_21", "prediction": "The character's emotional state is disapproval, dissatisfaction, frustration.<|endoftext|>", "extracted_labels": "[disapproval, dissatisfaction, frustration]", "sentiment": "negative"}
+{"id": "rnaNMUZpvvg_22", "prediction": "The character's emotional state is disinterested, bored.", "extracted_labels": "[disinterested, bored]", "sentiment": "negative"}
+{"id": "vyB00TXsimI_1", "prediction": "The character's emotional state is positive, excitement, passion.<|endoftext|>", "extracted_labels": "[positive, excitement, passion]", "sentiment": "positive"}
+{"id": "vyB00TXsimI_2", "prediction": "The character's emotional state is dissatisfied, disappointment.", "extracted_labels": "[dissatisfied, disappointment]", "sentiment": "negative"}
+{"id": "vyB00TXsimI_3", "prediction": "The character's emotional state: excited, enthusiastic.<|endoftext|>", "extracted_labels": "[excited, enthusiastic]", "sentiment": "positive"}
+{"id": "vyB00TXsimI_4", "prediction": "The character's emotional state is appreciative, complimentary.<|endoftext|>", "extracted_labels": "[appreciative, complimentary]", "sentiment": "positive"}
+{"id": "vyB00TXsimI_5", "prediction": "The character's emotional state is positive, excitement, excitement, anxiety, tension, humor, fun.<|endoftext|>", "extracted_labels": "[positive, excitement, anxiety, tension, humor, fun]", "sentiment": "positive"}
+{"id": "vyB00TXsimI_6", "prediction": "The character's emotional state is excited, enthusiastic.<|endoftext|>", "extracted_labels": "[excited, enthusiastic]", "sentiment": "positive"}
+{"id": "vyB00TXsimI_7", "prediction": "The character's emotional state is positive, excitement.<|endoftext|>", "extracted_labels": "[positive, excitement]", "sentiment": "positive"}
+{"id": "vyB00TXsimI_8", "prediction": "The character's emotional state is love, enthusiasm.<|endoftext|>", "extracted_labels": "[love, enthusiasm]", "sentiment": "positive"}
+{"id": "vyB00TXsimI_9", "prediction": "The character's emotional state is disapproval, dissatisfaction, negative.<|endoftext|>", "extracted_labels": "[disapproval, dissatisfaction, negative]", "sentiment": "negative"}
+{"id": "vyB00TXsimI_10", "prediction": "The character's emotional state is neutral.<|endoftext|>", "extracted_labels": "[neutral]", "sentiment": "neutral"}
+{"id": "vyB00TXsimI_11", "prediction": "The character's emotional state is frustration, disappointment.<|endoftext|>", "extracted_labels": "[frustration, disappointment]", "sentiment": "negative"}
+{"id": "vyB00TXsimI_12", "prediction": "The character's emotional state is neutral.<|endoftext|>", "extracted_labels": "[neutral]", "sentiment": "neutral"}
+{"id": "vyB00TXsimI_13", "prediction": "The character's emotional state is positive, appreciation.", "extracted_labels": "[positive, appreciation]", "sentiment": "positive"}
+{"id": "vyB00TXsimI_14", "prediction": "The character's emotional state is喜欢,期待,兴奋.<|endoftext|>", "extracted_labels": "[like, expect, excited]", "sentiment": "positive"}
+{"id": "vyB00TXsimI_15", "prediction": "The character's emotional state is excitement, passion, love.<|endoftext|>", "extracted_labels": "[excitement, passion, love]", "sentiment": "positive"}
+{"id": "vyB00TXsimI_16", "prediction": "The character's emotional state is excitement, anticipation.<|endoftext|>", "extracted_labels": "[excitement, anticipation]", "sentiment": "positive"}
+{"id": "vyB00TXsimI_17", "prediction": "The character's emotional state: excited, enthusiastic, positive.<|endoftext|>", "extracted_labels": "[excited, enthusiastic, positive]", "sentiment": "positive"}
+{"id": "vyB00TXsimI_18", "prediction": "The character's emotional state is positive, satisfaction.<|endoftext|>", "extracted_labels": "[positive, satisfaction]", "sentiment": "positive"}
+{"id": "vyB00TXsimI_19", "prediction": "The character's emotional state is positive, excitement, satisfaction.<|endoftext|>", "extracted_labels": "[positive, excitement, satisfaction]", "sentiment": "positive"}
+{"id": "vyB00TXsimI_20", "prediction": "The character's emotional state is positive, enjoyment.<|endoftext|>", "extracted_labels": "[positive, enjoyment]", "sentiment": "positive"}
+{"id": "vyB00TXsimI_21", "prediction": "The character's emotional state: positive, humor, entertaining, negative, anxiety, anger, sadness.<|endoftext|>", "extracted_labels": "[positive, humor, entertaining, negative, anxiety, anger, sadness]", "sentiment": "mixed"}
+{"id": "vyB00TXsimI_22", "prediction": "The character's emotional state is tension, anxiety, stress.<|endoftext|>", "extracted_labels": "[tension, anxiety, stress]", "sentiment": "negative"}
+{"id": "c7UH_rxdZv4_1", "prediction": "The character's emotional state is disliking, dissatisfaction, negative.<|endoftext|>", "extracted_labels": "[disliking, dissatisfaction, negative]", "sentiment": "negative"}
+{"id": "c7UH_rxdZv4_2", "prediction": "The character's emotional state is disappointment, dissatisfaction.<|endoftext|>", "extracted_labels": "[disappointment, dissatisfaction]", "sentiment": "negative"}
+{"id": "c7UH_rxdZv4_3", "prediction": "The character's emotional state is disappointment, dissatisfaction, negative.<|endoftext|>", "extracted_labels": "[disappointment, dissatisfaction, negative]", "sentiment": "negative"}
+{"id": "c7UH_rxdZv4_4", "prediction": "The character's emotional state is positive, excitement.<|endoftext|>", "extracted_labels": "[positive, excitement]", "sentiment": "positive"}
+{"id": "c7UH_rxdZv4_5", "prediction": "The character's emotional state is disapproval, dissatisfaction, negative.<|endoftext|>", "extracted_labels": "[disapproval, dissatisfaction, negative]", "sentiment": "negative"}
+{"id": "c7UH_rxdZv4_6", "prediction": "The character's emotional state is disliking, dissatisfaction, negative.", "extracted_labels": "[dissatisfaction, negative]", "sentiment": "negative"}
+{"id": "c7UH_rxdZv4_7", "prediction": "The character's emotional state is negative, disliking, dissatisfaction.<|endoftext|>", "extracted_labels": "[negative, disliking, dissatisfaction]", "sentiment": "negative"}
+{"id": "c7UH_rxdZv4_8", "prediction": "The character's emotional state is negative, critical.<|endoftext|>", "extracted_labels": "[negative, critical]", "sentiment": "negative"}
+{"id": "c7UH_rxdZv4_9", "prediction": "The character's emotional state is positive, optimistic, unique, valuable.<|endoftext|>", "extracted_labels": "[positive, optimistic]", "sentiment": "positive"}
+{"id": "c7UH_rxdZv4_10", "prediction": "The character's emotional state is humorous, teasing, positive.<|endoftext|>", "extracted_labels": "[humorous, teasing, positive]", "sentiment": "positive"}
+{"id": "c7UH_rxdZv4_11", "prediction": "The character's emotional state: positive, appreciative.<|endoftext|>", "extracted_labels": "[positive, appreciative]", "sentiment": "positive"}
+{"id": "c7UH_rxdZv4_12", "prediction": "The character's emotional state is disapproval, dissatisfaction, frustration.<|endoftext|>", "extracted_labels": "[disapproval, dissatisfaction, frustration]", "sentiment": "negative"}
+{"id": "c7UH_rxdZv4_13", "prediction": "The character's emotional state is anger, frustration, disappointment.<|endoftext|>", "extracted_labels": "[anger, frustration, disappointment]", "sentiment": "negative"}
+{"id": "c7UH_rxdZv4_14", "prediction": "The emotional state of the character is excited, appreciative.<|endoftext|>", "extracted_labels": "[excited, appreciative]", "sentiment": "positive"}
+{"id": "c7UH_rxdZv4_15", "prediction": "The character's emotional state is monotonous, dull, disinterested.<|endoftext|>", "extracted_labels": "[dull, disinterested]", "sentiment": "negative"}
+{"id": "c7UH_rxdZv4_16", "prediction": "The character's emotional state: disatisfaction, boredom.<|endoftext|>", "extracted_labels": "[disatisfaction, boredom]", "sentiment": "negative"}
+{"id": "c7UH_rxdZv4_17", "prediction": "The character's emotional state is appreciative, admiring, positive.", "extracted_labels": "[appreciative, admiring, positive]", "sentiment": "positive"}
+{"id": "c7UH_rxdZv4_18", "prediction": "The character's emotional state is anger, frustration, dissatisfaction.", "extracted_labels": "[anger, frustration, dissatisfaction]", "sentiment": "negative"}
+{"id": "c7UH_rxdZv4_19", "prediction": "The character's emotional state is disappointment, frustration, anger.<|endoftext|>", "extracted_labels": "[disappointment, frustration, anger]", "sentiment": "negative"}
+{"id": "c7UH_rxdZv4_20", "prediction": "The character's emotional state is disappointment, frustration.<|endoftext|>", "extracted_labels": "[disappointment, frustration]", "sentiment": "negative"}
+{"id": "c7UH_rxdZv4_21", "prediction": "The character's emotional state is positive, happy, dissatisfied, thoughtful, complex.<|endoftext|>", "extracted_labels": "[positive, happy, dissatisfied, thoughtful, complex]", "sentiment": "complex"}
+{"id": "c7UH_rxdZv4_22", "prediction": "The character's emotional state is apathetic, negative.<|endoftext|>", "extracted_labels": "[apathetic, negative]", "sentiment": "negative"}
+{"id": "c7UH_rxdZv4_23", "prediction": "The character's emotional state is appreciation, recognition, positive.", "extracted_labels": "[appreciation, recognition, positive]", "sentiment": "positive"}
+{"id": "c7UH_rxdZv4_24", "prediction": "The character's emotional state is disatisfaction, disappointment.", "extracted_labels": "[disatisfaction, disappointment]", "sentiment": "negative"}
+{"id": "c7UH_rxdZv4_25", "prediction": "The character's emotional state is neutral.<|endoftext|>", "extracted_labels": "[neutral]", "sentiment": "neutral"}
+{"id": "c7UH_rxdZv4_26", "prediction": "The character's emotional state is dissatisfied, negative, disappointment.<|endoftext|>", "extracted_labels": "[dissatisfied, negative, disappointment]", "sentiment": "negative"}
+{"id": "c7UH_rxdZv4_27", "prediction": "The character's emotional state is disapproval, dissatisfaction, negative.<|endoftext|>", "extracted_labels": "[disapproval, dissatisfaction, negative]", "sentiment": "negative"}
+{"id": "c7UH_rxdZv4_28", "prediction": "The character's emotional state is neutral, slightly negative.<|endoftext|>", "extracted_labels": "[neutral, negative]", "sentiment": "negative"}
+{"id": "c7UH_rxdZv4_29", "prediction": "The character's emotional state is genuine affection, positive, stable.<|endoftext|>", "extracted_labels": "[genuine affection, positive, stable]", "sentiment": "positive"}
+{"id": "c7UH_rxdZv4_30", "prediction": "The character's emotional state is positive, excited, satisfied, dissatisfied, contemplative, negative.<|endoftext|>", "extracted_labels": "[positive, excited, satisfied, dissatisfied, contemplative, negative]", "sentiment": "positive"}
+{"id": "c7UH_rxdZv4_31", "prediction": "The character's emotional state is disapproval, dissatisfaction, criticism.", "extracted_labels": "[disapproval, dissatisfaction, criticism]", "sentiment": "negative"}
+{"id": "c7UH_rxdZv4_32", "prediction": "The character's emotional state: disinterest, disapproval, casual, humorous.<|endoftext|>", "extracted_labels": "[disinterest, disapproval, casual, humorous]", "sentiment": "negative"}
+{"id": "c7UH_rxdZv4_33", "prediction": "The character's emotional state: disinterest, apathy.<|endoftext|>", "extracted_labels": "[disinterest, apathy]", "sentiment": "negative"}
+{"id": "cM3Yna7AavY_1", "prediction": "The character's emotional state is excited, satisfied, happy, satisfied, neutral, negative.<|endoftext|>", "extracted_labels": "[excited, happy, satisfied, neutral, negative]", "sentiment": "positive"}
+{"id": "cM3Yna7AavY_2", "prediction": "The character's emotional state is positive, excitement, love.<|endoftext|>", "extracted_labels": "[positive, excitement, love]", "sentiment": "positive"}
+{"id": "cM3Yna7AavY_3", "prediction": "The character's emotional state is anticipation, excitement.<|endoftext|>", "extracted_labels": "[anticipation, excitement]", "sentiment": "positive"}
+{"id": "cM3Yna7AavY_4", "prediction": "The character's emotional state is positive, expectant.<|endoftext|>", "extracted_labels": "[positive, expectant]", "sentiment": "positive"}
+{"id": "cM3Yna7AavY_5", "prediction": "The character's emotional state is surprised, excited.<|endoftext|>", "extracted_labels": "[surprised, excited]", "sentiment": "positive"}
+{"id": "cM3Yna7AavY_6", "prediction": "The character's emotional state is speechless, amazed, admiration, positive.<|endoftext|>", "extracted_labels": "[speechless, amazed, admiration, positive]", "sentiment": "positive"}
+{"id": "cM3Yna7AavY_7", "prediction": "The character's emotional state is excited, appreciative.<|endoftext|>", "extracted_labels": "[excited, appreciative]", "sentiment": "positive"}
+{"id": "cM3Yna7AavY_8", "prediction": "The character's emotional state is disapproval, dissatisfaction, criticism.", "extracted_labels": "[disapproval, dissatisfaction, criticism]", "sentiment": "negative"}
+{"id": "cM3Yna7AavY_9", "prediction": "The character's emotional state is neutral.<|endoftext|>", "extracted_labels": "[neutral]", "sentiment": "neutral"}
+{"id": "cM3Yna7AavY_10", "prediction": "The character's emotional state is positive, liking, excitement.<|endoftext|>", "extracted_labels": "[positive, liking, excitement]", "sentiment": "positive"}
+{"id": "cM3Yna7AavY_11", "prediction": "The character's emotional state: positive, excited.<|endoftext|>", "extracted_labels": "[positive, excited]", "sentiment": "positive"}
+{"id": "cM3Yna7AavY_12", "prediction": "The character's emotional state is neutral.<|endoftext|>", "extracted_labels": "[neutral]", "sentiment": "neutral"}
+{"id": "cM3Yna7AavY_13", "prediction": "The character's emotional state is disliking, dissatisfaction.", "extracted_labels": "[disliking, dissatisfaction]", "sentiment": "negative"}
+{"id": "cM3Yna7AavY_14", "prediction": "The character's emotional state is negative, dissatisfied, frustration.<|endoftext|>", "extracted_labels": "[negative, dissatisfied, frustration]", "sentiment": "negative"}
+{"id": "cM3Yna7AavY_15", "prediction": "The character's emotional state: disappointment, dissatisfaction, frustration, anger.<|endoftext|>", "extracted_labels": "[disappointment, dissatisfaction, frustration, anger]", "sentiment": "negative"}
+{"id": "cM3Yna7AavY_16", "prediction": "The character's emotional state is dissatisfaction, regret, negative.<|endoftext|>", "extracted_labels": "[dissatisfaction, regret, negative]", "sentiment": "negative"}
+{"id": "d3_k5Xpfmik_1", "prediction": "The character's emotional state is positive, appreciation, excitement.<|endoftext|>", "extracted_labels": "[positive, appreciation, excitement]", "sentiment": "positive"}
+{"id": "d3_k5Xpfmik_2", "prediction": "The character's emotional state is disapproval, dissatisfaction, stress, anxiety.<|endoftext|>", "extracted_labels": "[disapproval, dissatisfaction, stress, anxiety]", "sentiment": "negative"}
+{"id": "d3_k5Xpfmik_3", "prediction": "The character's emotional state is positive, energetic, passionate.<|endoftext|>", "extracted_labels": "[positive, energetic, passionate]", "sentiment": "positive"}
+{"id": "d3_k5Xpfmik_4", "prediction": "The character's emotional state is disappointment, frustration, anger.<|endoftext|>", "extracted_labels": "[disappointment, frustration, anger]", "sentiment": "negative"}
+{"id": "d3_k5Xpfmik_5", "prediction": "The character's emotional state is positive, evaluation, description.", "extracted_labels": "[]", "sentiment": "neutral"}
+{"id": "d3_k5Xpfmik_6", "prediction": "The character's emotional state is appreciation, positive.", "extracted_labels": "[appreciation, positive]", "sentiment": "positive"}
+{"id": "d3_k5Xpfmik_7", "prediction": "The character's emotional state is detached,客观,分析, humor.<|endoftext|>", "extracted_labels": "[detached, objective, analytical, humorous]", "sentiment": "neutral"}
+{"id": "d3_k5Xpfmik_8", "prediction": "The character's emotional state is appreciation, positive.<|endoftext|>", "extracted_labels": "[appreciation, positive]", "sentiment": "positive"}
+{"id": "d3_k5Xpfmik_9", "prediction": "The character's emotional state: excitement, anticipation, urgency.<|endoftext|>", "extracted_labels": "[excitement, anticipation, urgency]", "sentiment": "positive"}
+{"id": "d3_k5Xpfmik_10", "prediction": "The character's emotional state is neutral.<|endoftext|>", "extracted_labels": "[neutral]", "sentiment": "neutral"}
+{"id": "d3_k5Xpfmik_11", "prediction": "The character's emotional state: positive, excitement.<|endoftext|>", "extracted_labels": "[positive, excitement]", "sentiment": "positive"}
+{"id": "d3_k5Xpfmik_12", "prediction": "The character's emotional state is positive, appreciation.<|endoftext|>", "extracted_labels": "[positive, appreciation]", "sentiment": "positive"}
+{"id": "d3_k5Xpfmik_13", "prediction": "The character's emotional state is positive, appreciation.", "extracted_labels": "[positive, appreciation]", "sentiment": "positive"}
+{"id": "d3_k5Xpfmik_14", "prediction": "The character's emotional state is appreciation, positive.", "extracted_labels": "[appreciation, positive]", "sentiment": "positive"}
+{"id": "d3_k5Xpfmik_15", "prediction": "The character's emotional state is appreciative, positive.<|endoftext|>", "extracted_labels": "[appreciative, positive]", "sentiment": "positive"}
+{"id": "d3_k5Xpfmik_16", "prediction": "The character's emotional state: appreciation, positive.<|endoftext|>", "extracted_labels": "[appreciation, positive]", "sentiment": "positive"}
+{"id": "d3_k5Xpfmik_17", "prediction": "The character's emotional state is neutral.<|endoftext|>", "extracted_labels": "[neutral]", "sentiment": "neutral"}
+{"id": "d3_k5Xpfmik_18", "prediction": "The character's emotional state is excited, enthusiastic.<|endoftext|>", "extracted_labels": "[excited, enthusiastic]", "sentiment": "positive"}
+{"id": "d3_k5Xpfmik_19", "prediction": "The character's emotional state is excited, passionate.<|endoftext|>", "extracted_labels": "[excited, passionate]", "sentiment": "positive"}
+{"id": "tIrG4oNLFzE_1", "prediction": "The character's emotional state is positive, excitement.<|endoftext|>", "extracted_labels": "[positive, excitement]", "sentiment": "positive"}
+{"id": "tIrG4oNLFzE_2", "prediction": "The character's emotional state is positive, love, affection.<|endoftext|>", "extracted_labels": "[positive, love, affection]", "sentiment": "positive"}
+{"id": "tIrG4oNLFzE_3", "prediction": "The character's emotional state is positive, enjoyment.", "extracted_labels": "[positive, enjoyment]", "sentiment": "positive"}
+{"id": "tIrG4oNLFzE_4", "prediction": "The character's emotional state is positive, negative.<|endoftext|>", "extracted_labels": "[positive, negative]", "sentiment": "neutral"}
+{"id": "tIrG4oNLFzE_5", "prediction": "The character's emotional state: anticipation, excitement.<|endoftext|>", "extracted_labels": "[anticipation, excitement]", "sentiment": "positive"}
+{"id": "tIrG4oNLFzE_6", "prediction": "The character's emotional state is positive, excitement.<|endoftext|>", "extracted_labels": "[positive, excitement]", "sentiment": "positive"}
+{"id": "tIrG4oNLFzE_7", "prediction": "The character's emotional state is Caution, Concern, Positive, Negative.<|endoftext|>", "extracted_labels": "[Caution, Concern, Positive, Negative]", "sentiment": "neutral"}
+{"id": "tIrG4oNLFzE_8", "prediction": "The character's emotional state is Doubt, Uncertainty, Expectation, Curiosity, Anticipation, Concern.<|endoftext|>", "extracted_labels": "[Doubt, Uncertainty, Expectation, Curiosity, Anticipation, Concern]", "sentiment": "negative"}
+{"id": "tIrG4oNLFzE_9", "prediction": "The character's emotional state is neutral.<|endoftext|>", "extracted_labels": "[neutral]", "sentiment": "neutral"}
+{"id": "tIrG4oNLFzE_10", "prediction": "The character's emotional state is dissatisfied, unhappy, playful.<|endoftext|>", "extracted_labels": "[dissatisfied, unhappy, playful]", "sentiment": "negative"}
+{"id": "tIrG4oNLFzE_11", "prediction": "The character's emotional state is grumpy, frowns, pout, happy, not clearly defined.<|endoftext|>", "extracted_labels": "[grumpy, happy]", "sentiment": "neutral"}
+{"id": "tIrG4oNLFzE_12", "prediction": "The character's emotional state is frustration, anger, annoyance.<|endoftext|>", "extracted_labels": "[frustration, anger, annoyance]", "sentiment": "negative"}
+{"id": "tIrG4oNLFzE_13", "prediction": "The character's emotional state is confused, curious, contemplative.<|endoftext|>", "extracted_labels": "[confused, curious, contemplative]", "sentiment": "neutral"}
+{"id": "tIrG4oNLFzE_14", "prediction": "The character's emotional state is confusion, dissatisfaction, frustration, shock, sadness.<|endoftext|>", "extracted_labels": "[confusion, dissatisfaction, frustration, sadness]", "sentiment": "negative"}
+{"id": "tIrG4oNLFzE_15", "prediction": "The character's emotional state is serious, focused, positive, emphasis, suggestion.<|endoftext|>", "extracted_labels": "[serious, focused, positive]", "sentiment": "positive"}
+{"id": "tIrG4oNLFzE_16", "prediction": "The character's emotional state is dissatisfaction, confusion.<|endoftext|>", "extracted_labels": "[dissatisfaction, confusion]", "sentiment": "negative"}
+{"id": "tIrG4oNLFzE_17", "prediction": "The character's emotional state is appreciation, positive evaluation.", "extracted_labels": "[appreciation, positive evaluation]", "sentiment": "positive"}
+{"id": "tIrG4oNLFzE_18", "prediction": "The character's emotional state is disappointment, frustration, anger.<|endoftext|>", "extracted_labels": "[disappointment, frustration, anger]", "sentiment": "negative"}
+{"id": "dq3Nf_lMPnE_1", "prediction": "The character's emotional state is positive, growth, discovery.<|endoftext|>", "extracted_labels": "[positive, growth, discovery]", "sentiment": "positive"}
+{"id": "dq3Nf_lMPnE_2", "prediction": "The character's emotional state is disapproval, dissatisfaction, negative.<|endoftext|>", "extracted_labels": "[disapproval, dissatisfaction, negative]", "sentiment": "negative"}
+{"id": "dq3Nf_lMPnE_3", "prediction": "The character's emotional state: frustration, confusion, dissatisfaction.<|endoftext|>", "extracted_labels": "[frustration, confusion, dissatisfaction]", "sentiment": "negative"}
+{"id": "dq3Nf_lMPnE_4", "prediction": "The character's emotional state is positive, negative, complex.<|endoftext|>", "extracted_labels": "[positive, negative, complex]", "sentiment": "complex"}
+{"id": "dq3Nf_lMPnE_5", "prediction": "The character's emotional state is positive, negative, complex.<|endoftext|>", "extracted_labels": "[positive, negative, complex]", "sentiment": "complex"}
+{"id": "dq3Nf_lMPnE_6", "prediction": "The character's emotional state is positive, affirmative.<|endoftext|>", "extracted_labels": "[positive, affirmative]", "sentiment": "positive"}
+{"id": "dq3Nf_lMPnE_7", "prediction": "The character's emotional state: disapproval, dissatisfaction, disappointment, frustration.<|endoftext|>", "extracted_labels": "[disapproval, dissatisfaction, disappointment, frustration]", "sentiment": "negative"}
+{"id": "dq3Nf_lMPnE_8", "prediction": "The character's emotional state is disappointment, dissatisfaction.<|endoftext|>", "extracted_labels": "[disappointment, dissatisfaction]", "sentiment": "negative"}
+{"id": "dq3Nf_lMPnE_9", "prediction": "The character's emotional state is humorous, satirical, positive.<|endoftext|>", "extracted_labels": "[humorous, satirical, positive]", "sentiment": "positive"}
+{"id": "dq3Nf_lMPnE_10", "prediction": "The character's emotional state is positive, humorous, self-deprecating.<|endoftext|>", "extracted_labels": "[positive, humorous, self-deprecating]", "sentiment": "positive"}
+{"id": "dq3Nf_lMPnE_11", "prediction": "The character's emotional state is positive, excitement, humor.<|endoftext|>", "extracted_labels": "[positive, excitement, humor]", "sentiment": "positive"}
+{"id": "dq3Nf_lMPnE_12", "prediction": "The character's emotional state is disapproval, dissatisfaction, criticism, negative.<|endoftext|>", "extracted_labels": "[disapproval, dissatisfaction, criticism, negative]", "sentiment": "negative"}
+{"id": "dq3Nf_lMPnE_13", "prediction": "The character's emotional state is appreciation, positive.", "extracted_labels": "[appreciation, positive]", "sentiment": "positive"}
+{"id": "dq3Nf_lMPnE_14", "prediction": "The character's emotional state is Impatient, Bored, Humor, Tease.<|endoftext|>", "extracted_labels": "[Impatient, Bored, Humor, Tease]", "sentiment": "positive"}
+{"id": "dq3Nf_lMPnE_15", "prediction": "The character's emotional state is positive, objective.<|endoftext|>", "extracted_labels": "[positive]", "sentiment": "positive"}
+{"id": "f9O3YtZ2VfI_1", "prediction": "The character's emotional state is Impatience, Bored.<|endoftext|>", "extracted_labels": "[impatience, bored]", "sentiment": "negative"}
+{"id": "f9O3YtZ2VfI_2", "prediction": "The character's emotional state is positive, excited, interested.<|endoftext|>", "extracted_labels": "[positive, excited, interested]", "sentiment": "positive"}
+{"id": "f9O3YtZ2VfI_3", "prediction": "The character's emotional state is affirmative, positive.<|endoftext|>", "extracted_labels": "[affirmative, positive]", "sentiment": "positive"}
+{"id": "f9O3YtZ2VfI_4", "prediction": "The character's emotional state is disappointment, frustration, stress, dissatisfaction.<|endoftext|>", "extracted_labels": "[disappointment, frustration, stress, dissatisfaction]", "sentiment": "negative"}
+{"id": "f9O3YtZ2VfI_5", "prediction": "The character's emotional state is neutral.<|endoftext|>", "extracted_labels": "[neutral]", "sentiment": "neutral"}
+{"id": "f9O3YtZ2VfI_6", "prediction": "The character's emotional state is dissatisfaction, anger.<|endoftext|>", "extracted_labels": "[dissatisfaction, anger]", "sentiment": "negative"}
+{"id": "f9O3YtZ2VfI_7", "prediction": "The character's emotional state is impatience, disinterest.<|endoftext|>", "extracted_labels": "[impatience, disinterest]", "sentiment": "negative"}
+{"id": "f9O3YtZ2VfI_8", "prediction": "The character's emotional state is dissatisfaction, disapproval.<|endoftext|>", "extracted_labels": "[dissatisfaction, disapproval]", "sentiment": "negative"}
+{"id": "f9O3YtZ2VfI_9", "prediction": "The character's emotional state is frustration, dissatisfaction, anger.<|endoftext|>", "extracted_labels": "[frustration, dissatisfaction, anger]", "sentiment": "negative"}
+{"id": "f9O3YtZ2VfI_10", "prediction": "The character's emotional state: dissatisfaction, complaint.<|endoftext|>", "extracted_labels": "[dissatisfaction, complaint]", "sentiment": "negative"}
+{"id": "f9O3YtZ2VfI_11", "prediction": "The character's emotional state: Impression, evaluation, suggestion, disapproval, dissatisfaction.", "extracted_labels": "[]", "sentiment": "neutral"}
+{"id": "f9O3YtZ2VfI_12", "prediction": "The character's emotional state is disapproval, dissatisfaction, negative.<|endoftext|>", "extracted_labels": "[disapproval, dissatisfaction, negative]", "sentiment": "negative"}
+{"id": "f9O3YtZ2VfI_13", "prediction": "The character's emotional state is disapproval, dissatisfaction, frustration, anger.<|endoftext|>", "extracted_labels": "[disapproval, dissatisfaction, frustration, anger]", "sentiment": "negative"}
+{"id": "f9O3YtZ2VfI_14", "prediction": "The character's emotional state is desire, expectation.<|endoftext|>", "extracted_labels": "[desire, expectation]", "sentiment": "positive"}
+{"id": "f9O3YtZ2VfI_15", "prediction": "The character's emotional state is neutral.<|endoftext|>", "extracted_labels": "[neutral]", "sentiment": "neutral"}
+{"id": "f9O3YtZ2VfI_16", "prediction": "The character's emotional state is positive, excitement.<|endoftext|>", "extracted_labels": "[positive, excitement]", "sentiment": "positive"}
+{"id": "f9O3YtZ2VfI_17", "prediction": "The character's emotional state is neutral.<|endoftext|>", "extracted_labels": "[neutral]", "sentiment": "neutral"}
+{"id": "f9O3YtZ2VfI_18", "prediction": "The character's emotional state is neutral.<|endoftext|>", "extracted_labels": "[neutral]", "sentiment": "neutral"}
+{"id": "f9O3YtZ2VfI_19", "prediction": "The character's emotional state: disapproval, dissatisfaction, disappointment, criticism.<|endoftext|>", "extracted_labels": "[disapproval, dissatisfaction, disappointment, criticism]", "sentiment": "negative"}
+{"id": "f9O3YtZ2VfI_20", "prediction": "The character's emotional state is positive, negative, evaluation, expectation.<|endoftext|>", "extracted_labels": "[positive, negative, evaluation, expectation]", "sentiment": "positive"}
+{"id": "f9O3YtZ2VfI_21", "prediction": "The character's emotional state is excited, anticipating, positive.<|endoftext|>", "extracted_labels": "[excited, anticipating, positive]", "sentiment": "positive"}
+{"id": "f9O3YtZ2VfI_22", "prediction": "The character's emotional state is positive, excitement.<|endoftext|>", "extracted_labels": "[positive, excitement]", "sentiment": "positive"}
+{"id": "f9O3YtZ2VfI_23", "prediction": "The character's emotional state is positive, appreciation.", "extracted_labels": "[positive, appreciation]", "sentiment": "positive"}
+{"id": "f9O3YtZ2VfI_24", "prediction": "The character's emotional state is dissatisfaction, frustration.<|endoftext|>", "extracted_labels": "[dissatisfaction, frustration]", "sentiment": "negative"}
+{"id": "f9O3YtZ2VfI_25", "prediction": "The character's emotional state: disatisfaction, disappointment.<|endoftext|>", "extracted_labels": "[disatisfaction, disappointment]", "sentiment": "negative"}
+{"id": "f9O3YtZ2VfI_26", "prediction": "The character's emotional state is positive, appreciation.", "extracted_labels": "[positive, appreciation]", "sentiment": "positive"}
+{"id": "f9O3YtZ2VfI_27", "prediction": "The character's emotional state: excitement, anxiety.<|endoftext|>", "extracted_labels": "[excitement, anxiety]", "sentiment": "negative"}
+{"id": "f9O3YtZ2VfI_28", "prediction": "The character's emotional state: positive, excited, enthusiastic.<|endoftext|>", "extracted_labels": "[positive, excited, enthusiastic]", "sentiment": "positive"}
+{"id": "f9O3YtZ2VfI_29", "prediction": "The character's emotional state is disapproval, disagreement, frustration, anger.<|endoftext|>", "extracted_labels": "[disapproval, disagreement, frustration, anger]", "sentiment": "negative"}
+{"id": "f9O3YtZ2VfI_30", "prediction": "The character's emotional state is anger, frustration, excitement.<|endoftext|>", "extracted_labels": "[anger, frustration, excitement]", "sentiment": "positive"}
+{"id": "pLTX3ipuDJI_1", "prediction": "The character's emotional state is dissatisfied, disappointment.<|endoftext|>", "extracted_labels": "[dissatisfied, disappointment]", "sentiment": "negative"}
+{"id": "pLTX3ipuDJI_2", "prediction": "The character's emotional state is disappointment, frustration.<|endoftext|>", "extracted_labels": "[disappointment, frustration]", "sentiment": "negative"}
+{"id": "pLTX3ipuDJI_3", "prediction": "The character's emotional state is Disappointed, Un满足, Criticizing.<|endoftext|>", "extracted_labels": "[Disappointed, Un满足, Criticizing]", "sentiment": "negative"}
+{"id": "pLTX3ipuDJI_4", "prediction": "The character's emotional state is dissatisfaction, disappointment.<|endoftext|>", "extracted_labels": "[dissatisfaction, disappointment]", "sentiment": "negative"}
+{"id": "pLTX3ipuDJI_5", "prediction": "The character's emotional state is apathetic, indifferent, negative.<|endoftext|>", "extracted_labels": "[apathetic, indifferent, negative]", "sentiment": "negative"}
+{"id": "pLTX3ipuDJI_6", "prediction": "The character's emotional state is neutral.<|endoftext|>", "extracted_labels": "[neutral]", "sentiment": "neutral"}
+{"id": "pLTX3ipuDJI_7", "prediction": "The character's emotional state is positive, objective, neutral.<|endoftext|>", "extracted_labels": "[positive, objective, neutral]", "sentiment": "positive"}
+{"id": "pLTX3ipuDJI_8", "prediction": "The character's emotional state is disappointment, dissatisfaction.", "extracted_labels": "[disappointment, dissatisfaction]", "sentiment": "negative"}
+{"id": "pLTX3ipuDJI_9", "prediction": "The character's emotional state is disappointment, frustration, anger.<|endoftext|>", "extracted_labels": "[disappointment, frustration, anger]", "sentiment": "negative"}
+{"id": "pLTX3ipuDJI_10", "prediction": "The character's emotional state is disappointment, frustration.", "extracted_labels": "[disappointment, frustration]", "sentiment": "negative"}
+{"id": "pLTX3ipuDJI_11", "prediction": "The character's emotional state is disapproval, confusion, frustration, anger, surprise, confusion.<|endoftext|>", "extracted_labels": "[disapproval, confusion, frustration, anger, surprise]", "sentiment": "negative"}
+{"id": "pLTX3ipuDJI_12", "prediction": "The character's emotional state is disapproval, dissatisfaction, criticism.", "extracted_labels": "[disapproval, dissatisfaction, criticism]", "sentiment": "negative"}
+{"id": "pLTX3ipuDJI_13", "prediction": "The character's emotional state is excited, enthusiastic, passionate.<|endoftext|>", "extracted_labels": "[excited, enthusiastic, passionate]", "sentiment": "positive"}
+{"id": "pLTX3ipuDJI_14", "prediction": "The character's emotional state is negative, dis喜欢, apathetic.<|endoftext|>", "extracted_labels": "[negative, apathetic]", "sentiment": "negative"}
+{"id": "pLTX3ipuDJI_15", "prediction": "The character's emotional state is dissatisfaction, disapproval, negative.", "extracted_labels": "[dissatisfaction, disapproval]", "sentiment": "negative"}
+{"id": "pLTX3ipuDJI_16", "prediction": "The character's emotional state is dissatisfaction, disapproval, negative.", "extracted_labels": "[dissatisfaction, disapproval]", "sentiment": "negative"}
+{"id": "ob23OKe5a9Q_1", "prediction": "The character's emotional state: positive, satisfaction, enjoyment.<|endoftext|>", "extracted_labels": "[positive, satisfaction, enjoyment]", "sentiment": "positive"}
+{"id": "ob23OKe5a9Q_2", "prediction": "The character's emotional state is neutral, cool.<|endoftext|>", "extracted_labels": "[neutral, cool]", "sentiment": "neutral"}
+{"id": "ob23OKe5a9Q_3", "prediction": "The character's emotional state is disinterested, bored.<|endoftext|>", "extracted_labels": "[disinterested, bored]", "sentiment": "negative"}
+{"id": "ob23OKe5a9Q_4", "prediction": "The character's emotional state: apathetic, monotonous,预测, Uninterested, Bored.<|endoftext|>", "extracted_labels": "[apathetic, monotonous, uninterested, bored]", "sentiment": "negative"}
+{"id": "ob23OKe5a9Q_5", "prediction": "The character's emotional state is dis喜欢, dissatisfaction, humor, light-hearted, positive.<|endoftext|>", "extracted_labels": "[dislike, dissatisfaction, humor, light-hearted, positive]", "sentiment": "positive"}
+{"id": "ob23OKe5a9Q_6", "prediction": "The character's emotional state is humorous, positive, sarcastic, playful.<|endoftext|>", "extracted_labels": "[humorous, positive, sarcastic, playful]", "sentiment": "positive"}
+{"id": "ob23OKe5a9Q_7", "prediction": "The character's emotional state is positive, recommendation.", "extracted_labels": "[positive]", "sentiment": "positive"}
+{"id": "ob23OKe5a9Q_8", "prediction": "The character's emotional state is positive, recommendation.", "extracted_labels": "[positive]", "sentiment": "positive"}
+{"id": "ob23OKe5a9Q_9", "prediction": "The character's emotional state is dissatisfied, unhappy.", "extracted_labels": "[unhappy]", "sentiment": "negative"}
+{"id": "ob23OKe5a9Q_10", "prediction": "The character's emotional state is positive, neutral.<|endoftext|>", "extracted_labels": "[positive, neutral]", "sentiment": "positive"}
+{"id": "ob23OKe5a9Q_11", "prediction": "The character's emotional state is positive, appreciation.<|endoftext|>", "extracted_labels": "[positive, appreciation]", "sentiment": "positive"}
+{"id": "ob23OKe5a9Q_12", "prediction": "The character's emotional state is positive, satisfaction, love.<|endoftext|>", "extracted_labels": "[positive, satisfaction, love]", "sentiment": "positive"}
+{"id": "ob23OKe5a9Q_13", "prediction": "The character's emotional state is positive, negative, mixed.<|endoftext|>", "extracted_labels": "[positive, negative, mixed]", "sentiment": "mixed"}
+{"id": "ob23OKe5a9Q_14", "prediction": "The character's emotional state: positive, encouragement.<|endoftext|>", "extracted_labels": "[positive, encouragement]", "sentiment": "positive"}
+{"id": "etzxEpPuc6I_1", "prediction": "The character's emotional state is neutral, positive, negative.<|endoftext|>", "extracted_labels": "[neutral, positive, negative]", "sentiment": "positive"}
+{"id": "etzxEpPuc6I_2", "prediction": "The character's emotional state is excited, passionate.<|endoftext|>", "extracted_labels": "[excited, passionate]", "sentiment": "positive"}
+{"id": "etzxEpPuc6I_3", "prediction": "The character's emotional state is humorous, exaggerated, positive.", "extracted_labels": "[humorous, positive]", "sentiment": "positive"}
+{"id": "etzxEpPuc6I_4", "prediction": "The character's emotional state is excited, enthusiastic, positive, humorous.<|endoftext|>", "extracted_labels": "[excited, enthusiastic, positive, humorous]", "sentiment": "positive"}
+{"id": "etzxEpPuc6I_5", "prediction": "The character's emotional state is excited, passionate, positive.<|endoftext|>", "extracted_labels": "[excited, passionate, positive]", "sentiment": "positive"}
+{"id": "etzxEpPuc6I_6", "prediction": "The character's emotional state: Disapproval, Dislike, Criticism, Negative.<|endoftext|>", "extracted_labels": "[Disapproval, Dislike, Criticism, Negative]", "sentiment": "negative"}
+{"id": "etzxEpPuc6I_7", "prediction": "The character's emotional state is disapproval, dissatisfaction, confusion, uncertainty.<|endoftext|>", "extracted_labels": "[disapproval, dissatisfaction, confusion, uncertainty]", "sentiment": "negative"}
+{"id": "etzxEpPuc6I_8", "prediction": "The character's emotional state is disapproval, dissatisfaction, anger.<|endoftext|>", "extracted_labels": "[disapproval, dissatisfaction, anger]", "sentiment": "negative"}
+{"id": "etzxEpPuc6I_9", "prediction": "The character's emotional state is disappointment, dissatisfaction.<|endoftext|>", "extracted_labels": "[disappointment, dissatisfaction]", "sentiment": "negative"}
+{"id": "etzxEpPuc6I_10", "prediction": "The character's emotional state is neutral.<|endoftext|>", "extracted_labels": "[neutral]", "sentiment": "neutral"}
+{"id": "etzxEpPuc6I_11", "prediction": "The character's emotional state is disappointment, frustration.<|endoftext|>", "extracted_labels": "[disappointment, frustration]", "sentiment": "negative"}
+{"id": "etzxEpPuc6I_12", "prediction": "The emotional state of the character is humor, joy.<|endoftext|>", "extracted_labels": "[humor, joy]", "sentiment": "positive"}
+{"id": "etzxEpPuc6I_13", "prediction": "The character's emotional state is humorous, self-deprecating, humorous, self-deprecating, positive.<|endoftext|>", "extracted_labels": "[humorous, self-deprecating, positive]", "sentiment": "positive"}
+{"id": "etzxEpPuc6I_14", "prediction": "The character's emotional state is disapproval, dissatisfaction, disappointment, frustration.<|endoftext|>", "extracted_labels": "[disapproval, dissatisfaction, disappointment, frustration]", "sentiment": "negative"}
+{"id": "etzxEpPuc6I_15", "prediction": "The character's emotional state is positive, motivational.<|endoftext|>", "extracted_labels": "[positive, motivational]", "sentiment": "positive"}
+{"id": "etzxEpPuc6I_16", "prediction": "The character's emotional state is dissatisfied, negative, disliking.<|endoftext|>", "extracted_labels": "[dissatisfied, negative, disliking]", "sentiment": "negative"}
+{"id": "etzxEpPuc6I_17", "prediction": "The character's emotional state is positive, negative, positive, negative.<|endoftext|>", "extracted_labels": "[positive, negative]", "sentiment": "neutral"}
+{"id": "etzxEpPuc6I_18", "prediction": "The character's emotional state is excited, surprised, positive.<|endoftext|>", "extracted_labels": "[excited, surprised, positive]", "sentiment": "positive"}
+{"id": "etzxEpPuc6I_19", "prediction": "The character's emotional state is描述: The character's emotional state is fear, shock, unease, horror.<|endoftext|>", "extracted_labels": "[fear, shock, unease, horror]", "sentiment": "negative"}
+{"id": "nzpVDcQ0ywM_1", "prediction": "The character's emotional state is excited, appreciative.<|endoftext|>", "extracted_labels": "[excited, appreciative]", "sentiment": "positive"}
+{"id": "nzpVDcQ0ywM_2", "prediction": "The character's emotional state is dissatisfaction, criticism, humor, positive.<|endoftext|>", "extracted_labels": "[dissatisfaction, criticism, humor, positive]", "sentiment": "positive"}
+{"id": "nzpVDcQ0ywM_3", "prediction": "The character's emotional state is excited, enthusiastic, positive.<|endoftext|>", "extracted_labels": "[excited, enthusiastic, positive]", "sentiment": "positive"}
+{"id": "nzpVDcQ0ywM_4", "prediction": "The character's emotional state is disappointment, dissatisfaction.<|endoftext|>", "extracted_labels": "[disappointment, dissatisfaction]", "sentiment": "negative"}
+{"id": "nzpVDcQ0ywM_5", "prediction": "The character's emotional state: positive, excited, satisfaction, dissatisfaction, expectation.<|endoftext|>", "extracted_labels": "[positive, excited, satisfaction, dissatisfaction, expectation]", "sentiment": "positive"}
+{"id": "nzpVDcQ0ywM_6", "prediction": "The character's emotional state is disapproval, dissatisfaction, disappointment, frustration.<|endoftext|>", "extracted_labels": "[disapproval, dissatisfaction, disappointment, frustration]", "sentiment": "negative"}
+{"id": "nzpVDcQ0ywM_7", "prediction": "The character's emotional state is dissatisfaction, disappointment, negative.<|endoftext|>", "extracted_labels": "[dissatisfaction, disappointment, negative]", "sentiment": "negative"}
+{"id": "nzpVDcQ0ywM_8", "prediction": "The character's emotional state is positive, recommendation, evaluation.", "extracted_labels": "[]", "sentiment": "neutral"}
+{"id": "nzpVDcQ0ywM_9", "prediction": "The character's emotional state is disapproval, dissatisfaction, negative.", "extracted_labels": "[disapproval, dissatisfaction, negative]", "sentiment": "negative"}
+{"id": "nzpVDcQ0ywM_10", "prediction": "The character's emotional state is dissatisfied, disagreement, frustration, anger, positive, happy.", "extracted_labels": "[disappointed, disagreement, frustrated, angry, positive, happy]", "sentiment": "positive"}
+{"id": "nzpVDcQ0ywM_11", "prediction": "The character's emotional state is disapproval, dissatisfaction, disinterest.<|endoftext|>", "extracted_labels": "[disapproval, dissatisfaction, disinterest]", "sentiment": "negative"}
+{"id": "nzpVDcQ0ywM_12", "prediction": "The character's emotional state is disinterest, dissatisfaction.<|endoftext|>", "extracted_labels": "[disinterest, dissatisfaction]", "sentiment": "negative"}
+{"id": "nzpVDcQ0ywM_13", "prediction": "The character's emotional state is critical, dissatisfied.", "extracted_labels": "[critical, dissatisfied]", "sentiment": "negative"}
+{"id": "nzpVDcQ0ywM_14", "prediction": "The character's emotional state is humorous, teasing, critical, playful.<|endoftext|>", "extracted_labels": "[humorous, teasing, critical, playful]", "sentiment": "positive"}
+{"id": "nzpVDcQ0ywM_15", "prediction": "The character's emotional state is disapproval, dissatisfaction, negative.<|endoftext|>", "extracted_labels": "[disapproval, dissatisfaction, negative]", "sentiment": "negative"}
+{"id": "nzpVDcQ0ywM_16", "prediction": "The character's emotional state is positive, appreciation.<|endoftext|>", "extracted_labels": "[positive, appreciation]", "sentiment": "positive"}
+{"id": "nzpVDcQ0ywM_17", "prediction": "The character's emotional state is positive, excited, enthusiastic.<|endoftext|>", "extracted_labels": "[positive, excited, enthusiastic]", "sentiment": "positive"}
+{"id": "nzpVDcQ0ywM_18", "prediction": "The character's emotional state is anticipation, expectation, excitement, hope.<|endoftext|>", "extracted_labels": "[anticipation, expectation, excitement, hope]", "sentiment": "positive"}
+{"id": "nzpVDcQ0ywM_19", "prediction": "The character's emotional state is critical, dissatisfied, humorous.<|endoftext|>", "extracted_labels": "[critical, dissatisfied, humorous]", "sentiment": "negative"}
+{"id": "nzpVDcQ0ywM_20", "prediction": "The character's emotional state: neutral, cool.<|endoftext|>", "extracted_labels": "[neutral, cool]", "sentiment": "neutral"}
+{"id": "nzpVDcQ0ywM_21", "prediction": "The character's emotional state is disappointment, dissatisfaction, frustration.<|endoftext|>", "extracted_labels": "[disappointment, dissatisfaction, frustration]", "sentiment": "negative"}
+{"id": "nzpVDcQ0ywM_22", "prediction": "The character's emotional state: appreciation, positive, excitement.<|endoftext|>", "extracted_labels": "[appreciation, positive, excitement]", "sentiment": "positive"}
+{"id": "nzpVDcQ0ywM_23", "prediction": "The character's emotional state: appreciation, positive.<|endoftext|>", "extracted_labels": "[appreciation, positive]", "sentiment": "positive"}
+{"id": "nzpVDcQ0ywM_24", "prediction": "The character's emotional state is positive, evaluation, emotional state, intensity.<|endoftext|>", "extracted_labels": "[positive]", "sentiment": "positive"}
+{"id": "d6hH302o4v8_1", "prediction": "The character's emotional state is negative, disliking, dissatisfaction.<|endoftext|>", "extracted_labels": "[negative, disliking, dissatisfaction]", "sentiment": "negative"}
+{"id": "d6hH302o4v8_2", "prediction": "The character's emotional state is disapproval, dissatisfaction, criticism.", "extracted_labels": "[disapproval, dissatisfaction, criticism]", "sentiment": "negative"}
+{"id": "d6hH302o4v8_3", "prediction": "The character's emotional state is disatisfaction, criticism.", "extracted_labels": "[disatisfaction, criticism]", "sentiment": "negative"}
+{"id": "d6hH302o4v8_4", "prediction": "The character's emotional state is frustration, exhaustion.<|endoftext|>", "extracted_labels": "[frustration, exhaustion]", "sentiment": "negative"}
+{"id": "d6hH302o4v8_5", "prediction": "The character's emotional state is disatisfaction, disappointment.", "extracted_labels": "[disatisfaction, disappointment]", "sentiment": "negative"}
+{"id": "d6hH302o4v8_6", "prediction": "The character's emotional state is disappointment, frustration, dissatisfaction.", "extracted_labels": "[disappointment, frustration, dissatisfaction]", "sentiment": "negative"}
+{"id": "d6hH302o4v8_7", "prediction": "The character's emotional state: anger, dissatisfaction.<|endoftext|>", "extracted_labels": "[anger, dissatisfaction]", "sentiment": "negative"}
+{"id": "d6hH302o4v8_8", "prediction": "The character's emotional state is disinterested, bored.<|endoftext|>", "extracted_labels": "[disinterested, bored]", "sentiment": "negative"}
+{"id": "d6hH302o4v8_9", "prediction": "The character's emotional state is dissatisfaction, anger.<|endoftext|>", "extracted_labels": "[dissatisfaction, anger]", "sentiment": "negative"}
+{"id": "d6hH302o4v8_10", "prediction": "The character's emotional state: dissatisfaction, disapproval, negative.<|endoftext|>", "extracted_labels": "[dissatisfaction, disapproval, negative]", "sentiment": "negative"}
+{"id": "d6hH302o4v8_11", "prediction": "The character's emotional state: boredom, fatigue.<|endoftext|>", "extracted_labels": "[boredom, fatigue]", "sentiment": "negative"}
+{"id": "d6hH302o4v8_12", "prediction": "The character's emotional state is appreciation, excitement, passion.<|endoftext|>", "extracted_labels": "[appreciation, excitement, passion]", "sentiment": "positive"}
+{"id": "d6hH302o4v8_13", "prediction": "The character's emotional state is dissatisfaction, disapproval.", "extracted_labels": "[dissatisfaction, disapproval]", "sentiment": "negative"}
+{"id": "d6hH302o4v8_14", "prediction": "The character's emotional state is disapproval, dissatisfaction, disinterest.<|endoftext|>", "extracted_labels": "[disapproval, dissatisfaction, disinterest]", "sentiment": "negative"}
+{"id": "d6hH302o4v8_15", "prediction": "The character's emotional state: disinterested, bored.<|endoftext|>", "extracted_labels": "[disinterested, bored]", "sentiment": "negative"}
+{"id": "d6hH302o4v8_16", "prediction": "The character's emotional state is disinterested, bored.<|endoftext|>", "extracted_labels": "[disinterested, bored]", "sentiment": "negative"}
+{"id": "d6hH302o4v8_17", "prediction": "The character's emotional state: confused, dissatisfied, frustrated.<|endoftext|>", "extracted_labels": "[confused, dissatisfied, frustrated]", "sentiment": "negative"}
+{"id": "d6hH302o4v8_18", "prediction": "The character's emotional state: disinterested, apathetic.<|endoftext|>", "extracted_labels": "[disinterested, apathetic]", "sentiment": "negative"}
+{"id": "d6hH302o4v8_19", "prediction": "The character's emotional state is disappointment, dissatisfaction.", "extracted_labels": "[dissatisfaction, disappointment]", "sentiment": "negative"}
+{"id": "d6hH302o4v8_20", "prediction": "The character's emotional state: excited, expectant, positive.<|endoftext|>", "extracted_labels": "[excited, expectant, positive]", "sentiment": "positive"}
+{"id": "d6hH302o4v8_21", "prediction": "The character's emotional state is disinterested, unexciting.<|endoftext|>", "extracted_labels": "[disinterested, unexciting]", "sentiment": "negative"}
+{"id": "d6hH302o4v8_22", "prediction": "The character's emotional state is disappointment, dissatisfaction, disappointment, dissatisfaction.<|endoftext|>", "extracted_labels": "[disappointment, dissatisfaction]", "sentiment": "negative"}
+{"id": "d6hH302o4v8_23", "prediction": "The character's emotional state is disappointment, dissatisfaction, anger.<|endoftext|>", "extracted_labels": "[disappointment, dissatisfaction, anger]", "sentiment": "negative"}
+{"id": "d6hH302o4v8_24", "prediction": "The character's emotional state: disinterest, boredom.<|endoftext|>", "extracted_labels": "[disinterest, boredom]", "sentiment": "negative"}
+{"id": "d6hH302o4v8_25", "prediction": "The character's emotional state is disapproval, confusion, dissatisfaction.<|endoftext|>", "extracted_labels": "[disapproval, confusion, dissatisfaction]", "sentiment": "negative"}
+{"id": "d6hH302o4v8_26", "prediction": "The character's emotional state: disapproval, dissatisfaction, disappointment.<|endoftext|>", "extracted_labels": "[disapproval, dissatisfaction, disappointment]", "sentiment": "negative"}
+{"id": "d6hH302o4v8_27", "prediction": "The character's emotional state is negative, dissatisfied, emotional distress.", "extracted_labels": "[negative, dissatisfied, emotional distress]", "sentiment": "negative"}
+{"id": "d6hH302o4v8_28", "prediction": "The character's emotional state is dissatisfied, negative.<|endoftext|>", "extracted_labels": "[negative, dissatisfied]", "sentiment": "negative"}
+{"id": "d6hH302o4v8_29", "prediction": "The character's emotional state is dissatisfaction, frustration.", "extracted_labels": "[dissatisfaction, frustration]", "sentiment": "negative"}
+{"id": "d6hH302o4v8_30", "prediction": "The character's emotional state is negative, dissatisfied, disappointment.<|endoftext|>", "extracted_labels": "[negative, dissatisfied, disappointment]", "sentiment": "negative"}
+{"id": "d6hH302o4v8_31", "prediction": "The character's emotional state is disappointment, dissatisfaction.<|endoftext|>", "extracted_labels": "[disappointment, dissatisfaction]", "sentiment": "negative"}
+{"id": "d6hH302o4v8_32", "prediction": "The character's emotional state: disappointment, dissatisfaction, dissatisfaction, criticism.<|endoftext|>", "extracted_labels": "[disappointment, dissatisfaction, criticism]", "sentiment": "negative"}
+{"id": "d6hH302o4v8_33", "prediction": "The character's emotional state is negative, disappointment, dissatisfaction.", "extracted_labels": "[negative, disappointment, dissatisfaction]", "sentiment": "negative"}
+{"id": "d6hH302o4v8_34", "prediction": "The character's emotional state is negative, disliking, dissatisfaction.<|endoftext|>", "extracted_labels": "[negative, disliking, dissatisfaction]", "sentiment": "negative"}
+{"id": "d6hH302o4v8_35", "prediction": "The character's emotional state is disappointment, dissatisfaction, humor, irony.<|endoftext|>", "extracted_labels": "[disappointment, dissatisfaction, humor, irony]", "sentiment": "negative"}
+{"id": "d6hH302o4v8_36", "prediction": "The character's emotional state is dissatisfied, negative, boredom, disinterest.", "extracted_labels": "[dissatisfied, negative, boredom, disinterest]", "sentiment": "negative"}
+{"id": "d6hH302o4v8_37", "prediction": "The character's emotional state is disinterested, uninteresting, negative.<|endoftext|>", "extracted_labels": "[disinterested, uninteresting, negative]", "sentiment": "negative"}
+{"id": "d6hH302o4v8_38", "prediction": "The character's emotional state: dissatisfaction, negative evaluation, disapproval.<|endoftext|>", "extracted_labels": "[dissatisfaction, negative evaluation, disapproval]", "sentiment": "negative"}
+{"id": "d6hH302o4v8_39", "prediction": "The character's emotional state: negative, dissatisfaction.", "extracted_labels": "[negative, dissatisfaction]", "sentiment": "negative"}
+{"id": "d6hH302o4v8_40", "prediction": "The character's emotional state is Bored, Uninterested.<|endoftext|>", "extracted_labels": "[Bored, Uninterested]", "sentiment": "negative"}
+{"id": "d6hH302o4v8_41", "prediction": "The character's emotional state: disappointment, dissatisfaction, frustration.<|endoftext|>", "extracted_labels": "[disappointment, dissatisfaction, frustration]", "sentiment": "negative"}
+{"id": "d6hH302o4v8_42", "prediction": "The character's emotional state is confusion, frustration.<|endoftext|>", "extracted_labels": "[confusion, frustration]", "sentiment": "negative"}
+{"id": "d6hH302o4v8_43", "prediction": "The character's emotional state is negative, dis喜欢, dissatisfaction.<|endoftext|>", "extracted_labels": "[dislike, dissatisfaction]", "sentiment": "negative"}
+{"id": "vvZ4IcEtiZc_1", "prediction": "The character's emotional state is positive, excitement, passion.<|endoftext|>", "extracted_labels": "[positive, excitement, passion]", "sentiment": "positive"}
+{"id": "vvZ4IcEtiZc_2", "prediction": "The character's emotional state: excited, appreciative, positive.<|endoftext|>", "extracted_labels": "[excited, appreciative, positive]", "sentiment": "positive"}
+{"id": "vvZ4IcEtiZc_3", "prediction": "The character's emotional state is disinterested, unimportant, evaluation, discussion.<|endoftext|>", "extracted_labels": "[disinterested, evaluation, discussion]", "sentiment": "neutral"}
+{"id": "vvZ4IcEtiZc_4", "prediction": "The character's emotional state is excited, enthusiastic.<|endoftext|>", "extracted_labels": "[excited, enthusiastic]", "sentiment": "positive"}
+{"id": "vvZ4IcEtiZc_5", "prediction": "The character's emotional state is positive, excitement.<|endoftext|>", "extracted_labels": "[positive, excitement]", "sentiment": "positive"}
+{"id": "vvZ4IcEtiZc_6", "prediction": "The character's emotional state is neutral.<|endoftext|>", "extracted_labels": "[neutral]", "sentiment": "neutral"}
+{"id": "vvZ4IcEtiZc_7", "prediction": "The character's emotional state is positive, evaluation, underappreciated, significant.", "extracted_labels": "[positive, underappreciated, significant]", "sentiment": "positive"}
+{"id": "vvZ4IcEtiZc_8", "prediction": "The character's emotional state is disappointment, sadness.<|endoftext|>", "extracted_labels": "[disappointment, sadness]", "sentiment": "negative"}
+{"id": "vvZ4IcEtiZc_9", "prediction": "The character's emotional state is excited, enthusiastic, positive.<|endoftext|>", "extracted_labels": "[excited, enthusiastic, positive]", "sentiment": "positive"}
+{"id": "vvZ4IcEtiZc_10", "prediction": "The character's emotional state is dissatisfaction, disapproval, critical.", "extracted_labels": "[dissatisfaction, disapproval, critical]", "sentiment": "negative"}
+{"id": "vvZ4IcEtiZc_11", "prediction": "The character's emotional state is neutral.<|endoftext|>", "extracted_labels": "[neutral]", "sentiment": "neutral"}
+{"id": "vvZ4IcEtiZc_12", "prediction": "The character's emotional state is positive, excited, enthusiastic.<|endoftext|>", "extracted_labels": "[positive, excited, enthusiastic]", "sentiment": "positive"}
+{"id": "jUzDDGyPkXU_1", "prediction": "The character's emotional state is positive, excitement.<|endoftext|>", "extracted_labels": "[positive, excitement]", "sentiment": "positive"}
+{"id": "jUzDDGyPkXU_2", "prediction": "The character's emotional state: appreciation, positive.<|endoftext|>", "extracted_labels": "[appreciation, positive]", "sentiment": "positive"}
+{"id": "jUzDDGyPkXU_3", "prediction": "The character's emotional state is positive, evaluation, comparison, excitement.<|endoftext|>", "extracted_labels": "[positive, excited]", "sentiment": "positive"}
+{"id": "jUzDDGyPkXU_4", "prediction": "The character's emotional state is excited, positive.<|endoftext|>", "extracted_labels": "[excited, positive]", "sentiment": "positive"}
+{"id": "jUzDDGyPkXU_5", "prediction": "The character's emotional state is Disappointed, Disatisfaction, Surprised, Concentrated.<|endoftext|>", "extracted_labels": "[Disappointed, Dissatisfaction, Surprised, Concentrated]", "sentiment": "negative"}
+{"id": "jUzDDGyPkXU_6", "prediction": "The character's emotional state is dissatisfied, disapproval, negative.", "extracted_labels": "[disappointed, disapproval, negative]", "sentiment": "negative"}
+{"id": "jUzDDGyPkXU_7", "prediction": "The character's emotional state is neutral.<|endoftext|>", "extracted_labels": "[neutral]", "sentiment": "neutral"}
+{"id": "jUzDDGyPkXU_8", "prediction": "The character's emotional state is positive, excitement.<|endoftext|>", "extracted_labels": "[positive, excitement]", "sentiment": "positive"}
+{"id": "jUzDDGyPkXU_9", "prediction": "The character's emotional state is positive, admiration.<|endoftext|>", "extracted_labels": "[positive, admiration]", "sentiment": "positive"}
+{"id": "jUzDDGyPkXU_10", "prediction": "The character's emotional state is appreciative, excited.<|endoftext|>", "extracted_labels": "[appreciative, excited]", "sentiment": "positive"}
+{"id": "jUzDDGyPkXU_11", "prediction": "The character's emotional state is excited, excited (negative), excited, interested, excited (negative), excited (negative), excited (negative).<|endoftext|>", "extracted_labels": "[excited, interested]", "sentiment": "positive"}
+{"id": "jUzDDGyPkXU_12", "prediction": "The character's emotional state is excited, enthusiastic, positive.<|endoftext|>", "extracted_labels": "[excited, enthusiastic, positive]", "sentiment": "positive"}
+{"id": "jUzDDGyPkXU_13", "prediction": "The character's emotional state is disapproval, uncertainty, frustration, anger, frustration, humor, light-hearted.<|endoftext|>", "extracted_labels": "[disapproval, uncertainty, frustration, anger, humor, light-hearted]", "sentiment": "positive"}
+{"id": "jUzDDGyPkXU_14", "prediction": "The character's emotional state is positive, evaluation, informative.<|endoftext|>", "extracted_labels": "[positive]", "sentiment": "positive"}
+{"id": "jUzDDGyPkXU_15", "prediction": "The character's emotional state is positive, negative, excitement, tension.<|endoftext|>", "extracted_labels": "[positive, negative, excitement, tension]", "sentiment": "positive"}
+{"id": "jUzDDGyPkXU_16", "prediction": "The character's emotional state is positive, appreciation.", "extracted_labels": "[positive, appreciation]", "sentiment": "positive"}
+{"id": "jUzDDGyPkXU_17", "prediction": "The character's emotional state is dissatisfaction, disappointment.<|endoftext|>", "extracted_labels": "[dissatisfaction, disappointment]", "sentiment": "negative"}
+{"id": "jUzDDGyPkXU_18", "prediction": "The character's emotional state: disatisfaction, disappointment.<|endoftext|>", "extracted_labels": "[disatisfaction, disappointment]", "sentiment": "negative"}
+{"id": "jUzDDGyPkXU_19", "prediction": "The character's emotional state is negative, dissatisfied, critical.<|endoftext|>", "extracted_labels": "[negative, dissatisfied, critical]", "sentiment": "negative"}
+{"id": "jUzDDGyPkXU_20", "prediction": "The character's emotional state is anger, dissatisfaction, frustration.<|endoftext|>", "extracted_labels": "[anger, dissatisfaction, frustration]", "sentiment": "negative"}
+{"id": "jUzDDGyPkXU_21", "prediction": "The character's emotional state is appreciation, positive.", "extracted_labels": "[appreciation, positive]", "sentiment": "positive"}
+{"id": "jUzDDGyPkXU_22", "prediction": "The character's emotional state is disapproval, dissatisfaction, disappointment, frustration.<|endoftext|>", "extracted_labels": "[disapproval, dissatisfaction, disappointment, frustration]", "sentiment": "negative"}
+{"id": "jUzDDGyPkXU_23", "prediction": "The character's emotional state: positive, excitement, passion.<|endoftext|>", "extracted_labels": "[positive, excitement, passion]", "sentiment": "positive"}
+{"id": "jUzDDGyPkXU_24", "prediction": "The character's emotional state is Disappointment, Dis满足, Criticism, Evaluation, Negative.<|endoftext|>", "extracted_labels": "[Disappointment, Criticism, Evaluation, Negative]", "sentiment": "negative"}
+{"id": "jUzDDGyPkXU_25", "prediction": "The character's emotional state is dissatisfied, negative.", "extracted_labels": "[negative, dissatisfied]", "sentiment": "negative"}
+{"id": "jUzDDGyPkXU_26", "prediction": "The character's emotional state is disinterested, indifferent.<|endoftext|>", "extracted_labels": "[disinterested, indifferent]", "sentiment": "negative"}
+{"id": "jUzDDGyPkXU_27", "prediction": "The character's emotional state is dissatisfied, negative.", "extracted_labels": "[negative, dissatisfied]", "sentiment": "negative"}
+{"id": "v0zCBqDeKcE_1", "prediction": "The character's emotional state is love, positive.<|endoftext|>", "extracted_labels": "[love, positive]", "sentiment": "positive"}
+{"id": "v0zCBqDeKcE_2", "prediction": "The character's emotional state is positive, appreciative.<|endoftext|>", "extracted_labels": "[positive, appreciative]", "sentiment": "positive"}
+{"id": "v0zCBqDeKcE_3", "prediction": "The character's emotional state is anticipation, excitement.<|endoftext|>", "extracted_labels": "[anticipation, excitement]", "sentiment": "positive"}
+{"id": "v0zCBqDeKcE_4", "prediction": "The character's emotional state is uncertainty, indecision, positive.<|endoftext|>", "extracted_labels": "[uncertainty, indecision, positive]", "sentiment": "positive"}
+{"id": "v0zCBqDeKcE_5", "prediction": "The character's emotional state is positive, excited,喜欢, appreciation.<|endoftext|>", "extracted_labels": "[positive, excited, like, appreciation]", "sentiment": "positive"}
+{"id": "v0zCBqDeKcE_6", "prediction": "The character's emotional state is appreciation, admiration.", "extracted_labels": "[appreciation, admiration]", "sentiment": "positive"}
+{"id": "v0zCBqDeKcE_7", "prediction": "The character's emotional state is admiration, appreciation, positive.", "extracted_labels": "[admiration, appreciation, positive]", "sentiment": "positive"}
+{"id": "v0zCBqDeKcE_8", "prediction": "The character's emotional state is positive, liking, appreciation.", "extracted_labels": "[positive, liking, appreciation]", "sentiment": "positive"}
+{"id": "v0zCBqDeKcE_9", "prediction": "The character's emotional state: positive, appreciation.<|endoftext|>", "extracted_labels": "[positive, appreciation]", "sentiment": "positive"}
+{"id": "v0zCBqDeKcE_10", "prediction": "The character's emotional state is positive, affection, likes, appreciation.<|endoftext|>", "extracted_labels": "[positive, affection, likes, appreciation]", "sentiment": "positive"}
+{"id": "v0zCBqDeKcE_11", "prediction": "The character's emotional state is excited, nervous, positive.<|endoftext|>", "extracted_labels": "[excited, nervous, positive]", "sentiment": "positive"}
+{"id": "v0zCBqDeKcE_12", "prediction": "The character's emotional state is anger, frustration.<|endoftext|>", "extracted_labels": "[anger, frustration]", "sentiment": "negative"}
+{"id": "v0zCBqDeKcE_13", "prediction": "The character's emotional state is love, appreciation, excitement, anxiety.<|endoftext|>", "extracted_labels": "[love, appreciation, excitement, anxiety]", "sentiment": "positive"}
+{"id": "v0zCBqDeKcE_14", "prediction": "The character's emotional state is excited, enthusiastic, love, passion.<|endoftext|>", "extracted_labels": "[excited, enthusiastic, love, passion]", "sentiment": "positive"}
+{"id": "v0zCBqDeKcE_15", "prediction": "The character's emotional state is positive, love, passion.<|endoftext|>", "extracted_labels": "[positive, love, passion]", "sentiment": "positive"}
+{"id": "v0zCBqDeKcE_16", "prediction": "The character's emotional state is positive, negative, mixed.<|endoftext|>", "extracted_labels": "[positive, negative, mixed]", "sentiment": "mixed"}
+{"id": "lXPQBPVc5Cw_1", "prediction": "The character's emotional state is positive, excitement.<|endoftext|>", "extracted_labels": "[positive, excitement]", "sentiment": "positive"}
+{"id": "lXPQBPVc5Cw_2", "prediction": "The character's emotional state is disappointment, dissatisfaction.", "extracted_labels": "[dissatisfaction, disappointment]", "sentiment": "negative"}
+{"id": "lXPQBPVc5Cw_3", "prediction": "The character's emotional state: disinterest, boredom.<|endoftext|>", "extracted_labels": "[disinterest, boredom]", "sentiment": "negative"}
+{"id": "lXPQBPVc5Cw_4", "prediction": "The character's emotional state is humorous, light-hearted, ironic, negative.<|endoftext|>", "extracted_labels": "[humorous, light-hearted, ironic, negative]", "sentiment": "negative"}
+{"id": "lXPQBPVc5Cw_5", "prediction": "The character's emotional state is positive, enjoyment, preference.<|endoftext|>", "extracted_labels": "[positive, enjoyment, preference]", "sentiment": "positive"}
+{"id": "lXPQBPVc5Cw_6", "prediction": "The character's emotional state is confused, uncertain, stressed, anxious.<|endoftext|>", "extracted_labels": "[confused, uncertain, stressed, anxious]", "sentiment": "negative"}
+{"id": "lXPQBPVc5Cw_7", "prediction": "The character's emotional state is disliking, disappointment, humor, jokes.<|endoftext|>", "extracted_labels": "[disliking, disappointment, humor, jokes]", "sentiment": "negative"}
+{"id": "lXPQBPVc5Cw_8", "prediction": "The character's emotional state is positive, appreciation.", "extracted_labels": "[positive, appreciation]", "sentiment": "positive"}
+{"id": "lXPQBPVc5Cw_9", "prediction": "The character's emotional state is disappointment, confusion.<|endoftext|>", "extracted_labels": "[disappointment, confusion]", "sentiment": "negative"}
+{"id": "lXPQBPVc5Cw_10", "prediction": "The character's emotional state is disappointment, frustration.<|endoftext|>", "extracted_labels": "[disappointment, frustration]", "sentiment": "negative"}
+{"id": "lXPQBPVc5Cw_11", "prediction": "The character's emotional state: disatisfaction, disappointment, frustration.<|endoftext|>", "extracted_labels": "[disatisfaction, disappointment, frustration]", "sentiment": "negative"}
+{"id": "lXPQBPVc5Cw_12", "prediction": "The character's emotional state: disappointment, dissatisfaction, frustration.<|endoftext|>", "extracted_labels": "[disappointment, dissatisfaction, frustration]", "sentiment": "negative"}
+{"id": "lXPQBPVc5Cw_13", "prediction": "The character's emotional state is positive, praise.", "extracted_labels": "[positive]", "sentiment": "positive"}
+{"id": "lXPQBPVc5Cw_14", "prediction": "The character's emotional state is disappointment, frustration, anger.<|endoftext|>", "extracted_labels": "[disappointment, frustration, anger]", "sentiment": "negative"}
+{"id": "lXPQBPVc5Cw_15", "prediction": "The character's emotional state is disappointment, dissatisfaction.", "extracted_labels": "[disappointment, dissatisfaction]", "sentiment": "negative"}
+{"id": "lXPQBPVc5Cw_16", "prediction": "The character's emotional state is disappointment, frustration, anger.<|endoftext|>", "extracted_labels": "[disappointment, frustration, anger]", "sentiment": "negative"}
+{"id": "lXPQBPVc5Cw_17", "prediction": "The character's emotional state is disappointment, frustration.<|endoftext|>", "extracted_labels": "[disappointment, frustration]", "sentiment": "negative"}
+{"id": "lXPQBPVc5Cw_18", "prediction": "The character's emotional state is disengaged, bored.<|endoftext|>", "extracted_labels": "[disengaged, bored]", "sentiment": "negative"}
+{"id": "lXPQBPVc5Cw_19", "prediction": "The character's emotional state is disinterested, unexcited.<|endoftext|>", "extracted_labels": "[disinterested, unexcited]", "sentiment": "negative"}
+{"id": "lXPQBPVc5Cw_20", "prediction": "The character's emotional state is disinterested, uninterested, dissatisfaction.<|endoftext|>", "extracted_labels": "[disinterested, uninterested, dissatisfaction]", "sentiment": "negative"}
+{"id": "lXPQBPVc5Cw_21", "prediction": "The character's emotional state is positive, humorous.<|endoftext|>", "extracted_labels": "[positive, humorous]", "sentiment": "positive"}
+{"id": "lXPQBPVc5Cw_22", "prediction": "The character's emotional state: positive, excitement, joy, negative, sadness, anger.<|endoftext|>", "extracted_labels": "[positive, excitement, joy, sadness, anger]", "sentiment": "positive"}
+{"id": "lXPQBPVc5Cw_23", "prediction": "The character's emotional state is confused, dissatisfied, stressed, overwhelmed.<|endoftext|>", "extracted_labels": "[confused, dissatisfied, stressed, overwhelmed]", "sentiment": "negative"}
+{"id": "lXPQBPVc5Cw_24", "prediction": "The character's emotional state: confusion, frustration.<|endoftext|>", "extracted_labels": "[confusion, frustration]", "sentiment": "negative"}
+{"id": "lXPQBPVc5Cw_25", "prediction": "The character's emotional state is impatience, anxiety.<|endoftext|>", "extracted_labels": "[impatience, anxiety]", "sentiment": "negative"}
+{"id": "lXPQBPVc5Cw_26", "prediction": "The character's emotional state: dissatisfaction, frustration.", "extracted_labels": "[dissatisfaction, frustration]", "sentiment": "negative"}
+{"id": "lXPQBPVc5Cw_27", "prediction": "The character's emotional state is anxiety, tension.<|endoftext|>", "extracted_labels": "[anxiety, tension]", "sentiment": "negative"}
+{"id": "lXPQBPVc5Cw_28", "prediction": "The character's emotional state is positive, excited.<|endoftext|>", "extracted_labels": "[positive, excited]", "sentiment": "positive"}
+{"id": "lXPQBPVc5Cw_29", "prediction": "The character's emotional state is confused, surprised.<|endoftext|>", "extracted_labels": "[confused, surprised]", "sentiment": "negative"}
+{"id": "lXPQBPVc5Cw_30", "prediction": "The character's emotional state is disappointment, frustration, sadness.<|endoftext|>", "extracted_labels": "[disappointment, frustration, sadness]", "sentiment": "negative"}

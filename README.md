@@ -3,6 +3,11 @@
 Standard DPO from the verified epoch-30 Qwen2.5-Omni SFT adapter, using the
 pinned official DPO loss/trainer and original AffectGPT supervision and evaluation.
 
+Completed [SFT epoch-30 and DPO evaluation results](evaluation/mer-unibench-sft30-dpo-aligned/README.md)
+include all predictions, extracted labels and scores for the same 12,799 MER-UniBench
+samples under the aligned v2 evaluation protocol. The nine-dataset means are
+**72.81** for the original SFT epoch-30 checkpoint and **71.78** for DPO final.
+
 ## Native audiovisual training input
 
 DPO directly calls the SFT module's `omni_components.encode_prompt`. It uses one

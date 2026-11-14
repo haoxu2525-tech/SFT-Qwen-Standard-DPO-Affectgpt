@@ -1,0 +1,10 @@
+dataset,metric,sft_epoch30_percent,dpo_final_percent,dpo_minus_sft_pp
+MER2023,hitrate,74.27,70.53,-3.74
+MER2024,hitrate,78.1,72.35,-5.75
+MELD,hitrate,58.55,53.52,-5.03
+IEMOCAPFour,hitrate,57.57,57.04,-0.53
+CMUMOSI,fscore,81.67,83.46,1.79
+CMUMOSEI,fscore,75.34,76.25,0.91
+SIMS,fscore,85.32,87.3,1.98
+SIMSv2,fscore,83.01,85.65,2.64
+OVMERDPlus,fscore,61.49,59.9,-1.59

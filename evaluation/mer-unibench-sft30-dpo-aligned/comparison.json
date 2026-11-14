@@ -1,0 +1,74 @@
+{
+  "datasets": [
+    {
+      "dataset": "MER2023",
+      "metric": "hitrate",
+      "sft_epoch30_percent": 74.27,
+      "dpo_final_percent": 70.53,
+      "dpo_minus_sft_pp": -3.74
+    },
+    {
+      "dataset": "MER2024",
+      "metric": "hitrate",
+      "sft_epoch30_percent": 78.1,
+      "dpo_final_percent": 72.35,
+      "dpo_minus_sft_pp": -5.75
+    },
+    {
+      "dataset": "MELD",
+      "metric": "hitrate",
+      "sft_epoch30_percent": 58.55,
+      "dpo_final_percent": 53.52,
+      "dpo_minus_sft_pp": -5.03
+    },
+    {
+      "dataset": "IEMOCAPFour",
+      "metric": "hitrate",
+      "sft_epoch30_percent": 57.57,
+      "dpo_final_percent": 57.04,
+      "dpo_minus_sft_pp": -0.53
+    },
+    {
+      "dataset": "CMUMOSI",
+      "metric": "fscore",
+      "sft_epoch30_percent": 81.67,
+      "dpo_final_percent": 83.46,
+      "dpo_minus_sft_pp": 1.79
+    },
+    {
+      "dataset": "CMUMOSEI",
+      "metric": "fscore",
+      "sft_epoch30_percent": 75.34,
+      "dpo_final_percent": 76.25,
+      "dpo_minus_sft_pp": 0.91
+    },
+    {
+      "dataset": "SIMS",
+      "metric": "fscore",
+      "sft_epoch30_percent": 85.32,
+      "dpo_final_percent": 87.3,
+      "dpo_minus_sft_pp": 1.98
+    },
+    {
+      "dataset": "SIMSv2",
+      "metric": "fscore",
+      "sft_epoch30_percent": 83.01,
+      "dpo_final_percent": 85.65,
+      "dpo_minus_sft_pp": 2.64
+    },
+    {
+      "dataset": "OVMERDPlus",
+      "metric": "fscore",
+      "sft_epoch30_percent": 61.49,
+      "dpo_final_percent": 59.9,
+      "dpo_minus_sft_pp": -1.59
+    }
+  ],
+  "mean_sft_percent": 72.81,
+  "mean_dpo_percent": 71.78,
+  "mean_difference_pp": -1.03,
+  "same_sample_ids": true,
+  "same_evaluation_protocol": true,
+  "selection": "one fixed checkpoint per run",
+  "rounding": "Summary difference subtracts the scorer-reported means rounded to two decimals. Dataset scores originate from scorer values rounded to four decimals."
+}

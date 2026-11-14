@@ -1,0 +1,532 @@
+{"id": "samplenew3_00000062", "prediction": "The character's emotional state is dissatisfaction, anger, sadness.<|endoftext|>", "extracted_labels": "[dissatisfaction, anger, sadness]"}
+{"id": "samplenew3_00000181", "prediction": "The character's emotional state is dissatisfaction, anger.<|endoftext|>", "extracted_labels": "[dissatisfaction, anger]"}
+{"id": "samplenew3_00001616", "prediction": "The character's emotional state is frustration, anger, disappointment.<|endoftext|>", "extracted_labels": "[frustration, anger, disappointment]"}
+{"id": "samplenew3_00002016", "prediction": "The character's emotional state is frustration, anger, stress, dissatisfaction.<|endoftext|>", "extracted_labels": "[frustration, anger, stress, dissatisfaction]"}
+{"id": "samplenew3_00003340", "prediction": "The character's emotional state is positive, appreciation.<|endoftext|>", "extracted_labels": "[positive, appreciation]"}
+{"id": "samplenew3_00004138", "prediction": "The character's emotional state is dissatisfaction, anxiety.<|endoftext|>", "extracted_labels": "[dissatisfaction, anxiety]"}
+{"id": "samplenew3_00004480", "prediction": "The character's emotional state is concern, tension.<|endoftext|>", "extracted_labels": "[concern, tension]"}
+{"id": "samplenew3_00005177", "prediction": "The character's emotional state is disappointment, frustration.<|endoftext|>", "extracted_labels": "[disappointment, frustration]"}
+{"id": "samplenew3_00005428", "prediction": "The character's emotional state is concerned, uncertain, tense.<|endoftext|>", "extracted_labels": "[concerned, uncertain, tense]"}
+{"id": "samplenew3_00008894", "prediction": "The character's emotional state is positive, satisfaction.<|endoftext|>", "extracted_labels": "[positive, satisfaction]"}
+{"id": "samplenew3_00008922", "prediction": "The character's emotional state is positive, progress, significant, positive, positive.<|endoftext|>", "extracted_labels": "[positive]"}
+{"id": "samplenew3_00009573", "prediction": "The character's emotional state is dissatisfaction, anger.<|endoftext|>", "extracted_labels": "[dissatisfaction, anger]"}
+{"id": "samplenew3_00012619", "prediction": "The character's emotional state is positive, happiness, satisfaction, strong, intense.<|endoftext|>", "extracted_labels": "[positive, happy, satisfied, strong, intense]"}
+{"id": "samplenew3_00012793", "prediction": "The character's emotional state is dissatisfaction, disapproval, frustration, anger.<|endoftext|>", "extracted_labels": "[dissatisfaction, disapproval, frustration, anger]"}
+{"id": "samplenew3_00013230", "prediction": "The character's emotional state: positive, casual, humorous.<|endoftext|>", "extracted_labels": "[positive, casual, humorous]"}
+{"id": "samplenew3_00013786", "prediction": "The character's emotional state is concern, tension.<|endoftext|>", "extracted_labels": "[concern, tension]"}
+{"id": "samplenew3_00014862", "prediction": "The character's emotional state is gratitude, nostalgia.<|endoftext|>", "extracted_labels": "[gratitude, nostalgia]"}
+{"id": "samplenew3_00015189", "prediction": "The character's emotional state is disappointment, dissatisfaction, negative.<|endoftext|>", "extracted_labels": "[disappointment, dissatisfaction, negative]"}
+{"id": "samplenew3_00015325", "prediction": "The character's emotional state is concern, anger.<|endoftext|>", "extracted_labels": "[concern, anger]"}
+{"id": "samplenew3_00016398", "prediction": "The character's emotional state is disappointment, frustration, sadness.<|endoftext|>", "extracted_labels": "[disappointment, frustration, sadness]"}
+{"id": "samplenew3_00017257", "prediction": "The character's emotional state is depression, concern, concern, disappointment.<|endoftext|>", "extracted_labels": "[depression, concern, disappointment]"}
+{"id": "samplenew3_00017304", "prediction": "The character's emotional state is frustration, anger, anxiety, pressure.<|endoftext|>", "extracted_labels": "[frustration, anger, anxiety, pressure]"}
+{"id": "samplenew3_00017374", "prediction": "The character's emotional state is concern, care.<|endoftext|>", "extracted_labels": "[concern, care]"}
+{"id": "samplenew3_00017471", "prediction": "The character's emotional state is dissatisfaction, disapproval, negative.<|endoftext|>", "extracted_labels": "[dissatisfaction, disapproval, negative]"}
+{"id": "samplenew3_00018153", "prediction": "The character's emotional state is playful, humorous.<|endoftext|>", "extracted_labels": "[playful, humorous]"}
+{"id": "samplenew3_00018536", "prediction": "The character's emotional state is anticipation, excitement.<|endoftext|>", "extracted_labels": "[anticipation, excitement]"}
+{"id": "samplenew3_00018863", "prediction": "The character's emotional state is positive, praise, admiration.", "extracted_labels": "[positive, praise, admiration]"}
+{"id": "samplenew3_00019346", "prediction": "The character's emotional state: tension, concern, dissatisfaction.<|endoftext|>", "extracted_labels": "[tension, concern, dissatisfaction]"}
+{"id": "samplenew3_00019671", "prediction": "The character's emotional state: positive, Remind, Suggestion.<|endoftext|>", "extracted_labels": "[positive]"}
+{"id": "samplenew3_00019916", "prediction": "The character's emotional state is concerned, dissatisfied, confused, surprised.<|endoftext|>", "extracted_labels": "[concerned, dissatisfied, confused, surprised]"}
+{"id": "samplenew3_00019990", "prediction": "The character's emotional state is tension, fear.<|endoftext|>", "extracted_labels": "[tension, fear]"}
+{"id": "samplenew3_00022210", "prediction": "The character's emotional state is Curiosity, Inquisitive, Positive.<|endoftext|>", "extracted_labels": "[Curious, Inquisitive, Positive]"}
+{"id": "samplenew3_00022518", "prediction": "The character's emotional state is dissatisfaction, confusion, anger.<|endoftext|>", "extracted_labels": "[dissatisfaction, confusion, anger]"}
+{"id": "samplenew3_00023011", "prediction": "The character's emotional state is探索,思考,可能性,选择,正经,轻松。<|endoftext|>", "extracted_labels": "[exploration, contemplation, possibilities, choices, seriousness, relaxation]"}
+{"id": "samplenew3_00023765", "prediction": "The character's emotional state is despondency, hopelessness, loneliness, isolation, sorrow, despair.<|endoftext|>", "extracted_labels": "[despondency, hopelessness, loneliness, isolation, sorrow, despair]"}
+{"id": "samplenew3_00023798", "prediction": "The character's emotional state is friendly,请求, positive.<|endoftext|>", "extracted_labels": "[friendly, positive]"}
+{"id": "samplenew3_00024731", "prediction": "The character's emotional state: tension, concern.<|endoftext|>", "extracted_labels": "[tension, concern]"}
+{"id": "samplenew3_00024776", "prediction": "The character's emotional state is tension, concern, warning.<|endoftext|>", "extracted_labels": "[tension, concern, warning]"}
+{"id": "samplenew3_00024932", "prediction": "The character's emotional state is期待,需要,压力,焦虑.<|endoftext|>", "extracted_labels": "[期待, 需要, 压力, 焦虑]"}
+{"id": "samplenew3_00025005", "prediction": "The character's emotional state is anticipation, satisfaction, positive.<|endoftext|>", "extracted_labels": "[anticipation, satisfaction, positive]"}
+{"id": "samplenew3_00025330", "prediction": "The character's emotional state is depression, hopelessness.<|endoftext|>", "extracted_labels": "[depression, hopelessness]"}
+{"id": "samplenew3_00025414", "prediction": "The character's emotional state is indecision, uncertainty, pressure, confusion.<|endoftext|>", "extracted_labels": "[uncertainty, confusion, pressure]"}
+{"id": "samplenew3_00025494", "prediction": "The character's emotional state is anxiety, frustration.<|endoftext|>", "extracted_labels": "[anxiety, frustration]"}
+{"id": "samplenew3_00025597", "prediction": "The character's emotional state is excitement, frustration, determination, anxiety, tension, humor, positive.<|endoftext|>", "extracted_labels": "[excitement, frustration, determination, anxiety, tension, humor, positive]"}
+{"id": "samplenew3_00025737", "prediction": "The character's emotional state: disappointment, frustration, anger, sadness.<|endoftext|>", "extracted_labels": "[disappointment, frustration, anger, sadness]"}
+{"id": "samplenew3_00027722", "prediction": "The character's emotional state is comforting, Assured, Reassuring.<|endoftext|>", "extracted_labels": "[comforting, assured, reassuring]"}
+{"id": "samplenew3_00029132", "prediction": "The character's emotional state: frustration, disappointment, anger, sadness, frustration, anxiety, confusion.<|endoftext|>", "extracted_labels": "[frustration, disappointment, anger, sadness, anxiety, confusion]"}
+{"id": "samplenew3_00031000", "prediction": "The character's emotional state is surprised, shocked, tense, anxious.<|endoftext|>", "extracted_labels": "[surprised, shocked, tense, anxious]"}
+{"id": "samplenew3_00031439", "prediction": "The character's emotional state is dissatisfaction, disappointment, anger.<|endoftext|>", "extracted_labels": "[dissatisfaction, disappointment, anger]"}
+{"id": "samplenew3_00032048", "prediction": "The character's emotional state is anger, frustration, anxiety.<|endoftext|>", "extracted_labels": "[anger, frustration, anxiety]"}
+{"id": "samplenew3_00032572", "prediction": "The character's emotional state is anger, frustration, disappointment.<|endoftext|>", "extracted_labels": "[anger, frustration, disappointment]"}
+{"id": "samplenew3_00032910", "prediction": "The character's emotional state is sadness, distress.<|endoftext|>", "extracted_labels": "[sadness, distress]"}
+{"id": "samplenew3_00033143", "prediction": "The character's emotional state is confusion, misunderstanding, frustration, anger, frustration, anxiety.<|endoftext|>", "extracted_labels": "[confusion, misunderstanding, frustration, anger, anxiety]"}
+{"id": "samplenew3_00033160", "prediction": "The character's emotional state is anger, frustration.<|endoftext|>", "extracted_labels": "[anger, frustration]"}
+{"id": "samplenew3_00034074", "prediction": "The character's emotional state is frustration, anger, disappointment, confusion, dissatisfaction.<|endoftext|>", "extracted_labels": "[frustration, anger, disappointment, confusion, dissatisfaction]"}
+{"id": "samplenew3_00034167", "prediction": "The character's emotional state is excited, enthusiastic, positive.<|endoftext|>", "extracted_labels": "[excited, enthusiastic, positive]"}
+{"id": "samplenew3_00035621", "prediction": "The character's emotional state is confused, uncertain, anxious.<|endoftext|>", "extracted_labels": "[confused, uncertain, anxious]"}
+{"id": "samplenew3_00037970", "prediction": "The character's emotional state is dissatisfaction, anger.<|endoftext|>", "extracted_labels": "[dissatisfaction, anger]"}
+{"id": "samplenew3_00038185", "prediction": "The character's emotional state is positive, appreciation.", "extracted_labels": "[positive, appreciation]"}
+{"id": "samplenew3_00038791", "prediction": "The character's emotional state is dissatisfaction, disapproval, negative.<|endoftext|>", "extracted_labels": "[dissatisfaction, disapproval, negative]"}
+{"id": "samplenew3_00039259", "prediction": "The character's emotional state is dissatisfaction, anger.", "extracted_labels": "[dissatisfaction, anger]"}
+{"id": "samplenew3_00039607", "prediction": "The character's emotional state is commitment, assurance, care.", "extracted_labels": "[commitment, assurance, care]"}
+{"id": "samplenew3_00040410", "prediction": "The character's emotional state is concern, anxiety.<|endoftext|>", "extracted_labels": "[concern, anxiety]"}
+{"id": "samplenew3_00040523", "prediction": "The character's emotional state is self-doubt, lack of confidence, frustration, anxiety.<|endoftext|>", "extracted_labels": "[self-doubt, lack_of_confidence, frustration, anxiety]"}
+{"id": "samplenew3_00040931", "prediction": "The character's emotional state is disappointment, frustration.<|endoftext|>", "extracted_labels": "[disappointment, frustration]"}
+{"id": "samplenew3_00041090", "prediction": "The character's emotional state is positive, love, enjoyment.<|endoftext|>", "extracted_labels": "[positive, love, enjoyment]"}
+{"id": "samplenew3_00041388", "prediction": "The character's emotional state is positive, surprise, excitement.<|endoftext|>", "extracted_labels": "[positive, surprise, excitement]"}
+{"id": "samplenew3_00041464", "prediction": "The character's emotional state is pressure, unease, confusion.<|endoftext|>", "extracted_labels": "[pressure, unease, confusion]"}
+{"id": "samplenew3_00042084", "prediction": "The character's emotional state is anxiety, stress, soothing, comforting.<|endoftext|>", "extracted_labels": "[anxiety, stress, soothing, comforting]"}
+{"id": "samplenew3_00042360", "prediction": "The character's emotional state is concern, worry, tension.<|endoftext|>", "extracted_labels": "[concern, worry, tension]"}
+{"id": "samplenew3_00043190", "prediction": "The character's emotional state is frustration, anger, disappointment.<|endoftext|>", "extracted_labels": "[frustration, anger, disappointment]"}
+{"id": "samplenew3_00044584", "prediction": "The character's emotional state is serious, focused, pressure, concern.<|endoftext|>", "extracted_labels": "[serious, focused, pressured, concerned]"}
+{"id": "samplenew3_00045003", "prediction": "The character's emotional state is anger, frustration, strong emotion, warning, advice.<|endoftext|>", "extracted_labels": "[anger, frustration, strong emotion, warning, advice]"}
+{"id": "samplenew3_00045907", "prediction": "The character's emotional state is contemplative, somber, sadness, anger, frustration.<|endoftext|>", "extracted_labels": "[contemplative, somber, sadness, anger, frustration]"}
+{"id": "samplenew3_00045966", "prediction": "The character's emotional state is depression, disappointment, sadness.<|endoftext|>", "extracted_labels": "[depression, disappointment, sadness]"}
+{"id": "samplenew3_00047626", "prediction": "The character's emotional state is playful, humorous, positive.<|endoftext|>", "extracted_labels": "[playful, humorous, positive]"}
+{"id": "samplenew3_00047652", "prediction": "The character's emotional state is frustration, anger, disappointment.<|endoftext|>", "extracted_labels": "[frustration, anger, disappointment]"}
+{"id": "samplenew3_00048578", "prediction": "The character's emotional state is confusion, dissatisfaction, humor, positive.<|endoftext|>", "extracted_labels": "[confusion, dissatisfaction, humor, positive]"}
+{"id": "samplenew3_00048823", "prediction": "The character's emotional state is dissatisfaction, concern, negative.<|endoftext|>", "extracted_labels": "[dissatisfaction, concern, negative]"}
+{"id": "samplenew3_00049042", "prediction": "The character's emotional state is disappointment, despair, depression.<|endoftext|>", "extracted_labels": "[disappointment, despair, depression]"}
+{"id": "samplenew3_00049640", "prediction": "The character's emotional state is heavy, negative, stress.<|endoftext|>", "extracted_labels": "[heavy, negative, stress]"}
+{"id": "samplenew3_00051156", "prediction": "The character's emotional state is positive, transformation, relief.<|endoftext|>", "extracted_labels": "[positive, relief]"}
+{"id": "samplenew3_00051356", "prediction": "The character's emotional state is confident, determined, focused.<|endoftext|>", "extracted_labels": "[confident, determined, focused]"}
+{"id": "samplenew3_00052078", "prediction": "The character's emotional state is impatience, frustration.<|endoftext|>", "extracted_labels": "[impatience, frustration]"}
+{"id": "samplenew3_00052226", "prediction": "The character's emotional state is sadness, anger, frustration.<|endoftext|>", "extracted_labels": "[sadness, anger, frustration]"}
+{"id": "samplenew3_00052531", "prediction": "The character's emotional state is dissatisfaction, frustration.<|endoftext|>", "extracted_labels": "[dissatisfaction, frustration]"}
+{"id": "samplenew3_00053551", "prediction": "The character's emotional state is disappointment, despair.<|endoftext|>", "extracted_labels": "[disappointment, despair]"}
+{"id": "samplenew3_00054049", "prediction": "The character's emotional state is tension, stress.<|endoftext|>", "extracted_labels": "[tension, stress]"}
+{"id": "samplenew3_00054802", "prediction": "The character's emotional state is dissatisfaction, frustration.<|endoftext|>", "extracted_labels": "[dissatisfaction, frustration]"}
+{"id": "samplenew3_00055241", "prediction": "The character's emotional state is concern, anger, determination.<|endoftext|>", "extracted_labels": "[concern, anger, determination]"}
+{"id": "samplenew3_00055533", "prediction": "The character's emotional state is negative, positive, negative, positive.<|endoftext|>", "extracted_labels": "[positive, negative]"}
+{"id": "samplenew3_00056037", "prediction": "The character's emotional state is positive, excitement, passion.<|endoftext|>", "extracted_labels": "[positive, excitement, passion]"}
+{"id": "samplenew3_00056050", "prediction": "The character's emotional state is concern, worry.<|endoftext|>", "extracted_labels": "[concern, worry]"}
+{"id": "samplenew3_00056147", "prediction": "The character's emotional state is excitement, humor, self-deprecating, humorous.<|endoftext|>", "extracted_labels": "[excitement, humor, self-deprecating]"}
+{"id": "samplenew3_00056404", "prediction": "The character's emotional state is positive, affirmative.<|endoftext|>", "extracted_labels": "[positive, affirmative]"}
+{"id": "samplenew3_00056512", "prediction": "The character's emotional state is sadness, anger, frustration, stress.<|endoftext|>", "extracted_labels": "[sadness, anger, frustration, stress]"}
+{"id": "samplenew3_00056776", "prediction": "The character's emotional state is sadness, anger, frustration, stress.<|endoftext|>", "extracted_labels": "[sadness, anger, frustration, stress]"}
+{"id": "samplenew3_00056988", "prediction": "The character's emotional state is apathetic, indifferent.<|endoftext|>", "extracted_labels": "[apathetic, indifferent]"}
+{"id": "samplenew3_00057128", "prediction": "The character's emotional state is excited, curious.<|endoftext|>", "extracted_labels": "[excited, curious]"}
+{"id": "samplenew3_00057624", "prediction": "The character's emotional state is surprised, shocked, tension, stress.<|endoftext|>", "extracted_labels": "[surprised, shocked, tension, stress]"}
+{"id": "samplenew3_00057659", "prediction": "The character's emotional state is frustration, anger.<|endoftext|>", "extracted_labels": "[frustration, anger]"}
+{"id": "samplenew3_00057707", "prediction": "The character's emotional state is positive, satisfaction, pressure, frustration.<|endoftext|>", "extracted_labels": "[positive, satisfaction, pressure, frustration]"}
+{"id": "samplenew3_00057796", "prediction": "The character's emotional state: pain, stress.<|endoftext|>", "extracted_labels": "[pain, stress]"}
+{"id": "samplenew3_00057807", "prediction": "The character's emotional state is anger, frustration.<|endoftext|>", "extracted_labels": "[anger, frustration]"}
+{"id": "samplenew3_00057986", "prediction": "The character's emotional state is serious, focused, determined.<|endoftext|>", "extracted_labels": "[serious, focused, determined]"}
+{"id": "samplenew3_00058321", "prediction": "The character's emotional state is positive,鼓励,志气.<|endoftext|>", "extracted_labels": "[positive, encouraged, spirited]"}
+{"id": "samplenew3_00058384", "prediction": "The character's emotional state is anxiety, tension.<|endoftext|>", "extracted_labels": "[anxiety, tension]"}
+{"id": "samplenew3_00058579", "prediction": "The character's emotional state is heavy, concerned, serious.<|endoftext|>", "extracted_labels": "[heavy, concerned, serious]"}
+{"id": "samplenew3_00060047", "prediction": "The character's emotional state is positive, appreciation.<|endoftext|>", "extracted_labels": "[positive, appreciation]"}
+{"id": "samplenew3_00061121", "prediction": "The character's emotional state is concern, anxiety.<|endoftext|>", "extracted_labels": "[concern, anxiety]"}
+{"id": "samplenew3_00061827", "prediction": "The character's emotional state is concern, worry.<|endoftext|>", "extracted_labels": "[concern, worry]"}
+{"id": "samplenew3_00061957", "prediction": "The character's emotional state is disconnection, confusion, anxiety.<|endoftext|>", "extracted_labels": "[disconnection, confusion, anxiety]"}
+{"id": "samplenew3_00062270", "prediction": "The character's emotional state is Curious, Anticipating, Positive.<|endoftext|>", "extracted_labels": "[Curious, Anticipating, Positive]"}
+{"id": "samplenew3_00062824", "prediction": "The character's emotional state is dissatisfaction, confusion, frustration.<|endoftext|>", "extracted_labels": "[dissatisfaction, confusion, frustration]"}
+{"id": "samplenew3_00063079", "prediction": "The character's emotional state is focused, serious,望远, thoughtful,紧张, anticipation, pressure, significance.<|endoftext|>", "extracted_labels": "[focused, serious, thoughtful,紧张, anticipation, pressure, significance]"}
+{"id": "samplenew3_00063436", "prediction": "The character's emotional state is dissatisfaction, challenge, strong emotion,压力, anxiety.", "extracted_labels": "[dissatisfaction, challenge, strong emotion, pressure, anxiety]"}
+{"id": "samplenew3_00063735", "prediction": "The character's emotional state is contemplative,探索,疑問, speculation.<|endoftext|>", "extracted_labels": "[contemplative, exploration, doubt, speculation]"}
+{"id": "samplenew3_00063772", "prediction": "The character's emotional state is neutral.<|endoftext|>", "extracted_labels": "[neutral]"}
+{"id": "samplenew3_00063931", "prediction": "The character's emotional state is confused, dissatisfied, surprised.<|endoftext|>", "extracted_labels": "[confused, dissatisfied, surprised]"}
+{"id": "samplenew3_00065552", "prediction": "The character's emotional state is anger, frustration.<|endoftext|>", "extracted_labels": "[anger, frustration]"}
+{"id": "samplenew3_00066371", "prediction": "The character's emotional state is positive, happy, humorous.<|endoftext|>", "extracted_labels": "[positive, happy, humorous]"}
+{"id": "samplenew3_00067666", "prediction": "The character's emotional state is frustration, anger, disappointment, dissatisfaction, disheartenment.<|endoftext|>", "extracted_labels": "[frustration, anger, disappointment, dissatisfaction, disheartenment]"}
+{"id": "samplenew3_00067687", "prediction": "The character's emotional state is dissatisfaction, confusion.<|endoftext|>", "extracted_labels": "[dissatisfaction, confusion]"}
+{"id": "samplenew3_00068016", "prediction": "The character's emotional state is concern, care.<|endoftext|>", "extracted_labels": "[concern, care]"}
+{"id": "samplenew3_00068651", "prediction": "The character's emotional state is frustration, disappointment, patience, determination.<|endoftext|>", "extracted_labels": "[frustration, disappointment, patience, determination]"}
+{"id": "samplenew3_00068744", "prediction": "The character's emotional state is concern, unease, distress, pressure.<|endoftext|>", "extracted_labels": "[concern, unease, distress, pressure]"}
+{"id": "samplenew3_00070019", "prediction": "The character's emotional state is disappointment, frustration, stress, anxiety.<|endoftext|>", "extracted_labels": "[disappointment, frustration, stress, anxiety]"}
+{"id": "samplenew3_00070557", "prediction": "The character's emotional state is concern, pressure.<|endoftext|>", "extracted_labels": "[concern, pressure]"}
+{"id": "samplenew3_00070631", "prediction": "The character's emotional state is anger, dissatisfaction.<|endoftext|>", "extracted_labels": "[anger, dissatisfaction]"}
+{"id": "samplenew3_00070880", "prediction": "The character's emotional state is tension, anxiety, stress.", "extracted_labels": "[tension, anxiety, stress]"}
+{"id": "samplenew3_00071475", "prediction": "The character's emotional state is serious, focused, tension, stress.<|endoftext|>", "extracted_labels": "[serious, focused, tension, stress]"}
+{"id": "samplenew3_00073835", "prediction": "The character's emotional state is sadness, pain, stress.<|endoftext|>", "extracted_labels": "[sadness, pain, stress]"}
+{"id": "samplenew3_00074802", "prediction": "The character's emotional state is positive, excited.<|endoftext|>", "extracted_labels": "[positive, excited]"}
+{"id": "samplenew3_00074901", "prediction": "The character's emotional state is humorous, playful, positive.<|endoftext|>", "extracted_labels": "[humorous, playful, positive]"}
+{"id": "samplenew3_00075337", "prediction": "The character's emotional state is anger, frustration, tension.<|endoftext|>", "extracted_labels": "[anger, frustration, tension]"}
+{"id": "samplenew3_00075351", "prediction": "The character's emotional state is disappointment, frustration.<|endoftext|>", "extracted_labels": "[disappointment, frustration]"}
+{"id": "samplenew3_00075480", "prediction": "The character's emotional state is positive, self-introduction, dialogue.<|endoftext|>", "extracted_labels": "[]"}
+{"id": "samplenew3_00077957", "prediction": "The character's emotional state is anger, frustration.<|endoftext|>", "extracted_labels": "[anger, frustration]"}
+{"id": "samplenew3_00078009", "prediction": "The character's emotional state is impatience, anxiety.<|endoftext|>", "extracted_labels": "[impatience, anxiety]"}
+{"id": "samplenew3_00079253", "prediction": "The character's emotional state is frustration, stress.", "extracted_labels": "[frustration, stress]"}
+{"id": "samplenew3_00081916", "prediction": "The character's emotional state is neutral.<|endoftext|>", "extracted_labels": "[neutral]"}
+{"id": "samplenew3_00081969", "prediction": "The character's emotional state is concern, unease, sadness.<|endoftext|>", "extracted_labels": "[concern, unease, sadness]"}
+{"id": "samplenew3_00082522", "prediction": "The character's emotional state is sadness, anger, frustration, stress.<|endoftext|>", "extracted_labels": "[sadness, anger, frustration, stress]"}
+{"id": "samplenew3_00083127", "prediction": "The character's emotional state is stressed, negative.<|endoftext|>", "extracted_labels": "[stressed, negative]"}
+{"id": "samplenew3_00083588", "prediction": "The character's emotional state is frustration, anger, disappointment, dissatisfaction.<|endoftext|>", "extracted_labels": "[frustration, anger, disappointment, dissatisfaction]"}
+{"id": "samplenew3_00083665", "prediction": "The character's emotional state is sadness, anger, frustration, stress.<|endoftext|>", "extracted_labels": "[sadness, anger, frustration, stress]"}
+{"id": "samplenew3_00085828", "prediction": "The character's emotional state is anger, frustration, stress, anxiety, panic, fear, anxiety, stress.<|endoftext|>", "extracted_labels": "[anger, frustration, fear, anxiety, stress]"}
+{"id": "samplenew3_00088548", "prediction": "The character's emotional state is humorous, playful, positive.<|endoftext|>", "extracted_labels": "[humorous, playful, positive]"}
+{"id": "samplenew3_00089342", "prediction": "The character's emotional state is disinterested, bored.<|endoftext|>", "extracted_labels": "[disinterested, bored]"}
+{"id": "samplenew3_00089384", "prediction": "The character's emotional state is confused, surprised, humorous, playful.<|endoftext|>", "extracted_labels": "[confused, surprised, humorous, playful]"}
+{"id": "samplenew3_00090020", "prediction": "The character's emotional state is desire, anticipation, strong emotion, stress.<|endoftext|>", "extracted_labels": "[desire, anticipation, strong emotion, stress]"}
+{"id": "samplenew3_00090533", "prediction": "The character's emotional state is humorous, self-deprecating, playful.<|endoftext|>", "extracted_labels": "[humorous, self-deprecating, playful]"}
+{"id": "samplenew3_00090931", "prediction": "The character's emotional state is concern, unease, stress, worry.<|endoftext|>", "extracted_labels": "[concern, unease, stress, worry]"}
+{"id": "samplenew3_00091062", "prediction": "The character's emotional state is dissatisfaction, impatience, frustration.<|endoftext|>", "extracted_labels": "[dissatisfaction, impatience, frustration]"}
+{"id": "samplenew3_00092762", "prediction": "The character's emotional state is anger, frustration, determination.<|endoftext|>", "extracted_labels": "[anger, frustration, determination]"}
+{"id": "samplenew3_00092772", "prediction": "The character's emotional state is dissatisfaction, frustration.<|endoftext|>", "extracted_labels": "[dissatisfaction, frustration]"}
+{"id": "samplenew3_00092861", "prediction": "The character's emotional state: dissatisfaction, impatience, anger.<|endoftext|>", "extracted_labels": "[dissatisfaction, impatience, anger]"}
+{"id": "samplenew3_00093267", "prediction": "The character's emotional state is uncertainty, confusion.<|endoftext|>", "extracted_labels": "[uncertainty, confusion]"}
+{"id": "samplenew3_00093435", "prediction": "The character's emotional state is鼓励, support, frustration, anger, sadness, anxiety, stress.", "extracted_labels": "[encouraged, supported, frustrated, angry, sad, anxious, stressed]"}
+{"id": "samplenew3_00094389", "prediction": "The character's emotional state is determination, firmness.<|endoftext|>", "extracted_labels": "[determination, firmness]"}
+{"id": "samplenew3_00094838", "prediction": "The character's emotional state is surprised, concerned, serious.<|endoftext|>", "extracted_labels": "[surprised, concerned, serious]"}
+{"id": "samplenew3_00095550", "prediction": "The character's emotional state is anger, dissatisfaction.<|endoftext|>", "extracted_labels": "[anger, dissatisfaction]"}
+{"id": "samplenew3_00097420", "prediction": "The character's emotional state is appreciation, praise.", "extracted_labels": "[appreciation, praise]"}
+{"id": "samplenew3_00097536", "prediction": "The character's emotional state is disconnection, confusion, sadness, anger, frustration.<|endoftext|>", "extracted_labels": "[disconnection, confusion, sadness, anger, frustration]"}
+{"id": "samplenew3_00098157", "prediction": "The character's emotional state is positive, suggestion, proposal, joy, satisfaction.<|endoftext|>", "extracted_labels": "[joy, satisfaction]"}
+{"id": "samplenew3_00098809", "prediction": "The character's emotional state is disappointment, frustration, anger.<|endoftext|>", "extracted_labels": "[disappointment, frustration, anger]"}
+{"id": "samplenew3_00098820", "prediction": "The character's emotional state is positive, satisfaction, happiness, frustration, anger.<|endoftext|>", "extracted_labels": "[positive, satisfaction, happiness, frustration, anger]"}
+{"id": "samplenew3_00099275", "prediction": "The character's emotional state is disappointment, frustration.<|endoftext|>", "extracted_labels": "[disappointment, frustration]"}
+{"id": "samplenew3_00099423", "prediction": "The character's emotional state is dissatisfaction, frustration.<|endoftext|>", "extracted_labels": "[dissatisfaction, frustration]"}
+{"id": "samplenew3_00099530", "prediction": "The character's emotional state is critical, evaluative, young, agile.<|endoftext|>", "extracted_labels": "[]"}
+{"id": "samplenew3_00099717", "prediction": "The character's emotional state: positive, satisfaction.<|endoftext|>", "extracted_labels": "[positive, satisfaction]"}
+{"id": "samplenew3_00101695", "prediction": "The character's emotional state is regret, guilt, sadness.<|endoftext|>", "extracted_labels": "[regret, guilt, sadness]"}
+{"id": "samplenew3_00101735", "prediction": "The character's emotional state is concern, anxiety.<|endoftext|>", "extracted_labels": "[concern, anxiety]"}
+{"id": "samplenew3_00102262", "prediction": "The character's emotional state is comfort, encouragement, stress, anxiety.", "extracted_labels": "[comfort, encouragement, stress, anxiety]"}
+{"id": "samplenew3_00102267", "prediction": "The character's emotional state is disappointment, frustration, concern, dissatisfaction.<|endoftext|>", "extracted_labels": "[disappointment, frustration, concern, dissatisfaction]"}
+{"id": "samplenew3_00102898", "prediction": "The character's emotional state is concern, worry.<|endoftext|>", "extracted_labels": "[concern, worry]"}
+{"id": "samplenew3_00103511", "prediction": "The character's emotional state is disinterested, unimportant, negative.<|endoftext|>", "extracted_labels": "[disinterested, unimportant, negative]"}
+{"id": "samplenew3_00104444", "prediction": "The character's emotional state is concern, worry.<|endoftext|>", "extracted_labels": "[concern, worry]"}
+{"id": "samplenew3_00104457", "prediction": "The character's emotional state is tension, anxiety.<|endoftext|>", "extracted_labels": "[tension, anxiety]"}
+{"id": "samplenew3_00104795", "prediction": "The character's emotional state is humorous, self-deprecating, positive.<|endoftext|>", "extracted_labels": "[humorous, self-deprecating, positive]"}
+{"id": "samplenew3_00105070", "prediction": "The character's emotional state is dissatisfaction, disapproval, frustration, anxiety.<|endoftext|>", "extracted_labels": "[dissatisfaction, disapproval, frustration, anxiety]"}
+{"id": "samplenew3_00106200", "prediction": "The character's emotional state is positive,认同, agreement.<|endoftext|>", "extracted_labels": "[positive, agreement]"}
+{"id": "samplenew3_00106521", "prediction": "The character's emotional state is anger, frustration, strong dissatisfaction.<|endoftext|>", "extracted_labels": "[anger, frustration, dissatisfaction]"}
+{"id": "samplenew3_00107006", "prediction": "The character's emotional state is positive, motivational.<|endoftext|>", "extracted_labels": "[positive, motivational]"}
+{"id": "samplenew3_00108029", "prediction": "The character's emotional state is dissatisfaction, anger.<|endoftext|>", "extracted_labels": "[dissatisfaction, anger]"}
+{"id": "samplenew3_00108205", "prediction": "The character's emotional state is disappointment, frustration, self-deprecation.<|endoftext|>", "extracted_labels": "[disappointment, frustration, self-deprecation]"}
+{"id": "samplenew3_00108514", "prediction": "The character's emotional state is dissatisfaction, anger.<|endoftext|>", "extracted_labels": "[dissatisfaction, anger]"}
+{"id": "samplenew3_00109300", "prediction": "The character's emotional state is concern, anxiety.<|endoftext|>", "extracted_labels": "[concern, anxiety]"}
+{"id": "samplenew3_00109302", "prediction": "The character's emotional state: positive, self-deprecating, humorous.<|endoftext|>", "extracted_labels": "[positive, self-deprecating, humorous]"}
+{"id": "samplenew3_00109997", "prediction": "The character's emotional state is confused, surprised, dissatisfaction, sadness.<|endoftext|>", "extracted_labels": "[confused, surprised, dissatisfaction, sadness]"}
+{"id": "samplenew3_00110123", "prediction": "The character's emotional state is disappointment, frustration.<|endoftext|>", "extracted_labels": "[disappointment, frustration]"}
+{"id": "samplenew3_00110266", "prediction": "The character's emotional state: frustration, confusion.<|endoftext|>", "extracted_labels": "[frustration, confusion]"}
+{"id": "samplenew3_00110691", "prediction": "The character's emotional state is positive, humorous, friendly.<|endoftext|>", "extracted_labels": "[positive, humorous, friendly]"}
+{"id": "samplenew3_00111584", "prediction": "The character's emotional state is sadness, anger, frustration, stress.<|endoftext|>", "extracted_labels": "[sadness, anger, frustration, stress]"}
+{"id": "samplenew3_00111917", "prediction": "The character's emotional state is dissatisfaction, pain, confusion.<|endoftext|>", "extracted_labels": "[dissatisfaction, pain, confusion]"}
+{"id": "samplenew3_00112591", "prediction": "The character's emotional state is regret, self-blame, guilt, sadness.<|endoftext|>", "extracted_labels": "[regret, self-blame, guilt, sadness]"}
+{"id": "samplenew3_00113347", "prediction": "The character's emotional state is discomfort, dissatisfaction, tension, anxiety.<|endoftext|>", "extracted_labels": "[discomfort, dissatisfaction, tension, anxiety]"}
+{"id": "samplenew3_00113581", "prediction": "The character's emotional state is positive, joyful, anxiety, stress.<|endoftext|>", "extracted_labels": "[positive, joyful, anxiety, stress]"}
+{"id": "samplenew3_00114298", "prediction": "The character's emotional state is tension, anxiety, stress.<|endoftext|>", "extracted_labels": "[tension, anxiety, stress]"}
+{"id": "samplenew3_00114970", "prediction": "The character's emotional state is tension, anxiety, anger.<|endoftext|>", "extracted_labels": "[tension, anxiety, anger]"}
+{"id": "sample_00000000", "prediction": "The character's emotional state is frustration, disappointment, anxiety, stress, lack of confidence.<|endoftext|>", "extracted_labels": "[frustration, disappointment, anxiety, stress, lack_of_confidence]"}
+{"id": "sample_00000007", "prediction": "The character's emotional state is positive, friendly, farewell.<|endoftext|>", "extracted_labels": "[positive, friendly, farewell]"}
+{"id": "sample_00000021", "prediction": "The character's emotional state is anticipation, tension, positive.<|endoftext|>", "extracted_labels": "[anticipation, tension, positive]"}
+{"id": "sample_00000033", "prediction": "The character's emotional state is dissatisfaction, doubt, frustration, anger.<|endoftext|>", "extracted_labels": "[dissatisfaction, doubt, frustration, anger]"}
+{"id": "sample_00000039", "prediction": "The character's emotional state is anger, frustration.<|endoftext|>", "extracted_labels": "[anger, frustration]"}
+{"id": "sample_00000055", "prediction": "The character's emotional state is detached, disinterested, critical, negative.<|endoftext|>", "extracted_labels": "[detached, disinterested, critical, negative]"}
+{"id": "sample_00000068", "prediction": "The character's emotional state is dissatisfaction, anger.<|endoftext|>", "extracted_labels": "[dissatisfaction, anger]"}
+{"id": "sample_00000070", "prediction": "The character's emotional state is questioning, skepticism, dissatisfaction, disappointment.<|endoftext|>", "extracted_labels": "[questioning, skepticism, dissatisfaction, disappointment]"}
+{"id": "sample_00000073", "prediction": "The character's emotional state is frustration, anger, anxiety, stress.<|endoftext|>", "extracted_labels": "[frustration, anger, anxiety, stress]"}
+{"id": "sample_00000114", "prediction": "The character's emotional state is dissatisfaction, anger.<|endoftext|>", "extracted_labels": "[dissatisfaction, anger]"}
+{"id": "sample_00000118", "prediction": "The character's emotional state is dissatisfaction, pressure.", "extracted_labels": "[dissatisfaction, pressure]"}
+{"id": "sample_00000126", "prediction": "The character's emotional state is anger, frustration, disappointment, dissatisfaction, disappointment, criticism, frustration.<|endoftext|>", "extracted_labels": "[anger, frustration, disappointment, dissatisfaction]"}
+{"id": "sample_00000153", "prediction": "The character's emotional state is positive, happiness, satisfaction, excitement, energy, surprise, excitement, tension.<|endoftext|>", "extracted_labels": "[positive, happiness, satisfaction, excitement, energy, surprise, tension]"}
+{"id": "sample_00000166", "prediction": "The character's emotional state is surprised, shocked, tension, stress.<|endoftext|>", "extracted_labels": "[surprised, shocked, tension, stress]"}
+{"id": "sample_00000174", "prediction": "The character's emotional state is confused, surprised, dissatisfied, thoughtful, sad.<|endoftext|>", "extracted_labels": "[confused, surprised, dissatisfied, thoughtful, sad]"}
+{"id": "sample_00000176", "prediction": "The character's emotional state is concern, unease, disappointment.<|endoftext|>", "extracted_labels": "[concern, unease, disappointment]"}
+{"id": "sample_00000203", "prediction": "The character's emotional state is sadness, anger, frustration, stress.<|endoftext|>", "extracted_labels": "[sadness, anger, frustration, stress]"}
+{"id": "sample_00000208", "prediction": "The character's emotional state is positive, friendly, happy, satisfied.<|endoftext|>", "extracted_labels": "[positive, friendly, happy, satisfied]"}
+{"id": "sample_00000209", "prediction": "The character's emotional state is excitement, anticipation, joy.<|endoftext|>", "extracted_labels": "[excitement, anticipation, joy]"}
+{"id": "sample_00000213", "prediction": "The character's emotional state is frustration, anger, dissatisfaction, disappointment.<|endoftext|>", "extracted_labels": "[frustration, anger, dissatisfaction, disappointment]"}
+{"id": "sample_00000215", "prediction": "The character's emotional state is positive, optimistic.<|endoftext|>", "extracted_labels": "[positive, optimistic]"}
+{"id": "sample_00000218", "prediction": "The character's emotional state is dissatisfaction, discontent, humor.<|endoftext|>", "extracted_labels": "[dissatisfaction, discontent, humor]"}
+{"id": "sample_00000220", "prediction": "The character's emotional state is surprised, shocked, strong, intense.<|endoftext|>", "extracted_labels": "[surprised, shocked, strong, intense]"}
+{"id": "sample_00000225", "prediction": "The character's emotional state is skepticism, dissatisfaction, concern.<|endoftext|>", "extracted_labels": "[skepticism, dissatisfaction, concern]"}
+{"id": "sample_00000227", "prediction": "The character's emotional state is positive, confident, determined, humorous, dramatic.<|endoftext|>", "extracted_labels": "[positive, confident, determined, humorous, dramatic]"}
+{"id": "sample_00000240", "prediction": "The character's emotional state is strength, resilience, negative.<|endoftext|>", "extracted_labels": "[strength, resilience]"}
+{"id": "sample_00000246", "prediction": "The character's emotional state is concern, worry.<|endoftext|>", "extracted_labels": "[concern, worry]"}
+{"id": "sample_00000256", "prediction": "The character's emotional state is disappointment, sadness, anger.<|endoftext|>", "extracted_labels": "[disappointment, sadness, anger]"}
+{"id": "sample_00000258", "prediction": "The character's emotional state is negative, dissatisfaction, stress.<|endoftext|>", "extracted_labels": "[negative, dissatisfaction, stress]"}
+{"id": "sample_00000276", "prediction": "The character's emotional state is sadness, anger, frustration, stress.<|endoftext|>", "extracted_labels": "[sadness, anger, frustration, stress]"}
+{"id": "sample_00000278", "prediction": "The character's emotional state is humorous, joking, positive.<|endoftext|>", "extracted_labels": "[humorous, joking, positive]"}
+{"id": "sample_00000286", "prediction": "The character's emotional state is disappointment, dissatisfaction, let down.<|endoftext|>", "extracted_labels": "[disappointment, dissatisfaction, letdown]"}
+{"id": "sample_00000294", "prediction": "The character's emotional state is positive, Remembrance, possiblyRemind.<|endoftext|>", "extracted_labels": "[positive]"}
+{"id": "sample_00000296", "prediction": "The character's emotional state is anger, disappointment.<|endoftext|>", "extracted_labels": "[anger, disappointment]"}
+{"id": "sample_00000325", "prediction": "The character's emotional state is anger, sadness, frustration.<|endoftext|>", "extracted_labels": "[anger, sadness, frustration]"}
+{"id": "sample_00000338", "prediction": "The character's emotional state is frustration, disappointment.<|endoftext|>", "extracted_labels": "[frustration, disappointment]"}
+{"id": "sample_00000342", "prediction": "The character's emotional state is tension, anxiety.<|endoftext|>", "extracted_labels": "[tension, anxiety]"}
+{"id": "sample_00000346", "prediction": "The character's emotional state is pressure, confusion.<|endoftext|>", "extracted_labels": "[pressure, confusion]"}
+{"id": "sample_00000353", "prediction": "The character's emotional state is concern, anxiety.<|endoftext|>", "extracted_labels": "[concern, anxiety]"}
+{"id": "sample_00000361", "prediction": "The character's emotional state is contemplative, reflective, warning, advice.<|endoftext|>", "extracted_labels": "[contemplative, reflective, warning, advice]"}
+{"id": "sample_00000363", "prediction": "The character's emotional state is Apologetic, Explanation, Concern, Distress, Isolation, Protective, Caring.<|endoftext|>", "extracted_labels": "[apologetic, explanation, concern, distress, isolation, protective, caring]"}
+{"id": "sample_00000365", "prediction": "The character's emotional state is disappointment, anger, frustration.<|endoftext|>", "extracted_labels": "[disappointment, anger, frustration]"}
+{"id": "sample_00000368", "prediction": "The character's emotional state is confusion, unease, anxiety.<|endoftext|>", "extracted_labels": "[confusion, unease, anxiety]"}
+{"id": "sample_00000370", "prediction": "The character's emotional state is disappointment, dissatisfaction, pressure.<|endoftext|>", "extracted_labels": "[disappointment, dissatisfaction, pressure]"}
+{"id": "sample_00000385", "prediction": "The character's emotional state is positive, satisfaction, excitement.<|endoftext|>", "extracted_labels": "[positive, satisfaction, excitement]"}
+{"id": "sample_00000388", "prediction": "The character's emotional state is disappointment, anger, frustration, sadness, frustration, anger.<|endoftext|>", "extracted_labels": "[disappointment, anger, frustration, sadness]"}
+{"id": "sample_00000393", "prediction": "The character's emotional state is anger, frustration, dissatisfaction.<|endoftext|>", "extracted_labels": "[anger, frustration, dissatisfaction]"}
+{"id": "sample_00000406", "prediction": "The character's emotional state is思考，探索，不确定，期待.<|endoftext|>", "extracted_labels": "[思考, 探索, 不确定, 期待]"}
+{"id": "sample_00000407", "prediction": "The character's emotional state is anger, frustration.<|endoftext|>", "extracted_labels": "[anger, frustration]"}
+{"id": "sample_00000420", "prediction": "The character's emotional state is humorous, positive.<|endoftext|>", "extracted_labels": "[humorous, positive]"}
+{"id": "sample_00000433", "prediction": "The character's emotional state is concern, uncertainty,压力, anxiety.<|endoftext|>", "extracted_labels": "[concern, uncertainty, anxiety]"}
+{"id": "sample_00000439", "prediction": "The character's emotional state is surprised, confused.<|endoftext|>", "extracted_labels": "[surprised, confused]"}
+{"id": "sample_00000444", "prediction": "The character's emotional state is appreciative,感恩, Affection, Positive.<|endoftext|>", "extracted_labels": "[appreciative, 感恩, Affection, Positive]"}
+{"id": "sample_00000447", "prediction": "The character's emotional state is frustration, disappointment.<|endoftext|>", "extracted_labels": "[frustration, disappointment]"}
+{"id": "sample_00000461", "prediction": "The character's emotional state is heavy, sorrow, loss, reflection.<|endoftext|>", "extracted_labels": "[heavy, sorrow, loss, reflection]"}
+{"id": "sample_00000476", "prediction": "The character's emotional state: anxiety, frustration.<|endoftext|>", "extracted_labels": "[anxiety, frustration]"}
+{"id": "sample_00000493", "prediction": "The character's emotional state is dissatisfaction, disappointment, anger, frustration.<|endoftext|>", "extracted_labels": "[dissatisfaction, disappointment, anger, frustration]"}
+{"id": "sample_00000499", "prediction": "The character's emotional state is disappointment, frustration, anger.<|endoftext|>", "extracted_labels": "[disappointment, frustration, anger]"}
+{"id": "sample_00000502", "prediction": "The character's emotional state is positive, negative, apologetic.<|endoftext|>", "extracted_labels": "[positive, negative, apologetic]"}
+{"id": "sample_00000508", "prediction": "The character's emotional state is dissatisfaction, impatience.", "extracted_labels": "[dissatisfaction, impatience]"}
+{"id": "sample_00000515", "prediction": "The character's emotional state: anger, frustration, dissatisfaction.<|endoftext|>", "extracted_labels": "[anger, frustration, dissatisfaction]"}
+{"id": "sample_00000518", "prediction": "The character's emotional state is disappointment, frustration, anxiety.<|endoftext|>", "extracted_labels": "[disappointment, frustration, anxiety]"}
+{"id": "sample_00000519", "prediction": "The character's emotional state is anger, frustration.<|endoftext|>", "extracted_labels": "[anger, frustration]"}
+{"id": "sample_00000529", "prediction": "The character's emotional state is concern, unease, worry.<|endoftext|>", "extracted_labels": "[concern, unease, worry]"}
+{"id": "sample_00000535", "prediction": "The character's emotional state is disappointment, frustration, despair.<|endoftext|>", "extracted_labels": "[disappointment, frustration, despair]"}
+{"id": "sample_00000536", "prediction": "The character's emotional state is anger, disappointment, dissatisfaction, disappointment, sadness, anger, anxiety.<|endoftext|>", "extracted_labels": "[anger, disappointment, sadness, anxiety]"}
+{"id": "sample_00000549", "prediction": "The character's emotional state is dissatisfaction, frustration.", "extracted_labels": "[dissatisfaction, frustration]"}
+{"id": "sample_00000561", "prediction": "The character's emotional state is positive, satisfied, happy.<|endoftext|>", "extracted_labels": "[positive, satisfied, happy]"}
+{"id": "sample_00000569", "prediction": "The character's emotional state is depression, anger.<|endoftext|>", "extracted_labels": "[depression, anger]"}
+{"id": "sample_00000571", "prediction": "The character's emotional state is excited, satisfied, dissatisfied, concerned.<|endoftext|>", "extracted_labels": "[excited, satisfied, dissatisfied, concerned]"}
+{"id": "sample_00000601", "prediction": "The character's emotional state is frustration, stress, humor, irony.<|endoftext|>", "extracted_labels": "[frustration, stress, humor, irony]"}
+{"id": "sample_00000602", "prediction": "The character's emotional state is dissatisfaction, frustration.", "extracted_labels": "[dissatisfaction, frustration]"}
+{"id": "sample_00000605", "prediction": "The character's emotional state is喜欢, positive, excitement, anticipation, surprise, curiosity, playful, happiness, satisfaction.<|endoftext|>", "extracted_labels": "[happiness, satisfaction, positive, excitement, anticipation, surprise, curiosity, playful]"}
+{"id": "sample_00000607", "prediction": "The character's emotional state is positive, excited, happy.<|endoftext|>", "extracted_labels": "[positive, excited, happy]"}
+{"id": "sample_00000613", "prediction": "The character's emotional state is pressure, anxiety.<|endoftext|>", "extracted_labels": "[pressure, anxiety]"}
+{"id": "sample_00000623", "prediction": "The character's emotional state is neutral.<|endoftext|>", "extracted_labels": "[neutral]"}
+{"id": "sample_00000633", "prediction": "The character's emotional state is positive, confidence, control.<|endoftext|>", "extracted_labels": "[positive, confident, in control]"}
+{"id": "sample_00000639", "prediction": "The character's emotional state: frustration, exhaustion, dissatisfaction.<|endoftext|>", "extracted_labels": "[frustration, exhaustion, dissatisfaction]"}
+{"id": "sample_00000646", "prediction": "The character's emotional state is positive, encouragement.", "extracted_labels": "[positive]"}
+{"id": "sample_00000648", "prediction": "The character's emotional state is anger, frustration.<|endoftext|>", "extracted_labels": "[anger, frustration]"}
+{"id": "sample_00000653", "prediction": "The character's emotional state is dissatisfaction, confusion.<|endoftext|>", "extracted_labels": "[dissatisfaction, confusion]"}
+{"id": "sample_00000665", "prediction": "The character's emotional state is guilt, regret.<|endoftext|>", "extracted_labels": "[guilt, regret]"}
+{"id": "sample_00000668", "prediction": "The character's emotional state: dissatisfaction, anger.<|endoftext|>", "extracted_labels": "[dissatisfaction, anger]"}
+{"id": "sample_00000669", "prediction": "The character's emotional state is frustration, anger, dissatisfaction, confusion.<|endoftext|>", "extracted_labels": "[frustration, anger, dissatisfaction, confusion]"}
+{"id": "sample_00000679", "prediction": "The character's emotional state is positive, encouraging.<|endoftext|>", "extracted_labels": "[positive, encouraging]"}
+{"id": "sample_00000680", "prediction": "The character's emotional state is regret, apology, introspection, concentration.<|endoftext|>", "extracted_labels": "[regret, apology, introspection, concentration]"}
+{"id": "sample_00000686", "prediction": "The character's emotional state is positive, excitement.<|endoftext|>", "extracted_labels": "[positive, excitement]"}
+{"id": "sample_00000689", "prediction": "The character's emotional state is impatience, frustration, anger.<|endoftext|>", "extracted_labels": "[impatience, frustration, anger]"}
+{"id": "sample_00000694", "prediction": "The character's emotional state is anger, disappointment, frustration.<|endoftext|>", "extracted_labels": "[anger, disappointment, frustration]"}
+{"id": "sample_00000716", "prediction": "The character's emotional state is anger, frustration.<|endoftext|>", "extracted_labels": "[anger, frustration]"}
+{"id": "sample_00000727", "prediction": "The character's emotional state is sadness, frustration, guilt.<|endoftext|>", "extracted_labels": "[sadness, frustration, guilt]"}
+{"id": "sample_00000732", "prediction": "The character's emotional state is introspection, contemplation, complex emotions, self-reflection.<|endoftext|>", "extracted_labels": "[introspection, contemplation, self_reflection]"}
+{"id": "sample_00000741", "prediction": "The character's emotional state is responsible, concerned, stressed, under pressure.<|endoftext|>", "extracted_labels": "[responsible, concerned, stressed, under pressure]"}
+{"id": "sample_00000774", "prediction": "The character's emotional state is appreciation, encouragement, positive.", "extracted_labels": "[appreciation, encouragement, positive]"}
+{"id": "sample_00000788", "prediction": "The character's emotional state is frustration, anger, stress.<|endoftext|>", "extracted_labels": "[frustration, anger, stress]"}
+{"id": "sample_00000808", "prediction": "The character's emotional state is distress, frustration, anxiety.", "extracted_labels": "[distress, frustration, anxiety]"}
+{"id": "sample_00000817", "prediction": "The character's emotional state is humor, playfulness, positive.<|endoftext|>", "extracted_labels": "[humor, playfulness, positive]"}
+{"id": "sample_00000823", "prediction": "The character's emotional state is dissatisfaction, anger.<|endoftext|>", "extracted_labels": "[dissatisfaction, anger]"}
+{"id": "sample_00000839", "prediction": "The character's emotional state is positive, motivational.<|endoftext|>", "extracted_labels": "[positive, motivational]"}
+{"id": "sample_00000855", "prediction": "The character's emotional state is anger, frustration, dissatisfaction.<|endoftext|>", "extracted_labels": "[anger, frustration, dissatisfaction]"}
+{"id": "sample_00000877", "prediction": "The character's emotional state is concern, anticipation.<|endoftext|>", "extracted_labels": "[concern, anticipation]"}
+{"id": "sample_00000881", "prediction": "The character's emotional state is positive, happy, satisfied.<|endoftext|>", "extracted_labels": "[positive, happy, satisfied]"}
+{"id": "sample_00000884", "prediction": "The character's emotional state is dissatisfaction, concern.<|endoftext|>", "extracted_labels": "[dissatisfaction, concern]"}
+{"id": "sample_00000894", "prediction": "The character's emotional state is disappointment, frustration, anger.<|endoftext|>", "extracted_labels": "[disappointment, frustration, anger]"}
+{"id": "sample_00000906", "prediction": "The character's emotional state is dissatisfaction, disappointment, frustration.<|endoftext|>", "extracted_labels": "[dissatisfaction, disappointment, frustration]"}
+{"id": "sample_00000907", "prediction": "The character's emotional state is dissatisfaction, frustration, anger.<|endoftext|>", "extracted_labels": "[dissatisfaction, frustration, anger]"}
+{"id": "sample_00000912", "prediction": "The character's emotional state is concern, worry.<|endoftext|>", "extracted_labels": "[concern, worry]"}
+{"id": "sample_00000927", "prediction": "The character's emotional state is期待, humorous.<|endoftext|>", "extracted_labels": "[期待, 幽默]"}
+{"id": "sample_00000956", "prediction": "The character's emotional state is concern, surprise.<|endoftext|>", "extracted_labels": "[concern, surprise]"}
+{"id": "sample_00000958", "prediction": "The character's emotional state is positive, appreciation.", "extracted_labels": "[positive, appreciation]"}
+{"id": "sample_00000960", "prediction": "The character's emotional state is dissatisfaction, frustration.", "extracted_labels": "[dissatisfaction, frustration]"}
+{"id": "sample_00000972", "prediction": "The character's emotional state is accommodation, compromise, tension, pressure.<|endoftext|>", "extracted_labels": "[tension, pressure]"}
+{"id": "sample_00000980", "prediction": "The character's emotional state is positive, gratitude.<|endoftext|>", "extracted_labels": "[positive, gratitude]"}
+{"id": "sample_00000987", "prediction": "The character's emotional state is anger, dissatisfaction.<|endoftext|>", "extracted_labels": "[anger, dissatisfaction]"}
+{"id": "sample_00001000", "prediction": "The character's emotional state is rational, dissatisfaction, disappointment.", "extracted_labels": "[rational, dissatisfaction, disappointment]"}
+{"id": "sample_00001009", "prediction": "The character's emotional state: anger, frustration.<|endoftext|>", "extracted_labels": "[anger, frustration]"}
+{"id": "sample_00001025", "prediction": "The character's emotional state is dissatisfied, stressed, humorous, joking.<|endoftext|>", "extracted_labels": "[dissatisfied, stressed, humorous, joking]"}
+{"id": "sample_00001036", "prediction": "The character's emotional state is anger, frustration.<|endoftext|>", "extracted_labels": "[anger, frustration]"}
+{"id": "sample_00001039", "prediction": "The character's emotional state is impatience, pressure, anger.<|endoftext|>", "extracted_labels": "[impatience, pressure, anger]"}
+{"id": "sample_00001043", "prediction": "The character's emotional state is frustration, anger, dissatisfaction.<|endoftext|>", "extracted_labels": "[frustration, anger, dissatisfaction]"}
+{"id": "sample_00001049", "prediction": "The character's emotional state: humorous, teasing, positive.<|endoftext|>", "extracted_labels": "[humorous, teasing, positive]"}
+{"id": "sample_00001055", "prediction": "The character's emotional state is dissatisfaction, confusion.<|endoftext|>", "extracted_labels": "[dissatisfaction, confusion]"}
+{"id": "sample_00001068", "prediction": "The character's emotional state is dissatisfaction, confusion.<|endoftext|>", "extracted_labels": "[dissatisfaction, confusion]"}
+{"id": "sample_00001072", "prediction": "The character's emotional state is Reluctant, Unwilling, Positive, Negative.<|endoftext|>", "extracted_labels": "[Reluctant, Unwilling, Positive, Negative]"}
+{"id": "sample_00001073", "prediction": "The character's emotional state is positive, appreciation.", "extracted_labels": "[positive, appreciation]"}
+{"id": "sample_00001074", "prediction": "The character's emotional state is depression, hopelessness, despondency, frustration, disappointment.<|endoftext|>", "extracted_labels": "[depression, hopelessness, despondency, frustration, disappointment]"}
+{"id": "sample_00001089", "prediction": "The character's emotional state is positive, excitement.<|endoftext|>", "extracted_labels": "[positive, excitement]"}
+{"id": "sample_00001090", "prediction": "The character's emotional state is positive, happiness, satisfaction, frustration, anger.<|endoftext|>", "extracted_labels": "[positive, happy, satisfied, frustrated, angry]"}
+{"id": "sample_00001097", "prediction": "The character's emotional state: humorous, teasing, positive.<|endoftext|>", "extracted_labels": "[humorous, teasing, positive]"}
+{"id": "sample_00001101", "prediction": "The character's emotional state is excited, satisfied, positive.<|endoftext|>", "extracted_labels": "[excited, satisfied, positive]"}
+{"id": "sample_00001110", "prediction": "The character's emotional state is positive, happiness, excitement, enthusiasm.<|endoftext|>", "extracted_labels": "[positive, happiness, excitement, enthusiasm]"}
+{"id": "sample_00001116", "prediction": "The character's emotional state is dissatisfaction, anger.<|endoftext|>", "extracted_labels": "[dissatisfaction, anger]"}
+{"id": "sample_00001119", "prediction": "The character's emotional state is anger, frustration, disappointment.<|endoftext|>", "extracted_labels": "[anger, frustration, disappointment]"}
+{"id": "sample_00001126", "prediction": "The character's emotional state is disappointment, frustration, anger, sadness, frustration, anxiety, stress.<|endoftext|>", "extracted_labels": "[disappointment, frustration, anger, sadness, anxiety, stress]"}
+{"id": "sample_00001132", "prediction": "The character's emotional state is positive, humorous, self-deprecating.<|endoftext|>", "extracted_labels": "[positive, humorous, self-deprecating]"}
+{"id": "sample_00001142", "prediction": "The character's emotional state: frustration, anger, disappointment, despondency.<|endoftext|>", "extracted_labels": "[frustration, anger, disappointment, despondency]"}
+{"id": "sample_00001146", "prediction": "The character's emotional state is disappointment, frustration, stress.", "extracted_labels": "[disappointment, frustration, stress]"}
+{"id": "sample_00001152", "prediction": "The character's emotional state is excited, humorous, exaggerated.<|endoftext|>", "extracted_labels": "[excited, humorous, exaggerated]"}
+{"id": "sample_00001155", "prediction": "The character's emotional state is dissatisfaction, disappointment, frustration.<|endoftext|>", "extracted_labels": "[dissatisfaction, disappointment, frustration]"}
+{"id": "sample_00001156", "prediction": "The character's emotional state is concern, warning.<|endoftext|>", "extracted_labels": "[concern, warning]"}
+{"id": "sample_00001175", "prediction": "The character's emotional state is satisfaction, positive.<|endoftext|>", "extracted_labels": "[satisfaction, positive]"}
+{"id": "sample_00001176", "prediction": "The character's emotional state is dissatisfaction, anger.<|endoftext|>", "extracted_labels": "[dissatisfaction, anger]"}
+{"id": "sample_00001178", "prediction": "The character's emotional state is anger, frustration.<|endoftext|>", "extracted_labels": "[anger, frustration]"}
+{"id": "sample_00001184", "prediction": "The character's emotional state is appreciation, praise.<|endoftext|>", "extracted_labels": "[appreciation, praise]"}
+{"id": "sample_00001189", "prediction": "The character's emotional state is expectation, demand, dissatisfaction, disappointment.<|endoftext|>", "extracted_labels": "[expectation, demand, dissatisfaction, disappointment]"}
+{"id": "sample_00001192", "prediction": "The character's emotional state is determination, resolve, sadness, anger, stress.<|endoftext|>", "extracted_labels": "[determination, resolve, sadness, anger, stress]"}
+{"id": "sample_00001198", "prediction": "The character's emotional state is anger, frustration, dissatisfaction.<|endoftext|>", "extracted_labels": "[anger, frustration, dissatisfaction]"}
+{"id": "sample_00001199", "prediction": "The character's emotional state is positive, encouragement, support.", "extracted_labels": "[positive, encouraging, supportive]"}
+{"id": "sample_00001203", "prediction": "The character's emotional state is positive, happiness, satisfaction, stress, strong emotions, complex, positive, negative, tension, anxiety.<|endoftext|>", "extracted_labels": "[positive, happiness, satisfaction, stress, tension, anxiety]"}
+{"id": "sample_00001205", "prediction": "The character's emotional state is concern, unease, anxiety.<|endoftext|>", "extracted_labels": "[concern, unease, anxiety]"}
+{"id": "sample_00001215", "prediction": "The character's emotional state is anger, frustration.<|endoftext|>", "extracted_labels": "[anger, frustration]"}
+{"id": "sample_00001245", "prediction": "The character's emotional state is disappointment, frustration, humor, self-deprecation.<|endoftext|>", "extracted_labels": "[disappointment, frustration, humor, self-deprecation]"}
+{"id": "sample_00001249", "prediction": "The character's emotional state is disappointment, frustration.<|endoftext|>", "extracted_labels": "[disappointment, frustration]"}
+{"id": "sample_00001255", "prediction": "The character's emotional state is positive, excitement.<|endoftext|>", "extracted_labels": "[positive, excitement]"}
+{"id": "sample_00001260", "prediction": "The character's emotional state is bad, negative.<|endoftext|>", "extracted_labels": "[bad, negative]"}
+{"id": "sample_00001269", "prediction": "The character's emotional state is anger, frustration, dissatisfaction.<|endoftext|>", "extracted_labels": "[anger, frustration, dissatisfaction]"}
+{"id": "sample_00001282", "prediction": "The character's emotional state is frustration, anger, dissatisfaction.<|endoftext|>", "extracted_labels": "[frustration, anger, dissatisfaction]"}
+{"id": "sample_00001286", "prediction": "The character's emotional state is concern, tension.<|endoftext|>", "extracted_labels": "[concern, tension]"}
+{"id": "sample_00001288", "prediction": "The character's emotional state is positive, satisfaction, excitement, tension.<|endoftext|>", "extracted_labels": "[positive, satisfaction, excitement, tension]"}
+{"id": "sample_00001304", "prediction": "The character's emotional state is sadness, anger, frustration, stress.<|endoftext|>", "extracted_labels": "[sadness, anger, frustration, stress]"}
+{"id": "sample_00001314", "prediction": "The character's emotional state is Dissatisfied, Disappointed, Disatisfaction, Disappointment.<|endoftext|>", "extracted_labels": "[Dissatisfied, Disappointed]"}
+{"id": "sample_00001327", "prediction": "The character's emotional state is confusion, misunderstanding, tension, stress.<|endoftext|>", "extracted_labels": "[confusion, misunderstanding, tension, stress]"}
+{"id": "sample_00001334", "prediction": "The character's emotional state is understanding, agreement, positive mood.<|endoftext|>", "extracted_labels": "[understanding, agreement, positive mood]"}
+{"id": "sample_00001337", "prediction": "The character's emotional state is positive, comfortable, at ease.<|endoftext|>", "extracted_labels": "[positive, comfortable, at ease]"}
+{"id": "sample_00001340", "prediction": "The character's emotional state is frustrated, distressed, dissatisfied.<|endoftext|>", "extracted_labels": "[frustrated, distressed, dissatisfied]"}
+{"id": "sample_00001345", "prediction": "The character's emotional state is dissatisfaction, disapproval, negative.<|endoftext|>", "extracted_labels": "[dissatisfaction, disapproval, negative]"}
+{"id": "sample_00001346", "prediction": "The character's emotional state is disapproval, dissatisfaction, criticism, dissatisfaction.", "extracted_labels": "[dissatisfaction, disapproval, criticism]"}
+{"id": "sample_00001347", "prediction": "The character's emotional state is frustration, anger, anxiety.<|endoftext|>", "extracted_labels": "[frustration, anger, anxiety]"}
+{"id": "sample_00001350", "prediction": "The character's emotional state is impatience, frustration, stress.<|endoftext|>", "extracted_labels": "[impatience, frustration, stress]"}
+{"id": "sample_00001354", "prediction": "The character's emotional state is positive, happiness, excitement, excitement, happiness, positive.<|endoftext|>", "extracted_labels": "[happy, excited, positive]"}
+{"id": "sample_00001371", "prediction": "The character's emotional state is anxiety, concern, sadness.<|endoftext|>", "extracted_labels": "[anxiety, concern, sadness]"}
+{"id": "sample_00001378", "prediction": "The character's emotional state is frustration, anger, disappointment, dissatisfaction, warning.", "extracted_labels": "[frustration, anger, disappointment, dissatisfaction, warning]"}
+{"id": "sample_00001383", "prediction": "The character's emotional state is positive, encouragement.<|endoftext|>", "extracted_labels": "[positive, encouragement]"}
+{"id": "sample_00001389", "prediction": "The character's emotional state is dissatisfaction, anger.<|endoftext|>", "extracted_labels": "[dissatisfaction, anger]"}
+{"id": "sample_00001393", "prediction": "The character's emotional state is anxiety, tension.<|endoftext|>", "extracted_labels": "[anxiety, tension]"}
+{"id": "sample_00001411", "prediction": "The character's emotional state is anger, frustration.<|endoftext|>", "extracted_labels": "[anger, frustration]"}
+{"id": "sample_00001416", "prediction": "The character's emotional state is humorous, teasing, positive.", "extracted_labels": "[humorous, teasing, positive]"}
+{"id": "sample_00001421", "prediction": "The character's emotional state is disapproval, dissatisfaction, rejection, negative.<|endoftext|>", "extracted_labels": "[disapproval, dissatisfaction, rejection, negative]"}
+{"id": "sample_00001426", "prediction": "The character's emotional state is neutral.<|endoftext|>", "extracted_labels": "[neutral]"}
+{"id": "sample_00001433", "prediction": "The character's emotional state is satisfaction, joy.<|endoftext|>", "extracted_labels": "[satisfaction, joy]"}
+{"id": "sample_00001437", "prediction": "The character's emotional state is anger, dissatisfaction, criticism.<|endoftext|>", "extracted_labels": "[anger, dissatisfaction, criticism]"}
+{"id": "sample_00001440", "prediction": "The character's emotional state is fear, disappointment.<|endoftext|>", "extracted_labels": "[fear, disappointment]"}
+{"id": "sample_00001453", "prediction": "The character's emotional state is positive, happy, satisfied, humorous.<|endoftext|>", "extracted_labels": "[positive, happy, satisfied, humorous]"}
+{"id": "sample_00001455", "prediction": "The character's emotional state is humor, satire, playful, gentle, humorous, positive.<|endoftext|>", "extracted_labels": "[humor, satire, playful, gentle, humorous, positive]"}
+{"id": "sample_00001468", "prediction": "The character's emotional state is dissatisfaction, disappointment, anger.<|endoftext|>", "extracted_labels": "[dissatisfaction, disappointment, anger]"}
+{"id": "sample_00001492", "prediction": "The character's emotional state is anger, disappointment.<|endoftext|>", "extracted_labels": "[anger, disappointment]"}
+{"id": "sample_00001500", "prediction": "The character's emotional state is concern, dissatisfaction, stress.<|endoftext|>", "extracted_labels": "[concern, dissatisfaction, stress]"}
+{"id": "sample_00001515", "prediction": "The character's emotional state is anger, dissatisfaction, frustration.<|endoftext|>", "extracted_labels": "[anger, dissatisfaction, frustration]"}
+{"id": "sample_00001521", "prediction": "The character's emotional state is Shy, Uncomfortable, Anxiously, Anticipating, Curious, Concerned.<|endoftext|>", "extracted_labels": "[shy, uncomfortable, anxious, anticipating, curious, concerned]"}
+{"id": "sample_00001539", "prediction": "The character's emotional state is anticipation, excitement.<|endoftext|>", "extracted_labels": "[anticipation, excitement]"}
+{"id": "sample_00001557", "prediction": "The character's emotional state is disappointment, sadness.<|endoftext|>", "extracted_labels": "[disappointment, sadness]"}
+{"id": "sample_00001580", "prediction": "The character's emotional state is expectation, hope, tension, anxiety.<|endoftext|>", "extracted_labels": "[expectation, hope, tension, anxiety]"}
+{"id": "sample_00001586", "prediction": "The character's emotional state is gratitude, appreciation.<|endoftext|>", "extracted_labels": "[gratitude, appreciation]"}
+{"id": "sample_00001589", "prediction": "The character's emotional state is anger, frustration, dissatisfaction, dissatisfaction, frustration, anger.<|endoftext|>", "extracted_labels": "[anger, frustration, dissatisfaction]"}
+{"id": "sample_00001614", "prediction": "The character's emotional state is anger, disappointment, sadness.<|endoftext|>", "extracted_labels": "[anger, disappointment, sadness]"}
+{"id": "sample_00001619", "prediction": "The character's emotional state is frustration, anger, dissatisfaction, disappointment.<|endoftext|>", "extracted_labels": "[frustration, anger, dissatisfaction, disappointment]"}
+{"id": "sample_00001620", "prediction": "The character's emotional state is dissatisfaction, anger.<|endoftext|>", "extracted_labels": "[dissatisfaction, anger]"}
+{"id": "sample_00001629", "prediction": "The character's emotional state is positive, self-deprecating, humorous.<|endoftext|>", "extracted_labels": "[positive, self-deprecating, humorous]"}
+{"id": "sample_00001636", "prediction": "The character's emotional state is depression, pain, anxiety.<|endoftext|>", "extracted_labels": "[depression, pain, anxiety]"}
+{"id": "sample_00001641", "prediction": "The character's emotional state is anger, frustration, frustration, anger, sadness.<|endoftext|>", "extracted_labels": "[anger, frustration, sadness]"}
+{"id": "sample_00001642", "prediction": "The character's emotional state is gratitude, excitement.<|endoftext|>", "extracted_labels": "[gratitude, excitement]"}
+{"id": "sample_00001652", "prediction": "The character's emotional state is dissatisfaction, pressure.<|endoftext|>", "extracted_labels": "[dissatisfaction, pressure]"}
+{"id": "sample_00001655", "prediction": "The character's emotional state is anger, frustration, disappointment, dissatisfaction.<|endoftext|>", "extracted_labels": "[anger, frustration, disappointment, dissatisfaction]"}
+{"id": "sample_00001679", "prediction": "The character's emotional state is uncertainty, concern, anticipation.<|endoftext|>", "extracted_labels": "[uncertainty, concern, anticipation]"}
+{"id": "sample_00001681", "prediction": "The character's emotional state is anger, frustration, dissatisfaction.<|endoftext|>", "extracted_labels": "[anger, frustration, dissatisfaction]"}
+{"id": "sample_00001693", "prediction": "The character's emotional state is neutral.<|endoftext|>", "extracted_labels": "[neutral]"}
+{"id": "sample_00001697", "prediction": "The character's emotional state is surprised, surprised, surprised, surprised, surprised, excited, excited, excited.<|endoftext|>", "extracted_labels": "[surprised, excited]"}
+{"id": "sample_00001717", "prediction": "The character's emotional state is gratitude, appreciation.<|endoftext|>", "extracted_labels": "[gratitude, appreciation]"}
+{"id": "sample_00001720", "prediction": "The character's emotional state is pride, confidence, excitement.<|endoftext|>", "extracted_labels": "[pride, confidence, excitement]"}
+{"id": "sample_00001731", "prediction": "The character's emotional state is dissatisfied, resistant, dissatisfaction, firm, confident.<|endoftext|>", "extracted_labels": "[dissatisfied, resistant, confident]"}
+{"id": "sample_00001732", "prediction": "The character's emotional state is disappointment, frustration, concern, anger.<|endoftext|>", "extracted_labels": "[disappointment, frustration, concern, anger]"}
+{"id": "sample_00001749", "prediction": "The character's emotional state is dissatisfaction, anger.<|endoftext|>", "extracted_labels": "[dissatisfaction, anger]"}
+{"id": "sample_00001751", "prediction": "The character's emotional state is disapproval, concern, dissatisfaction.<|endoftext|>", "extracted_labels": "[disapproval, concern, dissatisfaction]"}
+{"id": "sample_00001755", "prediction": "The character's emotional state is anger, frustration, disappointment, criticism, blame.<|endoftext|>", "extracted_labels": "[anger, frustration, disappointment, criticism, blame]"}
+{"id": "sample_00001756", "prediction": "The character's emotional state is dissatisfaction, anger.<|endoftext|>", "extracted_labels": "[dissatisfaction, anger]"}
+{"id": "sample_00001760", "prediction": "The character's emotional state is anger, frustration, concern.<|endoftext|>", "extracted_labels": "[anger, frustration, concern]"}
+{"id": "sample_00001762", "prediction": "The character's emotional state is dissatisfaction, anger.<|endoftext|>", "extracted_labels": "[dissatisfaction, anger]"}
+{"id": "sample_00001766", "prediction": "The character's emotional state is regret, guilt, apologies, sorrow, frustration.<|endoftext|>", "extracted_labels": "[regret, guilt, apologies, sorrow, frustration]"}
+{"id": "sample_00001774", "prediction": "The character's emotional state is anger, frustration.<|endoftext|>", "extracted_labels": "[anger, frustration]"}
+{"id": "sample_00001776", "prediction": "The character's emotional state is despair, frustration, determination, resilience.<|endoftext|>", "extracted_labels": "[despair, frustration, determination, resilience]"}
+{"id": "sample_00001786", "prediction": "The character's emotional state: frustration, anger, stress.<|endoftext|>", "extracted_labels": "[frustration, anger, stress]"}
+{"id": "sample_00001797", "prediction": "The character's emotional state is dissatisfaction, anger.<|endoftext|>", "extracted_labels": "[dissatisfaction, anger]"}
+{"id": "sample_00001807", "prediction": "The character's emotional state is anger, dissatisfaction.<|endoftext|>", "extracted_labels": "[anger, dissatisfaction]"}
+{"id": "sample_00001811", "prediction": "The character's emotional state is anger, frustration.<|endoftext|>", "extracted_labels": "[anger, frustration]"}
+{"id": "sample_00001817", "prediction": "The character's emotional state is positive, cooperative.<|endoftext|>", "extracted_labels": "[positive, cooperative]"}
+{"id": "sample_00001823", "prediction": "The character's emotional state is dissatisfaction, disappointment, frustration, anger.<|endoftext|>", "extracted_labels": "[dissatisfaction, disappointment, frustration, anger]"}
+{"id": "sample_00001826", "prediction": "The character's emotional state is anticipation, desire, positive.<|endoftext|>", "extracted_labels": "[anticipation, desire, positive]"}
+{"id": "sample_00001832", "prediction": "The character's emotional state is concern, tension.<|endoftext|>", "extracted_labels": "[concern, tension]"}
+{"id": "sample_00001841", "prediction": "The character's emotional state is guilt, self-blame.<|endoftext|>", "extracted_labels": "[guilt, self-blame]"}
+{"id": "sample_00001846", "prediction": "The character's emotional state is anger, frustration.<|endoftext|>", "extracted_labels": "[anger, frustration]"}
+{"id": "sample_00001868", "prediction": "The character's emotional state is concern, worry.<|endoftext|>", "extracted_labels": "[concern, worry]"}
+{"id": "sample_00001871", "prediction": "The character's emotional state is neutral.<|endoftext|>", "extracted_labels": "[neutral]"}
+{"id": "sample_00001890", "prediction": "The character's emotional state is anger, frustration, stress.<|endoftext|>", "extracted_labels": "[anger, frustration, stress]"}
+{"id": "sample_00001904", "prediction": "The character's emotional state is satisfaction, happiness.<|endoftext|>", "extracted_labels": "[satisfaction, happiness]"}
+{"id": "sample_00001920", "prediction": "The character's emotional state is dissatisfied, discontent, frustration.<|endoftext|>", "extracted_labels": "[disatisfied, discontent, frustration]"}
+{"id": "sample_00001921", "prediction": "The character's emotional state is positive, excitement, anticipation.<|endoftext|>", "extracted_labels": "[positive, excitement, anticipation]"}
+{"id": "sample_00001932", "prediction": "The character's emotional state is dissatisfaction, frustration.", "extracted_labels": "[dissatisfaction, frustration]"}
+{"id": "sample_00001942", "prediction": "The character's emotional state is anger, frustration.<|endoftext|>", "extracted_labels": "[anger, frustration]"}
+{"id": "sample_00001946", "prediction": "The character's emotional state is positive, satisfaction.<|endoftext|>", "extracted_labels": "[positive, satisfaction]"}
+{"id": "sample_00001948", "prediction": "The character's emotional state is positive, encouragement, support.", "extracted_labels": "[positive, encouragement, support]"}
+{"id": "sample_00001959", "prediction": "The character's emotional state is disappointment, frustration, sadness.<|endoftext|>", "extracted_labels": "[disappointment, frustration, sadness]"}
+{"id": "sample_00001984", "prediction": "The character's emotional state is excited, nervous, positive.<|endoftext|>", "extracted_labels": "[excited, nervous, positive]"}
+{"id": "sample_00002021", "prediction": "The character's emotional state is positive, happy, satisfied, negative, anger, frustration.<|endoftext|>", "extracted_labels": "[positive, happy, satisfied, anger, frustration]"}
+{"id": "sample_00002041", "prediction": "The character's emotional state is dissatisfied, unsatisfied, pressure, unease.<|endoftext|>", "extracted_labels": "[dissatisfied, unsatisfied, pressure, unease]"}
+{"id": "sample_00002055", "prediction": "The character's emotional state is confusion, dissatisfaction, frustration, anger.<|endoftext|>", "extracted_labels": "[confusion, dissatisfaction, frustration, anger]"}
+{"id": "sample_00002058", "prediction": "The character's emotional state is anger, dissatisfaction, strong negative emotions.<|endoftext|>", "extracted_labels": "[anger, dissatisfaction, negative_emotions]"}
+{"id": "sample_00002070", "prediction": "The character's emotional state is frustration, anger, stress, dissatisfaction.<|endoftext|>", "extracted_labels": "[frustration, anger, stress, dissatisfaction]"}
+{"id": "sample_00002078", "prediction": "The character's emotional state is anger, frustration.<|endoftext|>", "extracted_labels": "[anger, frustration]"}
+{"id": "sample_00002087", "prediction": "The character's emotional state: dissatisfaction, anger.<|endoftext|>", "extracted_labels": "[dissatisfaction, anger]"}
+{"id": "sample_00002094", "prediction": "The character's emotional state is concern, warning.<|endoftext|>", "extracted_labels": "[concern, warning]"}
+{"id": "sample_00002097", "prediction": "The character's emotional state is dissatisfaction, anger.<|endoftext|>", "extracted_labels": "[dissatisfaction, anger]"}
+{"id": "sample_00002099", "prediction": "The character's emotional state: anger, dissatisfaction.<|endoftext|>", "extracted_labels": "[anger, dissatisfaction]"}
+{"id": "sample_00002132", "prediction": "The character's emotional state is positive, excited.<|endoftext|>", "extracted_labels": "[positive, excited]"}
+{"id": "sample_00002142", "prediction": "The character's emotional state is positive, satisfaction.<|endoftext|>", "extracted_labels": "[positive, satisfaction]"}
+{"id": "sample_00002148", "prediction": "The character's emotional state is respect, emotion, reflection, appreciation.<|endoftext|>", "extracted_labels": "[respect, emotion, reflection, appreciation]"}
+{"id": "sample_00002180", "prediction": "The character's emotional state is anger, frustration.<|endoftext|>", "extracted_labels": "[anger, frustration]"}
+{"id": "sample_00002181", "prediction": "The character's emotional state is positive, happy.<|endoftext|>", "extracted_labels": "[positive, happy]"}
+{"id": "sample_00002183", "prediction": "The character's emotional state is positive, satisfaction, satisfaction.<|endoftext|>", "extracted_labels": "[satisfied]"}
+{"id": "sample_00002187", "prediction": "The character's emotional state is dissatisfaction, anger.<|endoftext|>", "extracted_labels": "[dissatisfaction, anger]"}
+{"id": "sample_00002212", "prediction": "The character's emotional state is concern, care.<|endoftext|>", "extracted_labels": "[concern, care]"}
+{"id": "sample_00002220", "prediction": "The character's emotional state is frustration, anger, anxiety.<|endoftext|>", "extracted_labels": "[frustration, anger, anxiety]"}
+{"id": "sample_00002223", "prediction": "The character's emotional state is sadness, anger, frustration, stress.<|endoftext|>", "extracted_labels": "[sadness, anger, frustration, stress]"}
+{"id": "sample_00002238", "prediction": "The character's emotional state is heavy, contemplative, self-blame, disappointment.<|endoftext|>", "extracted_labels": "[heavy, contemplative, self-blame, disappointment]"}
+{"id": "sample_00002244", "prediction": "The character's emotional state is frustration, anger, sadness, disappointment, hopelessness.<|endoftext|>", "extracted_labels": "[frustration, anger, sadness, disappointment, hopelessness]"}
+{"id": "sample_00002253", "prediction": "The character's emotional state is disappointment, frustration.<|endoftext|>", "extracted_labels": "[disappointment, frustration]"}
+{"id": "sample_00002254", "prediction": "The character's emotional state is anticipation, excitement.<|endoftext|>", "extracted_labels": "[anticipation, excitement]"}
+{"id": "sample_00002259", "prediction": "The character's emotional state is dissatisfied, pressure, frustration.", "extracted_labels": "[dissatisfied, pressure, frustration]"}
+{"id": "sample_00002277", "prediction": "The character's emotional state is uncertainty, confusion.", "extracted_labels": "[uncertainty, confusion]"}
+{"id": "sample_00002280", "prediction": "The character's emotional state is concentration, stress.<|endoftext|>", "extracted_labels": "[concentration, stress]"}
+{"id": "sample_00002283", "prediction": "The character's emotional state is anger, frustration.<|endoftext|>", "extracted_labels": "[anger, frustration]"}
+{"id": "sample_00002292", "prediction": "The character's emotional state is anxiety, frustration, anger.<|endoftext|>", "extracted_labels": "[anxiety, frustration, anger]"}
+{"id": "sample_00002298", "prediction": "The character's emotional state is anger, frustration.<|endoftext|>", "extracted_labels": "[anger, frustration]"}
+{"id": "sample_00002303", "prediction": "The character's emotional state is disapproval, dissatisfaction, pressure, stress.<|endoftext|>", "extracted_labels": "[disapproval, dissatisfaction, pressure, stress]"}
+{"id": "sample_00002306", "prediction": "The character's emotional state is positive, agreement, excitement.<|endoftext|>", "extracted_labels": "[positive, agreement, excitement]"}
+{"id": "sample_00002311", "prediction": "The character's emotional state is anxiety, tension, embarrassment.<|endoftext|>", "extracted_labels": "[anxiety, tension, embarrassment]"}
+{"id": "sample_00002316", "prediction": "The character's emotional state: anger, frustration.<|endoftext|>", "extracted_labels": "[anger, frustration]"}
+{"id": "sample_00002325", "prediction": "The character's emotional state is excited, anticipation, positive.<|endoftext|>", "extracted_labels": "[excited, anticipation, positive]"}
+{"id": "sample_00002329", "prediction": "The character's emotional state is dissatisfaction, disappointment.<|endoftext|>", "extracted_labels": "[dissatisfaction, disappointment]"}
+{"id": "sample_00002337", "prediction": "The character's emotional state is neutral.<|endoftext|>", "extracted_labels": "[neutral]"}
+{"id": "sample_00002339", "prediction": "The character's emotional state is frustration, anger, disappointment, dissatisfaction, demand.<|endoftext|>", "extracted_labels": "[frustration, anger, disappointment, dissatisfaction, demand]"}
+{"id": "sample_00002348", "prediction": "The character's emotional state is surprise, shock, excitement.<|endoftext|>", "extracted_labels": "[surprise, shock, excitement]"}
+{"id": "sample_00002374", "prediction": "The character's emotional state is dissatisfaction, impatience.<|endoftext|>", "extracted_labels": "[dissatisfaction, impatience]"}
+{"id": "sample_00002394", "prediction": "The character's emotional state is dissatisfaction, frustration.<|endoftext|>", "extracted_labels": "[dissatisfaction, frustration]"}
+{"id": "sample_00002419", "prediction": "The character's emotional state is neutral.<|endoftext|>", "extracted_labels": "[neutral]"}
+{"id": "sample_00002420", "prediction": "The character's emotional state is anger, frustration, dissatisfaction.", "extracted_labels": "[anger, frustration, dissatisfaction]"}
+{"id": "sample_00002444", "prediction": "The character's emotional state is anger, frustration, disappointment, humor, exaggeration.<|endoftext|>", "extracted_labels": "[anger, frustration, disappointment, humor, exaggeration]"}
+{"id": "sample_00002448", "prediction": "The character's emotional state is positive, determination, uncertainty, concern.<|endoftext|>", "extracted_labels": "[positive, determination, uncertainty, concern]"}
+{"id": "sample_00002449", "prediction": "The character's emotional state is positive, happiness, satisfaction.<|endoftext|>", "extracted_labels": "[positive, happiness, satisfaction]"}
+{"id": "sample_00002465", "prediction": "The character's emotional state is neutral.<|endoftext|>", "extracted_labels": "[neutral]"}
+{"id": "sample_00002466", "prediction": "The character's emotional state is sadness, frustration.<|endoftext|>", "extracted_labels": "[sadness, frustration]"}
+{"id": "sample_00002475", "prediction": "The character's emotional state is sadness, anger, frustration, stress.<|endoftext|>", "extracted_labels": "[sadness, anger, frustration, stress]"}
+{"id": "sample_00002476", "prediction": "The character's emotional state is dissatisfied, discontent, free, unrestricted.<|endoftext|>", "extracted_labels": "[dissatisfied, discontent, free, unrestricted]"}
+{"id": "sample_00002477", "prediction": "The character's emotional state: dissatisfaction, anger.<|endoftext|>", "extracted_labels": "[dissatisfaction, anger]"}
+{"id": "sample_00002486", "prediction": "The character's emotional state is dissatisfied, concerned, dissatisfied with decision, expectation of tumor removal.", "extracted_labels": "[concerned, dissatisfied, expectation]"}
+{"id": "sample_00002504", "prediction": "The character's emotional state: humorous, playful, positive.<|endoftext|>", "extracted_labels": "[humorous, playful, positive]"}
+{"id": "sample_00002511", "prediction": "The character's emotional state is anger, frustration, disappointment.<|endoftext|>", "extracted_labels": "[anger, frustration, disappointment]"}
+{"id": "sample_00002514", "prediction": "The character's emotional state is objective, neutral.<|endoftext|>", "extracted_labels": "[]"}
+{"id": "sample_00002518", "prediction": "The character's emotional state is expectation, hope.", "extracted_labels": "[expectation, hope]"}
+{"id": "sample_00002536", "prediction": "The character's emotional state is humor, teasing, positive.", "extracted_labels": "[humor, teasing, positive]"}
+{"id": "sample_00002544", "prediction": "The character's emotional state is anger, frustration, dissatisfaction.<|endoftext|>", "extracted_labels": "[anger, frustration, dissatisfaction]"}
+{"id": "sample_00002550", "prediction": "The character's emotional state is dissatisfaction, disapproval.", "extracted_labels": "[dissatisfaction, disapproval]"}
+{"id": "sample_00002563", "prediction": "The character's emotional state is dissatisfaction, disappointment, frustration.<|endoftext|>", "extracted_labels": "[dissatisfaction, disappointment, frustration]"}
+{"id": "sample_00002565", "prediction": "The character's emotional state is frustration, disappointment, pressure, dissatisfaction.<|endoftext|>", "extracted_labels": "[frustration, disappointment, pressure, dissatisfaction]"}
+{"id": "sample_00002666", "prediction": "The character's emotional state is dissatisfaction, anger.<|endoftext|>", "extracted_labels": "[dissatisfaction, anger]"}
+{"id": "sample_00002682", "prediction": "The character's emotional state is dissatisfaction, anger.<|endoftext|>", "extracted_labels": "[dissatisfaction, anger]"}
+{"id": "sample_00002684", "prediction": "The character's emotional state is Remembrance, Caring, Uncomfortable.<|endoftext|>", "extracted_labels": "[Remembrance, Caring, Uncomfortable]"}
+{"id": "sample_00002709", "prediction": "The character's emotional state is anger, frustration.<|endoftext|>", "extracted_labels": "[anger, frustration]"}
+{"id": "sample_00002758", "prediction": "The character's emotional state is concern, doubt, anxiety, sadness, anger.<|endoftext|>", "extracted_labels": "[concern, doubt, anxiety, sadness, anger]"}
+{"id": "sample_00002783", "prediction": "The character's emotional state is concern, worry.<|endoftext|>", "extracted_labels": "[concern, worry]"}
+{"id": "sample_00002785", "prediction": "The character's emotional state is disinterest, dissatisfaction, negative.<|endoftext|>", "extracted_labels": "[disinterest, dissatisfaction, negative]"}
+{"id": "sample_00002789", "prediction": "The character's emotional state is anger, dissatisfaction.<|endoftext|>", "extracted_labels": "[anger, dissatisfaction]"}
+{"id": "sample_00002958", "prediction": "The character's emotional state is frustration, anger.<|endoftext|>", "extracted_labels": "[frustration, anger]"}
+{"id": "sample_00002968", "prediction": "The character's emotional state is dissatisfaction, disappointment.<|endoftext|>", "extracted_labels": "[dissatisfaction, disappointment]"}
+{"id": "sample_00002977", "prediction": "The character's emotional state is anger, frustration, disappointment, dissatisfaction.", "extracted_labels": "[anger, frustration, disappointment, dissatisfaction]"}
+{"id": "sample_00002982", "prediction": "The character's emotional state is anger, frustration.<|endoftext|>", "extracted_labels": "[anger, frustration]"}
+{"id": "sample_00003001", "prediction": "The character's emotional state is positive, appreciation.<|endoftext|>", "extracted_labels": "[positive, appreciation]"}
+{"id": "sample_00003025", "prediction": "The character's emotional state is tension, important.<|endoftext|>", "extracted_labels": "[tension]"}
+{"id": "sample_00003049", "prediction": "The character's emotional state is concern, unease.<|endoftext|>", "extracted_labels": "[concern, unease]"}
+{"id": "sample_00003058", "prediction": "The character's emotional state is dissatisfaction, confusion.<|endoftext|>", "extracted_labels": "[dissatisfaction, confusion]"}
+{"id": "sample_00003062", "prediction": "The character's emotional state is disappointment, frustration, sadness, anger, frustration, stress.<|endoftext|>", "extracted_labels": "[disappointment, frustration, sadness, anger, stress]"}
+{"id": "sample_00003084", "prediction": "The character's emotional state is anger, frustration, disappointment.<|endoftext|>", "extracted_labels": "[anger, frustration, disappointment]"}
+{"id": "sample_00003116", "prediction": "The character's emotional state is happy, satisfaction.<|endoftext|>", "extracted_labels": "[happy, satisfaction]"}
+{"id": "sample_00003127", "prediction": "The character's emotional state is confidence, humor, positive.<|endoftext|>", "extracted_labels": "[confidence, humor, positive]"}
+{"id": "sample_00003134", "prediction": "The character's emotional state is anger, frustration.<|endoftext|>", "extracted_labels": "[anger, frustration]"}
+{"id": "sample_00003159", "prediction": "The character's emotional state is frustration, anger, anxiety, stress.<|endoftext|>", "extracted_labels": "[frustration, anger, anxiety, stress]"}
+{"id": "sample_00003211", "prediction": "The character's emotional state is anger, frustration, disappointment.<|endoftext|>", "extracted_labels": "[anger, frustration, disappointment]"}
+{"id": "sample_00003238", "prediction": "The character's emotional state is dissatisfaction, disappointment.<|endoftext|>", "extracted_labels": "[dissatisfaction, disappointment]"}
+{"id": "sample_00003239", "prediction": "The character's emotional state is neutral.<|endoftext|>", "extracted_labels": "[neutral]"}
+{"id": "sample_00003253", "prediction": "The character's emotional state is happy, positive.<|endoftext|>", "extracted_labels": "[happy, positive]"}
+{"id": "sample_00003284", "prediction": "The character's emotional state is surprised, disappointed, frustrated.<|endoftext|>", "extracted_labels": "[surprised, disappointed, frustrated]"}
+{"id": "sample_00003296", "prediction": "The character's emotional state: dissatisfaction, pressure.", "extracted_labels": "[dissatisfaction, pressure]"}
+{"id": "sample_00003298", "prediction": "The character's emotional state is neutral.<|endoftext|>", "extracted_labels": "[neutral]"}
